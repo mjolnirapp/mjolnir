@@ -23,25 +23,29 @@
 
     
 
-    <h3>register</h3>
+    <a name="register"></a>
+    <h3><a href="#register">register</a></h3>
     <div class='def'>api.notify.register(tag, fn()) -> id</div>
     <div class='doc'>Registers a function to be called when an Apple notification with the given tag is clicked.</div>
 
     
 
-    <h3>show</h3>
+    <a name="show"></a>
+    <h3><a href="#show">show</a></h3>
     <div class='def'>api.notify.show(title, subtitle, text, tag)</div>
     <div class='doc'>Show an Apple notification. Tag is a unique string that identifies this notification, and will be passed to api.notify.clicked() if the notification is clicked. None of the strings are optional, though they may each be blank.</div>
 
     
 
-    <h3>unregister</h3>
+    <a name="unregister"></a>
+    <h3><a href="#unregister">unregister</a></h3>
     <div class='def'>api.notify.unregister(id)</div>
     <div class='doc'>Unregisters a function to no longer be called when an Apple notification with the given tag is clicked.</div>
 
     
 
-    <h3>unregisterall</h3>
+    <a name="unregisterall"></a>
+    <h3><a href="#unregisterall">unregisterall</a></h3>
     <div class='def'>api.notify.unregisterall()</div>
     <div class='doc'>Unregisters all functions registered for notification-clicks; called automatically when user config reloads.</div>
 
