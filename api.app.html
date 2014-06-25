@@ -1,0 +1,119 @@
+<html>
+
+  <head>
+    <title>Hydra docs: api.app module</title>
+    <style type="text/css">
+      .def {
+      font-family: Menlo, Monaco, Inconsolata, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>
+      
+      <a href="api.html">api</a>
+      
+      <a href="api.app.html">app</a>
+      
+    </h1>
+
+    <h2>Manipulate running applications.</h2>
+
+    
+
+    <h3>appforpid</h3>
+    <div class='def'>api.app.appforpid(pid) -> app or nil</div>
+    <div class='doc'>Returns the running app for the given pid, if it exists.</div>
+
+    
+
+    <h3>appsforbundleid</h3>
+    <div class='def'>api.app.appsforbundleid(bundleid) -> app[]</div>
+    <div class='doc'>Returns any running apps that have the given bundleid.</div>
+
+    
+
+    <h3>launchorfocus</h3>
+    <div class='def'>api.app.launchorfocus(name)</div>
+    <div class='doc'>Launches the app with the given name, or activates it if it's already running.</div>
+
+    
+
+    <h3>runningapps</h3>
+    <div class='def'>api.app.runningapps() -> app[]</div>
+    <div class='doc'>Returns all running apps.</div>
+
+    
+
+    <h3>activate</h3>
+    <div class='def'>api.app:activate() -> bool</div>
+    <div class='doc'>Tries to activate the app (make it focused) and returns its success.</div>
+
+    
+
+    <h3>allwindows</h3>
+    <div class='def'>api.app:allwindows() -> window[]</div>
+    <div class='doc'>Returns all open windows owned by the given app.</div>
+
+    
+
+    <h3>bundleid</h3>
+    <div class='def'>api.app:bundleid() -> string</div>
+    <div class='doc'>Returns the bundle identifier of the app.</div>
+
+    
+
+    <h3>hide</h3>
+    <div class='def'>api.app:hide()</div>
+    <div class='doc'>Hides the app (and all its windows).</div>
+
+    
+
+    <h3>ishidden</h3>
+    <div class='def'>api.app:ishidden() -> bool</div>
+    <div class='doc'>Returns whether the app is currently hidden.</div>
+
+    
+
+    <h3>kill</h3>
+    <div class='def'>api.app:kill()</div>
+    <div class='doc'>Tries to terminate the app.</div>
+
+    
+
+    <h3>kill9</h3>
+    <div class='def'>api.app:kill9()</div>
+    <div class='doc'>Assuredly terminates the app.</div>
+
+    
+
+    <h3>show</h3>
+    <div class='def'>api.app:show()</div>
+    <div class='doc'>Unhides the app (and all its windows) if it's hidden. Yeah, this method name should probably be renamed.</div>
+
+    
+
+    <h3>title</h3>
+    <div class='def'>api.app:title() -> string</div>
+    <div class='doc'>Returns the localized name of the app (in UTF8).</div>
+
+    
+
+    <h3>visiblewindows</h3>
+    <div class='def'>api.app:visiblewindows() -> win[]</div>
+    <div class='doc'>Returns only the app's windows that are visible.</div>
+
+    
+
+    <h2>Submodules</h2>
+
+    
+
+    None.
+
+    
+
+  </body>
+</html>

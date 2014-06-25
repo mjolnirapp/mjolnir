@@ -1,0 +1,233 @@
+<html>
+
+  <head>
+    <title>Hydra docs: api.window module</title>
+    <style type="text/css">
+      .def {
+      font-family: Menlo, Monaco, Inconsolata, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>
+      
+      <a href="api.html">api</a>
+      
+      <a href="api.window.html">window</a>
+      
+    </h1>
+
+    <h2>Functions for managing any window</h2>
+
+    
+
+    <h3>allwindows</h3>
+    <div class='def'>api.window.allwindows() -> win[]</div>
+    <div class='doc'>Returns all windows</div>
+
+    
+
+    <h3>focusedwindow</h3>
+    <div class='def'>api.window.focusedwindow() -> window</div>
+    <div class='doc'>Returns the focused window, or nil.</div>
+
+    
+
+    <h3>visible_windows_sorted_by_recency</h3>
+    <div class='def'>api.window.visible_windows_sorted_by_recency() -> win[]</div>
+    <div class='doc'>Experimental.</div>
+
+    
+
+    <h3>visiblewindows</h3>
+    <div class='def'>api.window.visiblewindows() -> win[]</div>
+    <div class='doc'>Get all windows on all screens that match api.window.isvisible.</div>
+
+    
+
+    <h3>app</h3>
+    <div class='def'>api.window:app() -> app</div>
+    <div class='doc'>Returns the app that the window belongs to.</div>
+
+    
+
+    <h3>becomemain</h3>
+    <div class='def'>api.window:becomemain() -> bool</div>
+    <div class='doc'>Make this window the main window of the given application; deos not implicitly focus the app.</div>
+
+    
+
+    <h3>focus</h3>
+    <div class='def'>api.window:focus() -> bool</div>
+    <div class='doc'>Try to make this window focused.</div>
+
+    
+
+    <h3>focuswindow_east</h3>
+    <div class='def'>api.window:focuswindow_east()</div>
+    <div class='doc'>Focus the first focus-able window to the east of this one.</div>
+
+    
+
+    <h3>focuswindow_north</h3>
+    <div class='def'>api.window:focuswindow_north()</div>
+    <div class='doc'>Focus the first focus-able window to the north of this one.</div>
+
+    
+
+    <h3>focuswindow_south</h3>
+    <div class='def'>api.window:focuswindow_south()</div>
+    <div class='doc'>Focus the first focus-able window to the south of this one.</div>
+
+    
+
+    <h3>focuswindow_west</h3>
+    <div class='def'>api.window:focuswindow_west()</div>
+    <div class='doc'>Focus the first focus-able window to the west of this one.</div>
+
+    
+
+    <h3>frame</h3>
+    <div class='def'>api.window:frame() -> rect</div>
+    <div class='doc'>Get the frame of the window in absolute coordinates.</div>
+
+    
+
+    <h3>isminimized</h3>
+    <div class='def'>api.window:isminimized() -> bool</div>
+    <div class='doc'>True if the window is currently minimized in the dock.</div>
+
+    
+
+    <h3>isstandard</h3>
+    <div class='def'>api.window:isstandard() -> bool</div>
+    <div class='doc'>True if the window's subrole indicates it's 'a standard window'.</div>
+
+    
+
+    <h3>isvisible</h3>
+    <div class='def'>api.window:isvisible() -> bool</div>
+    <div class='doc'>True if the app is not hidden, not minimized, and is a standard window</div>
+
+    
+
+    <h3>maximize</h3>
+    <div class='def'>api.window:maximize()</div>
+    <div class='doc'>Make this window fill the whole screen its on, without covering the dock or menu.</div>
+
+    
+
+    <h3>minimize</h3>
+    <div class='def'>api.window:minimize()</div>
+    <div class='doc'>Minimizes the window.</div>
+
+    
+
+    <h3>otherwindows_allscreens</h3>
+    <div class='def'>api.window:otherwindows_allscreens() -> win[]</div>
+    <div class='doc'>Get every window except this one.</div>
+
+    
+
+    <h3>otherwindows_samescreen</h3>
+    <div class='def'>api.window:otherwindows_samescreen() -> win[]</div>
+    <div class='doc'>Get other windows on the same screen as self.</div>
+
+    
+
+    <h3>role</h3>
+    <div class='def'>api.window:role() -> string</div>
+    <div class='doc'>Returns the role of the window, whatever that means.</div>
+
+    
+
+    <h3>screen</h3>
+    <div class='def'>api.window:screen()</div>
+    <div class='doc'>Get the screen this window is mostly on.</div>
+
+    
+
+    <h3>setframe</h3>
+    <div class='def'>api.window:setframe(rect)</div>
+    <div class='doc'>Set the frame of the window in absolute coordinates.</div>
+
+    
+
+    <h3>setsize</h3>
+    <div class='def'>api.window:setsize(size)</div>
+    <div class='doc'>Resizes the window.</div>
+
+    
+
+    <h3>settopleft</h3>
+    <div class='def'>api.window:settopleft(point)</div>
+    <div class='doc'>Moves the window to the given point in absolute coordinate.</div>
+
+    
+
+    <h3>size</h3>
+    <div class='def'>api.window:size() -> size</div>
+    <div class='doc'>The size of the window.</div>
+
+    
+
+    <h3>subrole</h3>
+    <div class='def'>api.window:subrole() -> string</div>
+    <div class='doc'>Returns the subrole of the window, whatever that means.</div>
+
+    
+
+    <h3>title</h3>
+    <div class='def'>api.window:title() -> string</div>
+    <div class='doc'>Returns the title of the window (as UTF8).</div>
+
+    
+
+    <h3>topleft</h3>
+    <div class='def'>api.window:topleft() -> point</div>
+    <div class='doc'>The top-left corner of the window in absolute coordinates.</div>
+
+    
+
+    <h3>unminimize</h3>
+    <div class='def'>api.window:unminimize()</div>
+    <div class='doc'>Un-minimizes the window.</div>
+
+    
+
+    <h3>windows_to_east</h3>
+    <div class='def'>api.window:windows_to_east()</div>
+    <div class='doc'>Get all windows east of this one, ordered by closeness.</div>
+
+    
+
+    <h3>windows_to_north</h3>
+    <div class='def'>api.window:windows_to_north()</div>
+    <div class='doc'>Get all windows north of this one, ordered by closeness.</div>
+
+    
+
+    <h3>windows_to_south</h3>
+    <div class='def'>api.window:windows_to_south()</div>
+    <div class='doc'>Get all windows south of this one, ordered by closeness.</div>
+
+    
+
+    <h3>windows_to_west</h3>
+    <div class='def'>api.window:windows_to_west()</div>
+    <div class='doc'>Get all windows west of this one, ordered by closeness.</div>
+
+    
+
+    <h2>Submodules</h2>
+
+    
+
+    None.
+
+    
+
+  </body>
+</html>

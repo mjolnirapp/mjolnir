@@ -1,0 +1,149 @@
+<html>
+
+  <head>
+    <title>Hydra docs: api module</title>
+    <style type="text/css">
+      .def {
+      font-family: Menlo, Monaco, Inconsolata, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>
+      
+      <a href="api.html">api</a>
+      
+    </h1>
+
+    <h2>The Hydra namespace.</h2>
+
+    
+
+    <h3>alert</h3>
+    <div class='def'>api.alert(str, seconds = 2)</div>
+    <div class='doc'>Shows a message in large words briefly in the middle of the screen.</div>
+
+    
+
+    <h3>call</h3>
+    <div class='def'>api.call(fn, ...) -> ...</div>
+    <div class='doc'>Just like pcall, except that failures are handled using api.errorhandler</div>
+
+    
+
+    <h3>check_accessibility</h3>
+    <div class='def'>api.check_accessibility(shouldprompt) -> isenabled</div>
+    <div class='doc'>Returns whether accessibility is enabled. If passed `true`, promtps the user to enable it.</div>
+
+    
+
+    <h3>douserfile</h3>
+    <div class='def'>api.douserfile(name)</div>
+    <div class='doc'>Convenience wrapper around dofile() and api.userfile(name)</div>
+
+    
+
+    <h3>errorhandler</h3>
+    <div class='def'>api.errorhandler = function(err)</div>
+    <div class='doc'>Error handler for api.call; intended for you to set, not for third party libs</div>
+
+    
+
+    <h3>fileexists</h3>
+    <div class='def'>api.fileexists(path) -> exists, isdir</div>
+    <div class='doc'>Checks if a file exists, and whether it's a directory.</div>
+
+    
+
+    <h3>focushydra</h3>
+    <div class='def'>api.focushydra()</div>
+    <div class='doc'>Makes Hydra the currently focused app; useful in combination with textgrids.</div>
+
+    
+
+    <h3>jsondocs</h3>
+    <div class='def'>api.jsondocs() -> string</div>
+    <div class='doc'>Returns the documentation as a JSON string for you to generate pretty docs with. The top-level is a group. Groups have keys: name (string), doc (string), subitems (list of items), subgroups (list of groups); Items have keys: name (string), def (string), doc (string).</div>
+
+    
+
+    <h3>reload</h3>
+    <div class='def'>api.reload()</div>
+    <div class='doc'>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</div>
+
+    
+
+    <h3>resourcesdir</h3>
+    <div class='def'>api.resourcesdir -> string</div>
+    <div class='doc'>The location of the built-in lua source files.</div>
+
+    
+
+    <h3>showabout</h3>
+    <div class='def'>api.showabout()</div>
+    <div class='doc'>Displays the standard OS X about panel; implicitly focuses Hydra.</div>
+
+    
+
+    <h3>userfile</h3>
+    <div class='def'>api.userfile(name)</div>
+    <div class='doc'>Returns the full path to the file ~/.hydra/{name}.lua</div>
+
+    
+
+    <h3>uuid</h3>
+    <div class='def'>api.uuid() -> string</div>
+    <div class='doc'>Returns a UUID as a string</div>
+
+    
+
+    <h2>Submodules</h2>
+
+    
+
+    <ul>
+      
+      <li><a href="api.app.html">app</a></li>
+      
+      <li><a href="api.autolaunch.html">autolaunch</a></li>
+      
+      <li><a href="api.ext.html">ext</a></li>
+      
+      <li><a href="api.fn.html">fn</a></li>
+      
+      <li><a href="api.geometry.html">geometry</a></li>
+      
+      <li><a href="api.hotkey.html">hotkey</a></li>
+      
+      <li><a href="api.log.html">log</a></li>
+      
+      <li><a href="api.menu.html">menu</a></li>
+      
+      <li><a href="api.mouse.html">mouse</a></li>
+      
+      <li><a href="api.notify.html">notify</a></li>
+      
+      <li><a href="api.pathwatcher.html">pathwatcher</a></li>
+      
+      <li><a href="api.repl.html">repl</a></li>
+      
+      <li><a href="api.screen.html">screen</a></li>
+      
+      <li><a href="api.textgrid.html">textgrid</a></li>
+      
+      <li><a href="api.timer.html">timer</a></li>
+      
+      <li><a href="api.updates.html">updates</a></li>
+      
+      <li><a href="api.webview.html">webview</a></li>
+      
+      <li><a href="api.window.html">window</a></li>
+      
+    </ul>
+
+    
+
+  </body>
+</html>

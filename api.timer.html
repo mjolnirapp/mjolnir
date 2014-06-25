@@ -1,0 +1,101 @@
+<html>
+
+  <head>
+    <title>Hydra docs: api.timer module</title>
+    <style type="text/css">
+      .def {
+      font-family: Menlo, Monaco, Inconsolata, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>
+      
+      <a href="api.html">api</a>
+      
+      <a href="api.timer.html">timer</a>
+      
+    </h1>
+
+    <h2>Execute functions with various timing rules.</h2>
+
+    
+
+    <h3>days</h3>
+    <div class='def'>api.timer.days(n) -> sec</div>
+    <div class='doc'>Returns the number of days in seconds.</div>
+
+    
+
+    <h3>doafter</h3>
+    <div class='def'>api.timer.doafter(sec, fn())</div>
+    <div class='doc'>Runs the function after sec seconds.</div>
+
+    
+
+    <h3>hours</h3>
+    <div class='def'>api.timer.hours(n) -> sec</div>
+    <div class='doc'>Returns the number of hours in seconds.</div>
+
+    
+
+    <h3>minutes</h3>
+    <div class='def'>api.timer.minutes(n) -> sec</div>
+    <div class='doc'>Returns the number of minutes in seconds.</div>
+
+    
+
+    <h3>new</h3>
+    <div class='def'>api.timer.new(seconds, fn) -> timer</div>
+    <div class='doc'>Creates a new timer that can be started. Has the fields: seconds, fn.</div>
+
+    
+
+    <h3>runonce</h3>
+    <div class='def'>api.timer.runonce(fn())</div>
+    <div class='doc'>Runs the function exactly once in the entire lifespan of Hydra; reset only when you quit/restart.</div>
+
+    
+
+    <h3>seconds</h3>
+    <div class='def'>api.timer.seconds(n) -> sec</div>
+    <div class='doc'>Returns the number of seconds in seconds.</div>
+
+    
+
+    <h3>stopall</h3>
+    <div class='def'>api.timer.stopall()</div>
+    <div class='doc'>Stops all running timers; called automatically when user config reloads.</div>
+
+    
+
+    <h3>weeks</h3>
+    <div class='def'>api.timer.weeks(n) -> sec</div>
+    <div class='doc'>Returns the number of weeks in seconds.</div>
+
+    
+
+    <h3>start</h3>
+    <div class='def'>api.timer:start() -> timer</div>
+    <div class='doc'>Begins to execute timer.fn every timer.seconds; calling this does not cause an initial firing of the timer immediately.</div>
+
+    
+
+    <h3>stop</h3>
+    <div class='def'>api.timer:stop() -> timer</div>
+    <div class='doc'>Stops the timer's fn from getting called until started again.</div>
+
+    
+
+    <h2>Submodules</h2>
+
+    
+
+    None.
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+
+  <head>
+    <title>Hydra docs: api.hotkey module</title>
+    <style type="text/css">
+      .def {
+      font-family: Menlo, Monaco, Inconsolata, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>
+      
+      <a href="api.html">api</a>
+      
+      <a href="api.hotkey.html">hotkey</a>
+      
+    </h1>
+
+    <h2>Manage global hotkeys.</h2>
+
+    
+
+    <h3>bind</h3>
+    <div class='def'>api.hotkey.bind(...) -> hotkey</div>
+    <div class='doc'>Shortcut for: return api.hotkey.new(...):enable()</div>
+
+    
+
+    <h3>disableall</h3>
+    <div class='def'>api.hotkey.disableall()</div>
+    <div class='doc'>Disables all hotkeys; automatically called when user config reloads.</div>
+
+    
+
+    <h3>new</h3>
+    <div class='def'>api.hotkey.new(mods, key, fn) -> hotkey</div>
+    <div class='doc'>Creates a new hotkey that can be enabled. Mods is a table containing any of the elements {cmd, ctrl, alt, shift}. Key may be any 1-character string, or 'F1', 'Enter', etc. Both are case-insensitive. The hotkey has the public fields: key, mods, fn.</div>
+
+    
+
+    <h3>disable</h3>
+    <div class='def'>api.hotkey:disable() -> self</div>
+    <div class='doc'>Disables the given hotkey; does not remove it from api.hotkey.keys.</div>
+
+    
+
+    <h3>enable</h3>
+    <div class='def'>api.hotkey:enable() -> hotkey</div>
+    <div class='doc'>Registers the hotkey's fn as the callback when the user presses key while holding mods.</div>
+
+    
+
+    <h2>Submodules</h2>
+
+    
+
+    None.
+
+    
+
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<html>
+
+  <head>
+    <title>Hydra docs: api.webview module</title>
+    <style type="text/css">
+      .def {
+      font-family: Menlo, Monaco, Inconsolata, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>
+      
+      <a href="api.html">api</a>
+      
+      <a href="api.webview.html">webview</a>
+      
+    </h1>
+
+    <h2>For showing stuff in web views!</h2>
+
+    
+
+    <h3>clicked</h3>
+    <div class='def'>api.webview.clicked = function(str)</div>
+    <div class='doc'>When a link is clicked with a URL like 'hydra:foo', this function is called (if set) with 'foo' as its argument.</div>
+
+    
+
+    <h3>closed</h3>
+    <div class='def'>api.webview.closed = function()</div>
+    <div class='doc'>Called (if set) when the webview closes.</div>
+
+    
+
+    <h3>open</h3>
+    <div class='def'>api.webview.open()</div>
+    <div class='doc'>Opens and returns a new webview instance; as with all other Hydra objects, it's just a table, and you're free to set whatever keys you want on it.</div>
+
+    
+
+    <h3>loadfile</h3>
+    <div class='def'>api.webview:loadfile(path)</div>
+    <div class='doc'>Loads the given file in the web view.</div>
+
+    
+
+    <h3>loadstring</h3>
+    <div class='def'>api.webview:loadstring(string, basepath)</div>
+    <div class='doc'>Loads the given string in the webview; basepath must be an absolute path.</div>
+
+    
+
+    <h3>loadurl</h3>
+    <div class='def'>api.webview:loadurl(url)</div>
+    <div class='doc'>Loads the given URL in the webview.</div>
+
+    
+
+    <h3>setborderless</h3>
+    <div class='def'>api.webview:setborderless(bool)</div>
+    <div class='doc'>Set whether a webview window has a border.</div>
+
+    
+
+    <h3>sethasshadow</h3>
+    <div class='def'>api.webview:sethasshadow(bool)</div>
+    <div class='doc'>Set whether a webview window has a shadow.</div>
+
+    
+
+    <h3>setignoresmouse</h3>
+    <div class='def'>api.webview:setignoresmouse(bool)</div>
+    <div class='doc'>Set whether a webview window can be interacted with via the mouse.</div>
+
+    
+
+    <h3>settitle</h3>
+    <div class='def'>api.webview:settitle(string)</div>
+    <div class='doc'>Set the title of a webview window.</div>
+
+    
+
+    <h3>window</h3>
+    <div class='def'>api.webview:window() -> window</div>
+    <div class='doc'>Return the api.window that represents the given webview.</div>
+
+    
+
+    <h2>Submodules</h2>
+
+    
+
+    None.
+
+    
+
+  </body>
+</html>
