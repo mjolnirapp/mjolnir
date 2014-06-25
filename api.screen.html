@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.screen module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -47,64 +81,64 @@
 
     <a name="allscreens"></a>
     <h3><a href="#allscreens">allscreens</a></h3>
-    <div class='def'>api.screen.allscreens() -> screen[]</div>
-    <div class='doc'>Returns all the screens there are.</div>
+    <code>api.screen.allscreens() -> screen[]</code>
+    <p>Returns all the screens there are.</p>
 
     
 
     <a name="frame"></a>
     <h3><a href="#frame">frame</a></h3>
-    <div class='def'>api.screen.frame(screen) -> rect</div>
-    <div class='doc'>Returns a screen's frame in its own coordinate space.</div>
+    <code>api.screen.frame(screen) -> rect</code>
+    <p>Returns a screen's frame in its own coordinate space.</p>
 
     
 
     <a name="mainscreen"></a>
     <h3><a href="#mainscreen">mainscreen</a></h3>
-    <div class='def'>api.screen.mainscreen() -> screen</div>
-    <div class='doc'>Returns the 'main' screen, i.e. the one containing the currently focused window.</div>
+    <code>api.screen.mainscreen() -> screen</code>
+    <p>Returns the 'main' screen, i.e. the one containing the currently focused window.</p>
 
     
 
     <a name="settint"></a>
     <h3><a href="#settint">settint</a></h3>
-    <div class='def'>api.screen.settint(redarray, greenarray, bluearray)</div>
-    <div class='doc'>Set the tint on a screen; experimental.</div>
+    <code>api.screen.settint(redarray, greenarray, bluearray)</code>
+    <p>Set the tint on a screen; experimental.</p>
 
     
 
     <a name="vislbleframe"></a>
     <h3><a href="#vislbleframe">vislbleframe</a></h3>
-    <div class='def'>api.screen.visibleframe(screen) -> rect</div>
-    <div class='doc'>Returns a screen's frame in its own coordinate space, without the dock or menu.</div>
+    <code>api.screen.visibleframe(screen) -> rect</code>
+    <p>Returns a screen's frame in its own coordinate space, without the dock or menu.</p>
 
     
 
     <a name="frame_including_dock_and_menu"></a>
     <h3><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></h3>
-    <div class='def'>api.screen:frame_including_dock_and_menu() -> rect</div>
-    <div class='doc'>Returns the screen's rect in absolute coordinates, including the dock and menu.</div>
+    <code>api.screen:frame_including_dock_and_menu() -> rect</code>
+    <p>Returns the screen's rect in absolute coordinates, including the dock and menu.</p>
 
     
 
     <a name="frame_without_dock_or_menu"></a>
     <h3><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></h3>
-    <div class='def'>api.screen:frame_without_dock_or_menu() -> rect</div>
-    <div class='doc'>Returns the screen's rect in absolute coordinates, without the dock or menu.</div>
+    <code>api.screen:frame_without_dock_or_menu() -> rect</code>
+    <p>Returns the screen's rect in absolute coordinates, without the dock or menu.</p>
 
     
 
     <a name="next"></a>
     <h3><a href="#next">next</a></h3>
-    <div class='def'>api.screen:next() -> screen</div>
-    <div class='doc'>Returns the screen 'after' this one; I have no idea how they're ordered though.</div>
+    <code>api.screen:next() -> screen</code>
+    <p>Returns the screen 'after' this one; I have no idea how they're ordered though.</p>
 
     
 
     <a name="previous"></a>
     <h3><a href="#previous">previous</a></h3>
-    <div class='def'>api.screen:previous() -> screen</div>
-    <div class='doc'>Returns the screen 'before' this one; I have no idea how they're ordered though.</div>
+    <code>api.screen:previous() -> screen</code>
+    <p>Returns the screen 'before' this one; I have no idea how they're ordered though.</p>
 
     
 
@@ -115,6 +149,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

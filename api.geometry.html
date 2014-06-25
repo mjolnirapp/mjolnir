@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.geometry module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -43,50 +77,50 @@
 
     <a name="hypot"></a>
     <h3><a href="#hypot">hypot</a></h3>
-    <div class='def'>api.geometry.hypot(point) -> number</div>
-    <div class='doc'>Returns hypotenuse of a line defined from 0,0 to point.</div>
+    <code>api.geometry.hypot(point) -> number</code>
+    <p>Returns hypotenuse of a line defined from 0,0 to point.</p>
 
     
 
     <a name="intersectionrect"></a>
     <h3><a href="#intersectionrect">intersectionrect</a></h3>
-    <div class='def'>api.geometry.intersectionrect(rect1, rect2) -> rect3</div>
-    <div class='doc'>Returns the intersection of two rects as a new rect.</div>
+    <code>api.geometry.intersectionrect(rect1, rect2) -> rect3</code>
+    <p>Returns the intersection of two rects as a new rect.</p>
 
     
 
     <a name="point"></a>
     <h3><a href="#point">point</a></h3>
-    <div class='def'>api.geometry.point(x, y) -> point</div>
-    <div class='doc'>Convenience function for creating a point-table.</div>
+    <code>api.geometry.point(x, y) -> point</code>
+    <p>Convenience function for creating a point-table.</p>
 
     
 
     <a name="rect"></a>
     <h3><a href="#rect">rect</a></h3>
-    <div class='def'>api.geometry.rect(x, y, w, y) -> rect</div>
-    <div class='doc'>Convenience function for creating a rect-table.</div>
+    <code>api.geometry.rect(x, y, w, y) -> rect</code>
+    <p>Convenience function for creating a rect-table.</p>
 
     
 
     <a name="rectmidpoint"></a>
     <h3><a href="#rectmidpoint">rectmidpoint</a></h3>
-    <div class='def'>api.geometry.rectmidpoint(r) -> point</div>
-    <div class='doc'>Returns the midpoint of a rect.</div>
+    <code>api.geometry.rectmidpoint(r) -> point</code>
+    <p>Returns the midpoint of a rect.</p>
 
     
 
     <a name="rotateccw"></a>
     <h3><a href="#rotateccw">rotateccw</a></h3>
-    <div class='def'>api.geometry.rotateccw(point, aroundpoint, ntimes = 1) -> point</div>
-    <div class='doc'>Rotates a point around another point N times.</div>
+    <code>api.geometry.rotateccw(point, aroundpoint, ntimes = 1) -> point</code>
+    <p>Rotates a point around another point N times.</p>
 
     
 
     <a name="size"></a>
     <h3><a href="#size">size</a></h3>
-    <div class='def'>api.geometry.size(w, h) -> size</div>
-    <div class='doc'>Convenience function for creating a size-table.</div>
+    <code>api.geometry.size(w, h) -> size</code>
+    <p>Convenience function for creating a size-table.</p>
 
     
 
@@ -97,6 +131,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

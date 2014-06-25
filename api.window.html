@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.window module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -95,232 +129,232 @@
 
     <a name="allwindows"></a>
     <h3><a href="#allwindows">allwindows</a></h3>
-    <div class='def'>api.window.allwindows() -> win[]</div>
-    <div class='doc'>Returns all windows</div>
+    <code>api.window.allwindows() -> win[]</code>
+    <p>Returns all windows</p>
 
     
 
     <a name="focusedwindow"></a>
     <h3><a href="#focusedwindow">focusedwindow</a></h3>
-    <div class='def'>api.window.focusedwindow() -> window</div>
-    <div class='doc'>Returns the focused window, or nil.</div>
+    <code>api.window.focusedwindow() -> window</code>
+    <p>Returns the focused window, or nil.</p>
 
     
 
     <a name="visible_windows_sorted_by_recency"></a>
     <h3><a href="#visible_windows_sorted_by_recency">visible_windows_sorted_by_recency</a></h3>
-    <div class='def'>api.window.visible_windows_sorted_by_recency() -> win[]</div>
-    <div class='doc'>Experimental.</div>
+    <code>api.window.visible_windows_sorted_by_recency() -> win[]</code>
+    <p>Experimental.</p>
 
     
 
     <a name="visiblewindows"></a>
     <h3><a href="#visiblewindows">visiblewindows</a></h3>
-    <div class='def'>api.window.visiblewindows() -> win[]</div>
-    <div class='doc'>Get all windows on all screens that match api.window.isvisible.</div>
+    <code>api.window.visiblewindows() -> win[]</code>
+    <p>Get all windows on all screens that match api.window.isvisible.</p>
 
     
 
     <a name="app"></a>
     <h3><a href="#app">app</a></h3>
-    <div class='def'>api.window:app() -> app</div>
-    <div class='doc'>Returns the app that the window belongs to.</div>
+    <code>api.window:app() -> app</code>
+    <p>Returns the app that the window belongs to.</p>
 
     
 
     <a name="becomemain"></a>
     <h3><a href="#becomemain">becomemain</a></h3>
-    <div class='def'>api.window:becomemain() -> bool</div>
-    <div class='doc'>Make this window the main window of the given application; deos not implicitly focus the app.</div>
+    <code>api.window:becomemain() -> bool</code>
+    <p>Make this window the main window of the given application; deos not implicitly focus the app.</p>
 
     
 
     <a name="focus"></a>
     <h3><a href="#focus">focus</a></h3>
-    <div class='def'>api.window:focus() -> bool</div>
-    <div class='doc'>Try to make this window focused.</div>
+    <code>api.window:focus() -> bool</code>
+    <p>Try to make this window focused.</p>
 
     
 
     <a name="focuswindow_east"></a>
     <h3><a href="#focuswindow_east">focuswindow_east</a></h3>
-    <div class='def'>api.window:focuswindow_east()</div>
-    <div class='doc'>Focus the first focus-able window to the east of this one.</div>
+    <code>api.window:focuswindow_east()</code>
+    <p>Focus the first focus-able window to the east of this one.</p>
 
     
 
     <a name="focuswindow_north"></a>
     <h3><a href="#focuswindow_north">focuswindow_north</a></h3>
-    <div class='def'>api.window:focuswindow_north()</div>
-    <div class='doc'>Focus the first focus-able window to the north of this one.</div>
+    <code>api.window:focuswindow_north()</code>
+    <p>Focus the first focus-able window to the north of this one.</p>
 
     
 
     <a name="focuswindow_south"></a>
     <h3><a href="#focuswindow_south">focuswindow_south</a></h3>
-    <div class='def'>api.window:focuswindow_south()</div>
-    <div class='doc'>Focus the first focus-able window to the south of this one.</div>
+    <code>api.window:focuswindow_south()</code>
+    <p>Focus the first focus-able window to the south of this one.</p>
 
     
 
     <a name="focuswindow_west"></a>
     <h3><a href="#focuswindow_west">focuswindow_west</a></h3>
-    <div class='def'>api.window:focuswindow_west()</div>
-    <div class='doc'>Focus the first focus-able window to the west of this one.</div>
+    <code>api.window:focuswindow_west()</code>
+    <p>Focus the first focus-able window to the west of this one.</p>
 
     
 
     <a name="frame"></a>
     <h3><a href="#frame">frame</a></h3>
-    <div class='def'>api.window:frame() -> rect</div>
-    <div class='doc'>Get the frame of the window in absolute coordinates.</div>
+    <code>api.window:frame() -> rect</code>
+    <p>Get the frame of the window in absolute coordinates.</p>
 
     
 
     <a name="isminimized"></a>
     <h3><a href="#isminimized">isminimized</a></h3>
-    <div class='def'>api.window:isminimized() -> bool</div>
-    <div class='doc'>True if the window is currently minimized in the dock.</div>
+    <code>api.window:isminimized() -> bool</code>
+    <p>True if the window is currently minimized in the dock.</p>
 
     
 
     <a name="isstandard"></a>
     <h3><a href="#isstandard">isstandard</a></h3>
-    <div class='def'>api.window:isstandard() -> bool</div>
-    <div class='doc'>True if the window's subrole indicates it's 'a standard window'.</div>
+    <code>api.window:isstandard() -> bool</code>
+    <p>True if the window's subrole indicates it's 'a standard window'.</p>
 
     
 
     <a name="isvisible"></a>
     <h3><a href="#isvisible">isvisible</a></h3>
-    <div class='def'>api.window:isvisible() -> bool</div>
-    <div class='doc'>True if the app is not hidden, not minimized, and is a standard window</div>
+    <code>api.window:isvisible() -> bool</code>
+    <p>True if the app is not hidden, not minimized, and is a standard window</p>
 
     
 
     <a name="maximize"></a>
     <h3><a href="#maximize">maximize</a></h3>
-    <div class='def'>api.window:maximize()</div>
-    <div class='doc'>Make this window fill the whole screen its on, without covering the dock or menu.</div>
+    <code>api.window:maximize()</code>
+    <p>Make this window fill the whole screen its on, without covering the dock or menu.</p>
 
     
 
     <a name="minimize"></a>
     <h3><a href="#minimize">minimize</a></h3>
-    <div class='def'>api.window:minimize()</div>
-    <div class='doc'>Minimizes the window.</div>
+    <code>api.window:minimize()</code>
+    <p>Minimizes the window.</p>
 
     
 
     <a name="otherwindows_allscreens"></a>
     <h3><a href="#otherwindows_allscreens">otherwindows_allscreens</a></h3>
-    <div class='def'>api.window:otherwindows_allscreens() -> win[]</div>
-    <div class='doc'>Get every window except this one.</div>
+    <code>api.window:otherwindows_allscreens() -> win[]</code>
+    <p>Get every window except this one.</p>
 
     
 
     <a name="otherwindows_samescreen"></a>
     <h3><a href="#otherwindows_samescreen">otherwindows_samescreen</a></h3>
-    <div class='def'>api.window:otherwindows_samescreen() -> win[]</div>
-    <div class='doc'>Get other windows on the same screen as self.</div>
+    <code>api.window:otherwindows_samescreen() -> win[]</code>
+    <p>Get other windows on the same screen as self.</p>
 
     
 
     <a name="role"></a>
     <h3><a href="#role">role</a></h3>
-    <div class='def'>api.window:role() -> string</div>
-    <div class='doc'>Returns the role of the window, whatever that means.</div>
+    <code>api.window:role() -> string</code>
+    <p>Returns the role of the window, whatever that means.</p>
 
     
 
     <a name="screen"></a>
     <h3><a href="#screen">screen</a></h3>
-    <div class='def'>api.window:screen()</div>
-    <div class='doc'>Get the screen this window is mostly on.</div>
+    <code>api.window:screen()</code>
+    <p>Get the screen this window is mostly on.</p>
 
     
 
     <a name="setframe"></a>
     <h3><a href="#setframe">setframe</a></h3>
-    <div class='def'>api.window:setframe(rect)</div>
-    <div class='doc'>Set the frame of the window in absolute coordinates.</div>
+    <code>api.window:setframe(rect)</code>
+    <p>Set the frame of the window in absolute coordinates.</p>
 
     
 
     <a name="setsize"></a>
     <h3><a href="#setsize">setsize</a></h3>
-    <div class='def'>api.window:setsize(size)</div>
-    <div class='doc'>Resizes the window.</div>
+    <code>api.window:setsize(size)</code>
+    <p>Resizes the window.</p>
 
     
 
     <a name="settopleft"></a>
     <h3><a href="#settopleft">settopleft</a></h3>
-    <div class='def'>api.window:settopleft(point)</div>
-    <div class='doc'>Moves the window to the given point in absolute coordinate.</div>
+    <code>api.window:settopleft(point)</code>
+    <p>Moves the window to the given point in absolute coordinate.</p>
 
     
 
     <a name="size"></a>
     <h3><a href="#size">size</a></h3>
-    <div class='def'>api.window:size() -> size</div>
-    <div class='doc'>The size of the window.</div>
+    <code>api.window:size() -> size</code>
+    <p>The size of the window.</p>
 
     
 
     <a name="subrole"></a>
     <h3><a href="#subrole">subrole</a></h3>
-    <div class='def'>api.window:subrole() -> string</div>
-    <div class='doc'>Returns the subrole of the window, whatever that means.</div>
+    <code>api.window:subrole() -> string</code>
+    <p>Returns the subrole of the window, whatever that means.</p>
 
     
 
     <a name="title"></a>
     <h3><a href="#title">title</a></h3>
-    <div class='def'>api.window:title() -> string</div>
-    <div class='doc'>Returns the title of the window (as UTF8).</div>
+    <code>api.window:title() -> string</code>
+    <p>Returns the title of the window (as UTF8).</p>
 
     
 
     <a name="topleft"></a>
     <h3><a href="#topleft">topleft</a></h3>
-    <div class='def'>api.window:topleft() -> point</div>
-    <div class='doc'>The top-left corner of the window in absolute coordinates.</div>
+    <code>api.window:topleft() -> point</code>
+    <p>The top-left corner of the window in absolute coordinates.</p>
 
     
 
     <a name="unminimize"></a>
     <h3><a href="#unminimize">unminimize</a></h3>
-    <div class='def'>api.window:unminimize()</div>
-    <div class='doc'>Un-minimizes the window.</div>
+    <code>api.window:unminimize()</code>
+    <p>Un-minimizes the window.</p>
 
     
 
     <a name="windows_to_east"></a>
     <h3><a href="#windows_to_east">windows_to_east</a></h3>
-    <div class='def'>api.window:windows_to_east()</div>
-    <div class='doc'>Get all windows east of this one, ordered by closeness.</div>
+    <code>api.window:windows_to_east()</code>
+    <p>Get all windows east of this one, ordered by closeness.</p>
 
     
 
     <a name="windows_to_north"></a>
     <h3><a href="#windows_to_north">windows_to_north</a></h3>
-    <div class='def'>api.window:windows_to_north()</div>
-    <div class='doc'>Get all windows north of this one, ordered by closeness.</div>
+    <code>api.window:windows_to_north()</code>
+    <p>Get all windows north of this one, ordered by closeness.</p>
 
     
 
     <a name="windows_to_south"></a>
     <h3><a href="#windows_to_south">windows_to_south</a></h3>
-    <div class='def'>api.window:windows_to_south()</div>
-    <div class='doc'>Get all windows south of this one, ordered by closeness.</div>
+    <code>api.window:windows_to_south()</code>
+    <p>Get all windows south of this one, ordered by closeness.</p>
 
     
 
     <a name="windows_to_west"></a>
     <h3><a href="#windows_to_west">windows_to_west</a></h3>
-    <div class='def'>api.window:windows_to_west()</div>
-    <div class='doc'>Get all windows west of this one, ordered by closeness.</div>
+    <code>api.window:windows_to_west()</code>
+    <p>Get all windows west of this one, ordered by closeness.</p>
 
     
 
@@ -331,6 +365,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

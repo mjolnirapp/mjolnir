@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.textgrid module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -63,120 +97,120 @@
 
     <a name="closeall"></a>
     <h3><a href="#closeall">closeall</a></h3>
-    <div class='def'>api.textgrid.closeall()</div>
-    <div class='doc'>Closes all non-protected textgrids; called automatically when user config is reloaded.</div>
+    <code>api.textgrid.closeall()</code>
+    <p>Closes all non-protected textgrids; called automatically when user config is reloaded.</p>
 
     
 
     <a name="open"></a>
     <h3><a href="#open">open</a></h3>
-    <div class='def'>api.textgrid.open() -> textgrid</div>
-    <div class='doc'>Opens a new textgrid window.</div>
+    <code>api.textgrid.open() -> textgrid</code>
+    <p>Opens a new textgrid window.</p>
 
     
 
     <a name="textgrids"></a>
     <h3><a href="#textgrids">textgrids</a></h3>
-    <div class='def'>api.textgrid.textgrids = {}</div>
-    <div class='doc'>All currently open textgrid windows; do not mutate this at all.</div>
+    <code>api.textgrid.textgrids = {}</code>
+    <p>All currently open textgrid windows; do not mutate this at all.</p>
 
     
 
     <a name="clear"></a>
     <h3><a href="#clear">clear</a></h3>
-    <div class='def'>api.textgrid:clear(bg)</div>
-    <div class='doc'>Clears the textgrid and sets its background color to bg, a CSS-like string.</div>
+    <code>api.textgrid:clear(bg)</code>
+    <p>Clears the textgrid and sets its background color to bg, a CSS-like string.</p>
 
     
 
     <a name="close"></a>
     <h3><a href="#close">close</a></h3>
-    <div class='def'>api.textgrid:close()</div>
-    <div class='doc'>Closes the given textgrid window.</div>
+    <code>api.textgrid:close()</code>
+    <p>Closes the given textgrid window.</p>
 
     
 
     <a name="closed"></a>
     <h3><a href="#closed">closed</a></h3>
-    <div class='def'>api.textgrid:closed = function()</div>
-    <div class='doc'>Calls the given function when the textgrid is closed. Defaults to nil.</div>
+    <code>api.textgrid:closed = function()</code>
+    <p>Calls the given function when the textgrid is closed. Defaults to nil.</p>
 
     
 
     <a name="focus"></a>
     <h3><a href="#focus">focus</a></h3>
-    <div class='def'>api.textgrid:focus()</div>
-    <div class='doc'>Brings the textgrid to front and focuses it; implicitly focuses Hydra.</div>
+    <code>api.textgrid:focus()</code>
+    <p>Brings the textgrid to front and focuses it; implicitly focuses Hydra.</p>
 
     
 
     <a name="getfont"></a>
     <h3><a href="#getfont">getfont</a></h3>
-    <div class='def'>api.textgrid:getfont() -> name, pointsize</div>
-    <div class='doc'>Gets the name and pointsize currently used in the textgrid.</div>
+    <code>api.textgrid:getfont() -> name, pointsize</code>
+    <p>Gets the name and pointsize currently used in the textgrid.</p>
 
     
 
     <a name="getsize"></a>
     <h3><a href="#getsize">getsize</a></h3>
-    <div class='def'>api.textgrid:getsize() -> size</div>
-    <div class='doc'>Returns the size (nubmer of rows and columns) as a size-table with keys {x,y}.</div>
+    <code>api.textgrid:getsize() -> size</code>
+    <p>Returns the size (nubmer of rows and columns) as a size-table with keys {x,y}.</p>
 
     
 
     <a name="keydown"></a>
     <h3><a href="#keydown">keydown</a></h3>
-    <div class='def'>api.textgrid:keydown = function(t)</div>
-    <div class='doc'>Calls the given function when a key is pressed in the focused textgrid. The table t contains keys {ctrl, alt, cmd, key}. Defaults to nil.</div>
+    <code>api.textgrid:keydown = function(t)</code>
+    <p>Calls the given function when a key is pressed in the focused textgrid. The table t contains keys {ctrl, alt, cmd, key}. Defaults to nil.</p>
 
     
 
     <a name="protect"></a>
     <h3><a href="#protect">protect</a></h3>
-    <div class='def'>api.textgrid:protect()</div>
-    <div class='doc'>Prevents the textgrid from closing when your config is reloaded.</div>
+    <code>api.textgrid:protect()</code>
+    <p>Prevents the textgrid from closing when your config is reloaded.</p>
 
     
 
     <a name="resize"></a>
     <h3><a href="#resize">resize</a></h3>
-    <div class='def'>api.textgrid:resize(size)</div>
-    <div class='doc'>Resizes the textgrid to the number of rows and columns given in the size-table with keys {x,y}.</div>
+    <code>api.textgrid:resize(size)</code>
+    <p>Resizes the textgrid to the number of rows and columns given in the size-table with keys {x,y}.</p>
 
     
 
     <a name="resized"></a>
     <h3><a href="#resized">resized</a></h3>
-    <div class='def'>api.textgrid:resized = function()</div>
-    <div class='doc'>Calls the given function when the textgrid is resized. Defaults to nil.</div>
+    <code>api.textgrid:resized = function()</code>
+    <p>Calls the given function when the textgrid is resized. Defaults to nil.</p>
 
     
 
     <a name="set"></a>
     <h3><a href="#set">set</a></h3>
-    <div class='def'>api.textgrid:set(char, x, y, fg, bg)</div>
-    <div class='doc'>Sets the given character in the given position, where char is a UTF8 character thingy, x and y are grid spaces, fg and bg are CSS-like strings.</div>
+    <code>api.textgrid:set(char, x, y, fg, bg)</code>
+    <p>Sets the given character in the given position, where char is a UTF8 character thingy, x and y are grid spaces, fg and bg are CSS-like strings.</p>
 
     
 
     <a name="settitle"></a>
     <h3><a href="#settitle">settitle</a></h3>
-    <div class='def'>api.textgrid:settitle(title)</div>
-    <div class='doc'>Changes the title of the textgrid window.</div>
+    <code>api.textgrid:settitle(title)</code>
+    <p>Changes the title of the textgrid window.</p>
 
     
 
     <a name="usefont"></a>
     <h3><a href="#usefont">usefont</a></h3>
-    <div class='def'>api.textgrid:usefont(name, pointsize)</div>
-    <div class='doc'>Sets the new font of the textgrid, potentially changing its visible size (no resize event is fired).</div>
+    <code>api.textgrid:usefont(name, pointsize)</code>
+    <p>Sets the new font of the textgrid, potentially changing its visible size (no resize event is fired).</p>
 
     
 
     <a name="window"></a>
     <h3><a href="#window">window</a></h3>
-    <div class='def'>api.textgrid:window() -> window</div>
-    <div class='doc'>Returns the api.window that represents this textgrid.</div>
+    <code>api.textgrid:window() -> window</code>
+    <p>Returns the api.window that represents this textgrid.</p>
 
     
 
@@ -187,6 +221,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

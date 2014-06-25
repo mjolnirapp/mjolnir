@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.fn module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -43,50 +77,50 @@
 
     <a name="concat"></a>
     <h3><a href="#concat">concat</a></h3>
-    <div class='def'>api.fn.concat(t1, t2)</div>
-    <div class='doc'>Adds all elements of t2 to the end of t1.</div>
+    <code>api.fn.concat(t1, t2)</code>
+    <p>Adds all elements of t2 to the end of t1.</p>
 
     
 
     <a name="contains"></a>
     <h3><a href="#contains">contains</a></h3>
-    <div class='def'>api.fn.contains(t, el) -> bool</div>
-    <div class='doc'>Returns whether a table contains a given element.</div>
+    <code>api.fn.contains(t, el) -> bool</code>
+    <p>Returns whether a table contains a given element.</p>
 
     
 
     <a name="filter"></a>
     <h3><a href="#filter">filter</a></h3>
-    <div class='def'>api.fn.filter(t, fn) -> t</div>
-    <div class='doc'>Returns a table of the elements in t in which t(el) is truthy.</div>
+    <code>api.fn.filter(t, fn) -> t</code>
+    <p>Returns a table of the elements in t in which t(el) is truthy.</p>
 
     
 
     <a name="indexof"></a>
     <h3><a href="#indexof">indexof</a></h3>
-    <div class='def'>api.fn.indexof(t, el) -> int or nil</div>
-    <div class='doc'>Returns the index of a given element in a table, or nil if not found.</div>
+    <code>api.fn.indexof(t, el) -> int or nil</code>
+    <p>Returns the index of a given element in a table, or nil if not found.</p>
 
     
 
     <a name="map"></a>
     <h3><a href="#map">map</a></h3>
-    <div class='def'>api.fn.map(t, fn) -> t</div>
-    <div class='doc'>Returns a table of the results of t(el) on every el in t.</div>
+    <code>api.fn.map(t, fn) -> t</code>
+    <p>Returns a table of the results of t(el) on every el in t.</p>
 
     
 
     <a name="mapcat"></a>
     <h3><a href="#mapcat">mapcat</a></h3>
-    <div class='def'>api.fn.mapcat(t, fn) -> t2</div>
-    <div class='doc'>Runs fn(el) for every el in t, and assuming the results are tables, combines them into a new table.</div>
+    <code>api.fn.mapcat(t, fn) -> t2</code>
+    <p>Runs fn(el) for every el in t, and assuming the results are tables, combines them into a new table.</p>
 
     
 
     <a name="reduce"></a>
     <h3><a href="#reduce">reduce</a></h3>
-    <div class='def'>api.fn.reduce(t, fn) -> t2</div>
-    <div class='doc'>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there's only one left.</div>
+    <code>api.fn.reduce(t, fn) -> t2</code>
+    <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there's only one left.</p>
 
     
 
@@ -97,6 +131,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

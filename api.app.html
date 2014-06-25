@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.app module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -57,99 +91,99 @@
 
     <a name="appforpid"></a>
     <h3><a href="#appforpid">appforpid</a></h3>
-    <div class='def'>api.app.appforpid(pid) -> app or nil</div>
-    <div class='doc'>Returns the running app for the given pid, if it exists.</div>
+    <code>api.app.appforpid(pid) -> app or nil</code>
+    <p>Returns the running app for the given pid, if it exists.</p>
 
     
 
     <a name="appsforbundleid"></a>
     <h3><a href="#appsforbundleid">appsforbundleid</a></h3>
-    <div class='def'>api.app.appsforbundleid(bundleid) -> app[]</div>
-    <div class='doc'>Returns any running apps that have the given bundleid.</div>
+    <code>api.app.appsforbundleid(bundleid) -> app[]</code>
+    <p>Returns any running apps that have the given bundleid.</p>
 
     
 
     <a name="launchorfocus"></a>
     <h3><a href="#launchorfocus">launchorfocus</a></h3>
-    <div class='def'>api.app.launchorfocus(name)</div>
-    <div class='doc'>Launches the app with the given name, or activates it if it's already running.</div>
+    <code>api.app.launchorfocus(name)</code>
+    <p>Launches the app with the given name, or activates it if it's already running.</p>
 
     
 
     <a name="runningapps"></a>
     <h3><a href="#runningapps">runningapps</a></h3>
-    <div class='def'>api.app.runningapps() -> app[]</div>
-    <div class='doc'>Returns all running apps.</div>
+    <code>api.app.runningapps() -> app[]</code>
+    <p>Returns all running apps.</p>
 
     
 
     <a name="activate"></a>
     <h3><a href="#activate">activate</a></h3>
-    <div class='def'>api.app:activate() -> bool</div>
-    <div class='doc'>Tries to activate the app (make it focused) and returns its success.</div>
+    <code>api.app:activate() -> bool</code>
+    <p>Tries to activate the app (make it focused) and returns its success.</p>
 
     
 
     <a name="allwindows"></a>
     <h3><a href="#allwindows">allwindows</a></h3>
-    <div class='def'>api.app:allwindows() -> window[]</div>
-    <div class='doc'>Returns all open windows owned by the given app.</div>
+    <code>api.app:allwindows() -> window[]</code>
+    <p>Returns all open windows owned by the given app.</p>
 
     
 
     <a name="bundleid"></a>
     <h3><a href="#bundleid">bundleid</a></h3>
-    <div class='def'>api.app:bundleid() -> string</div>
-    <div class='doc'>Returns the bundle identifier of the app.</div>
+    <code>api.app:bundleid() -> string</code>
+    <p>Returns the bundle identifier of the app.</p>
 
     
 
     <a name="hide"></a>
     <h3><a href="#hide">hide</a></h3>
-    <div class='def'>api.app:hide()</div>
-    <div class='doc'>Hides the app (and all its windows).</div>
+    <code>api.app:hide()</code>
+    <p>Hides the app (and all its windows).</p>
 
     
 
     <a name="ishidden"></a>
     <h3><a href="#ishidden">ishidden</a></h3>
-    <div class='def'>api.app:ishidden() -> bool</div>
-    <div class='doc'>Returns whether the app is currently hidden.</div>
+    <code>api.app:ishidden() -> bool</code>
+    <p>Returns whether the app is currently hidden.</p>
 
     
 
     <a name="kill"></a>
     <h3><a href="#kill">kill</a></h3>
-    <div class='def'>api.app:kill()</div>
-    <div class='doc'>Tries to terminate the app.</div>
+    <code>api.app:kill()</code>
+    <p>Tries to terminate the app.</p>
 
     
 
     <a name="kill9"></a>
     <h3><a href="#kill9">kill9</a></h3>
-    <div class='def'>api.app:kill9()</div>
-    <div class='doc'>Assuredly terminates the app.</div>
+    <code>api.app:kill9()</code>
+    <p>Assuredly terminates the app.</p>
 
     
 
     <a name="show"></a>
     <h3><a href="#show">show</a></h3>
-    <div class='def'>api.app:show()</div>
-    <div class='doc'>Unhides the app (and all its windows) if it's hidden. Yeah, this method name should probably be renamed.</div>
+    <code>api.app:show()</code>
+    <p>Unhides the app (and all its windows) if it's hidden. Yeah, this method name should probably be renamed.</p>
 
     
 
     <a name="title"></a>
     <h3><a href="#title">title</a></h3>
-    <div class='def'>api.app:title() -> string</div>
-    <div class='doc'>Returns the localized name of the app (in UTF8).</div>
+    <code>api.app:title() -> string</code>
+    <p>Returns the localized name of the app (in UTF8).</p>
 
     
 
     <a name="visiblewindows"></a>
     <h3><a href="#visiblewindows">visiblewindows</a></h3>
-    <div class='def'>api.app:visiblewindows() -> win[]</div>
-    <div class='doc'>Returns only the app's windows that are visible.</div>
+    <code>api.app:visiblewindows() -> win[]</code>
+    <p>Returns only the app's windows that are visible.</p>
 
     
 
@@ -160,6 +194,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

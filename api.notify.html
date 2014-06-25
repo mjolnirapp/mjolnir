@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.notify module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -37,29 +71,29 @@
 
     <a name="register"></a>
     <h3><a href="#register">register</a></h3>
-    <div class='def'>api.notify.register(tag, fn()) -> id</div>
-    <div class='doc'>Registers a function to be called when an Apple notification with the given tag is clicked.</div>
+    <code>api.notify.register(tag, fn()) -> id</code>
+    <p>Registers a function to be called when an Apple notification with the given tag is clicked.</p>
 
     
 
     <a name="show"></a>
     <h3><a href="#show">show</a></h3>
-    <div class='def'>api.notify.show(title, subtitle, text, tag)</div>
-    <div class='doc'>Show an Apple notification. Tag is a unique string that identifies this notification, and will be passed to api.notify.clicked() if the notification is clicked. None of the strings are optional, though they may each be blank.</div>
+    <code>api.notify.show(title, subtitle, text, tag)</code>
+    <p>Show an Apple notification. Tag is a unique string that identifies this notification, and will be passed to api.notify.clicked() if the notification is clicked. None of the strings are optional, though they may each be blank.</p>
 
     
 
     <a name="unregister"></a>
     <h3><a href="#unregister">unregister</a></h3>
-    <div class='def'>api.notify.unregister(id)</div>
-    <div class='doc'>Unregisters a function to no longer be called when an Apple notification with the given tag is clicked.</div>
+    <code>api.notify.unregister(id)</code>
+    <p>Unregisters a function to no longer be called when an Apple notification with the given tag is clicked.</p>
 
     
 
     <a name="unregisterall"></a>
     <h3><a href="#unregisterall">unregisterall</a></h3>
-    <div class='def'>api.notify.unregisterall()</div>
-    <div class='doc'>Unregisters all functions registered for notification-clicks; called automatically when user config reloads.</div>
+    <code>api.notify.unregisterall()</code>
+    <p>Unregisters all functions registered for notification-clicks; called automatically when user config reloads.</p>
 
     
 
@@ -70,6 +104,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

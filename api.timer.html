@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.timer module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -51,78 +85,78 @@
 
     <a name="days"></a>
     <h3><a href="#days">days</a></h3>
-    <div class='def'>api.timer.days(n) -> sec</div>
-    <div class='doc'>Returns the number of days in seconds.</div>
+    <code>api.timer.days(n) -> sec</code>
+    <p>Returns the number of days in seconds.</p>
 
     
 
     <a name="doafter"></a>
     <h3><a href="#doafter">doafter</a></h3>
-    <div class='def'>api.timer.doafter(sec, fn())</div>
-    <div class='doc'>Runs the function after sec seconds.</div>
+    <code>api.timer.doafter(sec, fn())</code>
+    <p>Runs the function after sec seconds.</p>
 
     
 
     <a name="hours"></a>
     <h3><a href="#hours">hours</a></h3>
-    <div class='def'>api.timer.hours(n) -> sec</div>
-    <div class='doc'>Returns the number of hours in seconds.</div>
+    <code>api.timer.hours(n) -> sec</code>
+    <p>Returns the number of hours in seconds.</p>
 
     
 
     <a name="minutes"></a>
     <h3><a href="#minutes">minutes</a></h3>
-    <div class='def'>api.timer.minutes(n) -> sec</div>
-    <div class='doc'>Returns the number of minutes in seconds.</div>
+    <code>api.timer.minutes(n) -> sec</code>
+    <p>Returns the number of minutes in seconds.</p>
 
     
 
     <a name="new"></a>
     <h3><a href="#new">new</a></h3>
-    <div class='def'>api.timer.new(seconds, fn) -> timer</div>
-    <div class='doc'>Creates a new timer that can be started. Has the fields: seconds, fn.</div>
+    <code>api.timer.new(seconds, fn) -> timer</code>
+    <p>Creates a new timer that can be started. Has the fields: seconds, fn.</p>
 
     
 
     <a name="runonce"></a>
     <h3><a href="#runonce">runonce</a></h3>
-    <div class='def'>api.timer.runonce(fn())</div>
-    <div class='doc'>Runs the function exactly once in the entire lifespan of Hydra; reset only when you quit/restart.</div>
+    <code>api.timer.runonce(fn())</code>
+    <p>Runs the function exactly once in the entire lifespan of Hydra; reset only when you quit/restart.</p>
 
     
 
     <a name="seconds"></a>
     <h3><a href="#seconds">seconds</a></h3>
-    <div class='def'>api.timer.seconds(n) -> sec</div>
-    <div class='doc'>Returns the number of seconds in seconds.</div>
+    <code>api.timer.seconds(n) -> sec</code>
+    <p>Returns the number of seconds in seconds.</p>
 
     
 
     <a name="stopall"></a>
     <h3><a href="#stopall">stopall</a></h3>
-    <div class='def'>api.timer.stopall()</div>
-    <div class='doc'>Stops all running timers; called automatically when user config reloads.</div>
+    <code>api.timer.stopall()</code>
+    <p>Stops all running timers; called automatically when user config reloads.</p>
 
     
 
     <a name="weeks"></a>
     <h3><a href="#weeks">weeks</a></h3>
-    <div class='def'>api.timer.weeks(n) -> sec</div>
-    <div class='doc'>Returns the number of weeks in seconds.</div>
+    <code>api.timer.weeks(n) -> sec</code>
+    <p>Returns the number of weeks in seconds.</p>
 
     
 
     <a name="start"></a>
     <h3><a href="#start">start</a></h3>
-    <div class='def'>api.timer:start() -> timer</div>
-    <div class='doc'>Begins to execute timer.fn every timer.seconds; calling this does not cause an initial firing of the timer immediately.</div>
+    <code>api.timer:start() -> timer</code>
+    <p>Begins to execute timer.fn every timer.seconds; calling this does not cause an initial firing of the timer immediately.</p>
 
     
 
     <a name="stop"></a>
     <h3><a href="#stop">stop</a></h3>
-    <div class='def'>api.timer:stop() -> timer</div>
-    <div class='doc'>Stops the timer's fn from getting called until started again.</div>
+    <code>api.timer:stop() -> timer</code>
+    <p>Stops the timer's fn from getting called until started again.</p>
 
     
 
@@ -133,6 +167,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>

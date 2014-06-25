@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -53,92 +87,92 @@
 
     <a name="alert"></a>
     <h3><a href="#alert">alert</a></h3>
-    <div class='def'>api.alert(str, seconds = 2)</div>
-    <div class='doc'>Shows a message in large words briefly in the middle of the screen.</div>
+    <code>api.alert(str, seconds = 2)</code>
+    <p>Shows a message in large words briefly in the middle of the screen.</p>
 
     
 
     <a name="call"></a>
     <h3><a href="#call">call</a></h3>
-    <div class='def'>api.call(fn, ...) -> ...</div>
-    <div class='doc'>Just like pcall, except that failures are handled using api.errorhandler</div>
+    <code>api.call(fn, ...) -> ...</code>
+    <p>Just like pcall, except that failures are handled using api.errorhandler</p>
 
     
 
     <a name="check_accessibility"></a>
     <h3><a href="#check_accessibility">check_accessibility</a></h3>
-    <div class='def'>api.check_accessibility(shouldprompt) -> isenabled</div>
-    <div class='doc'>Returns whether accessibility is enabled. If passed `true`, promtps the user to enable it.</div>
+    <code>api.check_accessibility(shouldprompt) -> isenabled</code>
+    <p>Returns whether accessibility is enabled. If passed `true`, promtps the user to enable it.</p>
 
     
 
     <a name="douserfile"></a>
     <h3><a href="#douserfile">douserfile</a></h3>
-    <div class='def'>api.douserfile(name)</div>
-    <div class='doc'>Convenience wrapper around dofile() and api.userfile(name)</div>
+    <code>api.douserfile(name)</code>
+    <p>Convenience wrapper around dofile() and api.userfile(name)</p>
 
     
 
     <a name="errorhandler"></a>
     <h3><a href="#errorhandler">errorhandler</a></h3>
-    <div class='def'>api.errorhandler = function(err)</div>
-    <div class='doc'>Error handler for api.call; intended for you to set, not for third party libs</div>
+    <code>api.errorhandler = function(err)</code>
+    <p>Error handler for api.call; intended for you to set, not for third party libs</p>
 
     
 
     <a name="fileexists"></a>
     <h3><a href="#fileexists">fileexists</a></h3>
-    <div class='def'>api.fileexists(path) -> exists, isdir</div>
-    <div class='doc'>Checks if a file exists, and whether it's a directory.</div>
+    <code>api.fileexists(path) -> exists, isdir</code>
+    <p>Checks if a file exists, and whether it's a directory.</p>
 
     
 
     <a name="focushydra"></a>
     <h3><a href="#focushydra">focushydra</a></h3>
-    <div class='def'>api.focushydra()</div>
-    <div class='doc'>Makes Hydra the currently focused app; useful in combination with textgrids.</div>
+    <code>api.focushydra()</code>
+    <p>Makes Hydra the currently focused app; useful in combination with textgrids.</p>
 
     
 
     <a name="jsondocs"></a>
     <h3><a href="#jsondocs">jsondocs</a></h3>
-    <div class='def'>api.jsondocs() -> string</div>
-    <div class='doc'>Returns the documentation as a JSON string for you to generate pretty docs with. The top-level is a group. Groups have keys: name (string), doc (string), subitems (list of items), subgroups (list of groups); Items have keys: name (string), def (string), doc (string).</div>
+    <code>api.jsondocs() -> string</code>
+    <p>Returns the documentation as a JSON string for you to generate pretty docs with. The top-level is a group. Groups have keys: name (string), doc (string), subitems (list of items), subgroups (list of groups); Items have keys: name (string), def (string), doc (string).</p>
 
     
 
     <a name="reload"></a>
     <h3><a href="#reload">reload</a></h3>
-    <div class='def'>api.reload()</div>
-    <div class='doc'>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</div>
+    <code>api.reload()</code>
+    <p>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</p>
 
     
 
     <a name="resourcesdir"></a>
     <h3><a href="#resourcesdir">resourcesdir</a></h3>
-    <div class='def'>api.resourcesdir -> string</div>
-    <div class='doc'>The location of the built-in lua source files.</div>
+    <code>api.resourcesdir -> string</code>
+    <p>The location of the built-in lua source files.</p>
 
     
 
     <a name="showabout"></a>
     <h3><a href="#showabout">showabout</a></h3>
-    <div class='def'>api.showabout()</div>
-    <div class='doc'>Displays the standard OS X about panel; implicitly focuses Hydra.</div>
+    <code>api.showabout()</code>
+    <p>Displays the standard OS X about panel; implicitly focuses Hydra.</p>
 
     
 
     <a name="userfile"></a>
     <h3><a href="#userfile">userfile</a></h3>
-    <div class='def'>api.userfile(name)</div>
-    <div class='doc'>Returns the full path to the file ~/.hydra/{name}.lua</div>
+    <code>api.userfile(name)</code>
+    <p>Returns the full path to the file ~/.hydra/{name}.lua</p>
 
     
 
     <a name="uuid"></a>
     <h3><a href="#uuid">uuid</a></h3>
-    <div class='def'>api.uuid() -> string</div>
-    <div class='doc'>Returns a UUID as a string</div>
+    <code>api.uuid() -> string</code>
+    <p>Returns a UUID as a string</p>
 
     
 
@@ -187,6 +221,8 @@
     </ul>
 
     
+
+  </div>
 
   </body>
 </html>

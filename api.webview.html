@@ -2,15 +2,49 @@
 
   <head>
     <title>Hydra docs: api.webview module</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <style type="text/css">
-      .def {
-      font-family: Menlo, Monaco, Inconsolata, monospace;
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #eee;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      a {
+        color: #2e8b57;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        max-width: 700px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
       }
     </style>
   </head>
 
   <body>
 
+  <div class="container">
     <h1>
       
       <a href="api.html">api</a>
@@ -53,85 +87,85 @@
 
     <a name="clicked"></a>
     <h3><a href="#clicked">clicked</a></h3>
-    <div class='def'>api.webview.clicked = function(str)</div>
-    <div class='doc'>When a link is clicked with a URL like 'hydra:foo', this function is called (if set) with 'foo' as its argument.</div>
+    <code>api.webview.clicked = function(str)</code>
+    <p>When a link is clicked with a URL like 'hydra:foo', this function is called (if set) with 'foo' as its argument.</p>
 
     
 
     <a name="closed"></a>
     <h3><a href="#closed">closed</a></h3>
-    <div class='def'>api.webview.closed = function()</div>
-    <div class='doc'>Called (if set) when the webview closes.</div>
+    <code>api.webview.closed = function()</code>
+    <p>Called (if set) when the webview closes.</p>
 
     
 
     <a name="open"></a>
     <h3><a href="#open">open</a></h3>
-    <div class='def'>api.webview.open()</div>
-    <div class='doc'>Opens and returns a new webview instance; as with all other Hydra objects, it's just a table, and you're free to set whatever keys you want on it.</div>
+    <code>api.webview.open()</code>
+    <p>Opens and returns a new webview instance; as with all other Hydra objects, it's just a table, and you're free to set whatever keys you want on it.</p>
 
     
 
     <a name="loadfile"></a>
     <h3><a href="#loadfile">loadfile</a></h3>
-    <div class='def'>api.webview:loadfile(path)</div>
-    <div class='doc'>Loads the given file in the web view.</div>
+    <code>api.webview:loadfile(path)</code>
+    <p>Loads the given file in the web view.</p>
 
     
 
     <a name="loadstring"></a>
     <h3><a href="#loadstring">loadstring</a></h3>
-    <div class='def'>api.webview:loadstring(string, basepath)</div>
-    <div class='doc'>Loads the given string in the webview; basepath must be an absolute path.</div>
+    <code>api.webview:loadstring(string, basepath)</code>
+    <p>Loads the given string in the webview; basepath must be an absolute path.</p>
 
     
 
     <a name="loadurl"></a>
     <h3><a href="#loadurl">loadurl</a></h3>
-    <div class='def'>api.webview:loadurl(url)</div>
-    <div class='doc'>Loads the given URL in the webview.</div>
+    <code>api.webview:loadurl(url)</code>
+    <p>Loads the given URL in the webview.</p>
 
     
 
     <a name="setborderless"></a>
     <h3><a href="#setborderless">setborderless</a></h3>
-    <div class='def'>api.webview:setborderless(bool)</div>
-    <div class='doc'>Set whether a webview window has a border.</div>
+    <code>api.webview:setborderless(bool)</code>
+    <p>Set whether a webview window has a border.</p>
 
     
 
     <a name="sethasshadow"></a>
     <h3><a href="#sethasshadow">sethasshadow</a></h3>
-    <div class='def'>api.webview:sethasshadow(bool)</div>
-    <div class='doc'>Set whether a webview window has a shadow.</div>
+    <code>api.webview:sethasshadow(bool)</code>
+    <p>Set whether a webview window has a shadow.</p>
 
     
 
     <a name="setignoresmouse"></a>
     <h3><a href="#setignoresmouse">setignoresmouse</a></h3>
-    <div class='def'>api.webview:setignoresmouse(bool)</div>
-    <div class='doc'>Set whether a webview window can be interacted with via the mouse.</div>
+    <code>api.webview:setignoresmouse(bool)</code>
+    <p>Set whether a webview window can be interacted with via the mouse.</p>
 
     
 
     <a name="setlevel"></a>
     <h3><a href="#setlevel">setlevel</a></h3>
-    <div class='def'>api.webview:setlevel(level)</div>
-    <div class='doc'>When level is -1, window is always below all others; when 0, window is normal; when 1, window is above all others.</div>
+    <code>api.webview:setlevel(level)</code>
+    <p>When level is -1, window is always below all others; when 0, window is normal; when 1, window is above all others.</p>
 
     
 
     <a name="settitle"></a>
     <h3><a href="#settitle">settitle</a></h3>
-    <div class='def'>api.webview:settitle(string)</div>
-    <div class='doc'>Set the title of a webview window.</div>
+    <code>api.webview:settitle(string)</code>
+    <p>Set the title of a webview window.</p>
 
     
 
     <a name="window"></a>
     <h3><a href="#window">window</a></h3>
-    <div class='def'>api.webview:window() -> window</div>
-    <div class='doc'>Return the api.window that represents the given webview.</div>
+    <code>api.webview:window() -> window</code>
+    <p>Return the api.window that represents the given webview.</p>
 
     
 
@@ -142,6 +176,8 @@
     None.
 
     
+
+  </div>
 
   </body>
 </html>
