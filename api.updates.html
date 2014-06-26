@@ -2,7 +2,9 @@
 
   <head>
     <title>Hydra docs: api.updates module</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+
     <style type="text/css">
       * {
         -webkit-box-sizing: border-box;
@@ -13,11 +15,19 @@
       body {
         margin: 0;
         background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
       }
 
       h1 {
         margin-top: 0;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+      }
+
+      section:last-of-type {
+        border-bottom: 1px solid #ccc;
       }
 
       a {
@@ -46,14 +56,14 @@
 
   <div class="container">
     <h1>
-      
-      <a href="api.html">api</a>
-      
-      <a href="api.updates.html">updates</a>
-      
+<code>
+      <a href="api.html">api</a>.<a href="api.updates.html">updates</a>
+</code>
     </h1>
 
-    <h2>Check for and install Hydra updates.</h2>
+    <p>Check for and install Hydra updates.</p>
+
+    
 
     <ul>
       
@@ -65,25 +75,25 @@
 
     
 
+    <section>
     <a name="available"></a>
     <h3><a href="#available">available</a></h3>
     <code>api.updates.available = function(isavailable)</code>
     <p>Called after api.updates.check() runs, with a boolean parameter specifying whether an update is available. Default implementation pushes a notification when an update is available with the tag 'showupdate'.</p>
+    </section>
 
     
 
+    <section>
     <a name="check"></a>
     <h3><a href="#check">check</a></h3>
     <code>api.updates.check()</code>
     <p>Checks for an update. If one is available, calls api.updates.available(true); otherwise calls api.updates.available(false).</p>
+    </section>
 
     
 
-    <h2>Submodules</h2>
-
     
-
-    None.
 
     
 

@@ -2,7 +2,9 @@
 
   <head>
     <title>Hydra docs: api.pathwatcher module</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+
     <style type="text/css">
       * {
         -webkit-box-sizing: border-box;
@@ -13,11 +15,19 @@
       body {
         margin: 0;
         background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
       }
 
       h1 {
         margin-top: 0;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+      }
+
+      section:last-of-type {
+        border-bottom: 1px solid #ccc;
       }
 
       a {
@@ -46,14 +56,14 @@
 
   <div class="container">
     <h1>
-      
-      <a href="api.html">api</a>
-      
-      <a href="api.pathwatcher.html">pathwatcher</a>
-      
+<code>
+      <a href="api.html">api</a>.<a href="api.pathwatcher.html">pathwatcher</a>
+</code>
     </h1>
 
-    <h2>Watch paths recursively for changes.</h2>
+    <p>Watch paths recursively for changes.</p>
+
+    
 
     <ul>
       
@@ -69,39 +79,43 @@
 
     
 
+    <section>
     <a name="new"></a>
     <h3><a href="#new">new</a></h3>
     <code>api.pathwatcher.new(path, fn())</code>
     <p>Returns a new pathwatcher that can be started and stopped. Contains fields: path, fn.</p>
+    </section>
 
     
 
+    <section>
     <a name="stopall"></a>
     <h3><a href="#stopall">stopall</a></h3>
     <code>api.pathwatcher.stopall()</code>
     <p>Calls p:stop() for all started pathwatchers; called automatically when user config reloads.</p>
+    </section>
 
     
 
+    <section>
     <a name="start"></a>
     <h3><a href="#start">start</a></h3>
     <code>api.pathwatcher:start()</code>
     <p>Registers pathwatcher's fn as a callback when pathwatcher's path or any descendent changes.</p>
+    </section>
 
     
 
+    <section>
     <a name="stop"></a>
     <h3><a href="#stop">stop</a></h3>
     <code>api.pathwatcher:stop()</code>
     <p>Unregisters pathwatcher's fn so it won't be called again until the pathwatcher is restarted.</p>
+    </section>
 
     
 
-    <h2>Submodules</h2>
-
     
-
-    None.
 
     
 

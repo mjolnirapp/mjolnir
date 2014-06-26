@@ -2,7 +2,9 @@
 
   <head>
     <title>Hydra docs: api.timer module</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+
     <style type="text/css">
       * {
         -webkit-box-sizing: border-box;
@@ -13,11 +15,19 @@
       body {
         margin: 0;
         background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
       }
 
       h1 {
         margin-top: 0;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+      }
+
+      section:last-of-type {
+        border-bottom: 1px solid #ccc;
       }
 
       a {
@@ -46,14 +56,14 @@
 
   <div class="container">
     <h1>
-      
-      <a href="api.html">api</a>
-      
-      <a href="api.timer.html">timer</a>
-      
+<code>
+      <a href="api.html">api</a>.<a href="api.timer.html">timer</a>
+</code>
     </h1>
 
-    <h2>Execute functions with various timing rules.</h2>
+    <p>Execute functions with various timing rules.</p>
+
+    
 
     <ul>
       
@@ -83,88 +93,106 @@
 
     
 
+    <section>
     <a name="days"></a>
     <h3><a href="#days">days</a></h3>
     <code>api.timer.days(n) -> sec</code>
     <p>Returns the number of days in seconds.</p>
+    </section>
 
     
 
+    <section>
     <a name="doafter"></a>
     <h3><a href="#doafter">doafter</a></h3>
     <code>api.timer.doafter(sec, fn())</code>
     <p>Runs the function after sec seconds.</p>
+    </section>
 
     
 
+    <section>
     <a name="hours"></a>
     <h3><a href="#hours">hours</a></h3>
     <code>api.timer.hours(n) -> sec</code>
     <p>Returns the number of hours in seconds.</p>
+    </section>
 
     
 
+    <section>
     <a name="minutes"></a>
     <h3><a href="#minutes">minutes</a></h3>
     <code>api.timer.minutes(n) -> sec</code>
     <p>Returns the number of minutes in seconds.</p>
+    </section>
 
     
 
+    <section>
     <a name="new"></a>
     <h3><a href="#new">new</a></h3>
     <code>api.timer.new(seconds, fn) -> timer</code>
     <p>Creates a new timer that can be started. Has the fields: seconds, fn.</p>
+    </section>
 
     
 
+    <section>
     <a name="runonce"></a>
     <h3><a href="#runonce">runonce</a></h3>
     <code>api.timer.runonce(fn())</code>
     <p>Runs the function exactly once in the entire lifespan of Hydra; reset only when you quit/restart.</p>
+    </section>
 
     
 
+    <section>
     <a name="seconds"></a>
     <h3><a href="#seconds">seconds</a></h3>
     <code>api.timer.seconds(n) -> sec</code>
     <p>Returns the number of seconds in seconds.</p>
+    </section>
 
     
 
+    <section>
     <a name="stopall"></a>
     <h3><a href="#stopall">stopall</a></h3>
     <code>api.timer.stopall()</code>
     <p>Stops all running timers; called automatically when user config reloads.</p>
+    </section>
 
     
 
+    <section>
     <a name="weeks"></a>
     <h3><a href="#weeks">weeks</a></h3>
     <code>api.timer.weeks(n) -> sec</code>
     <p>Returns the number of weeks in seconds.</p>
+    </section>
 
     
 
+    <section>
     <a name="start"></a>
     <h3><a href="#start">start</a></h3>
     <code>api.timer:start() -> timer</code>
     <p>Begins to execute timer.fn every timer.seconds; calling this does not cause an initial firing of the timer immediately.</p>
+    </section>
 
     
 
+    <section>
     <a name="stop"></a>
     <h3><a href="#stop">stop</a></h3>
     <code>api.timer:stop() -> timer</code>
     <p>Stops the timer's fn from getting called until started again.</p>
+    </section>
 
     
 
-    <h2>Submodules</h2>
-
     
-
-    None.
 
     
 

@@ -2,7 +2,9 @@
 
   <head>
     <title>Hydra docs: api module</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+
     <style type="text/css">
       * {
         -webkit-box-sizing: border-box;
@@ -13,11 +15,19 @@
       body {
         margin: 0;
         background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
       }
 
       h1 {
         margin-top: 0;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+      }
+
+      section:last-of-type {
+        border-bottom: 1px solid #ccc;
       }
 
       a {
@@ -46,12 +56,14 @@
 
   <div class="container">
     <h1>
-      
+<code>
       <a href="api.html">api</a>
-      
+</code>
     </h1>
 
-    <h2>The Hydra namespace.</h2>
+    <p>The Hydra namespace.</p>
+
+    
 
     <ul>
       
@@ -85,100 +97,128 @@
 
     
 
+    <section>
     <a name="alert"></a>
     <h3><a href="#alert">alert</a></h3>
     <code>api.alert(str, seconds = 2)</code>
     <p>Shows a message in large words briefly in the middle of the screen.</p>
+    </section>
 
     
 
+    <section>
     <a name="call"></a>
     <h3><a href="#call">call</a></h3>
     <code>api.call(fn, ...) -> ...</code>
     <p>Just like pcall, except that failures are handled using api.errorhandler</p>
+    </section>
 
     
 
+    <section>
     <a name="check_accessibility"></a>
     <h3><a href="#check_accessibility">check_accessibility</a></h3>
     <code>api.check_accessibility(shouldprompt) -> isenabled</code>
     <p>Returns whether accessibility is enabled. If passed `true`, promtps the user to enable it.</p>
+    </section>
 
     
 
+    <section>
     <a name="douserfile"></a>
     <h3><a href="#douserfile">douserfile</a></h3>
     <code>api.douserfile(name)</code>
     <p>Convenience wrapper around dofile() and api.userfile(name)</p>
+    </section>
 
     
 
+    <section>
     <a name="errorhandler"></a>
     <h3><a href="#errorhandler">errorhandler</a></h3>
     <code>api.errorhandler = function(err)</code>
     <p>Error handler for api.call; intended for you to set, not for third party libs</p>
+    </section>
 
     
 
+    <section>
     <a name="fileexists"></a>
     <h3><a href="#fileexists">fileexists</a></h3>
     <code>api.fileexists(path) -> exists, isdir</code>
     <p>Checks if a file exists, and whether it's a directory.</p>
+    </section>
 
     
 
+    <section>
     <a name="focushydra"></a>
     <h3><a href="#focushydra">focushydra</a></h3>
     <code>api.focushydra()</code>
     <p>Makes Hydra the currently focused app; useful in combination with textgrids.</p>
+    </section>
 
     
 
+    <section>
     <a name="jsondocs"></a>
     <h3><a href="#jsondocs">jsondocs</a></h3>
     <code>api.jsondocs() -> string</code>
     <p>Returns the documentation as a JSON string for you to generate pretty docs with. The top-level is a group. Groups have keys: name (string), doc (string), subitems (list of items), subgroups (list of groups); Items have keys: name (string), def (string), doc (string).</p>
+    </section>
 
     
 
+    <section>
     <a name="reload"></a>
     <h3><a href="#reload">reload</a></h3>
     <code>api.reload()</code>
     <p>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</p>
+    </section>
 
     
 
+    <section>
     <a name="resourcesdir"></a>
     <h3><a href="#resourcesdir">resourcesdir</a></h3>
     <code>api.resourcesdir -> string</code>
     <p>The location of the built-in lua source files.</p>
+    </section>
 
     
 
+    <section>
     <a name="showabout"></a>
     <h3><a href="#showabout">showabout</a></h3>
     <code>api.showabout()</code>
     <p>Displays the standard OS X about panel; implicitly focuses Hydra.</p>
+    </section>
 
     
 
+    <section>
     <a name="userfile"></a>
     <h3><a href="#userfile">userfile</a></h3>
     <code>api.userfile(name)</code>
     <p>Returns the full path to the file ~/.hydra/{name}.lua</p>
+    </section>
 
     
 
+    <section>
     <a name="uuid"></a>
     <h3><a href="#uuid">uuid</a></h3>
     <code>api.uuid() -> string</code>
     <p>Returns a UUID as a string</p>
+    </section>
+
+    
+
+    
 
     
 
     <h2>Submodules</h2>
-
-    
 
     <ul>
       

@@ -2,7 +2,9 @@
 
   <head>
     <title>Hydra docs: api.hotkey module</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+
     <style type="text/css">
       * {
         -webkit-box-sizing: border-box;
@@ -13,11 +15,19 @@
       body {
         margin: 0;
         background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
       }
 
       h1 {
         margin-top: 0;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+      }
+
+      section:last-of-type {
+        border-bottom: 1px solid #ccc;
       }
 
       a {
@@ -46,14 +56,14 @@
 
   <div class="container">
     <h1>
-      
-      <a href="api.html">api</a>
-      
-      <a href="api.hotkey.html">hotkey</a>
-      
+<code>
+      <a href="api.html">api</a>.<a href="api.hotkey.html">hotkey</a>
+</code>
     </h1>
 
-    <h2>Manage global hotkeys.</h2>
+    <p>Manage global hotkeys.</p>
+
+    
 
     <ul>
       
@@ -71,46 +81,52 @@
 
     
 
+    <section>
     <a name="bind"></a>
     <h3><a href="#bind">bind</a></h3>
     <code>api.hotkey.bind(...) -> hotkey</code>
     <p>Shortcut for: return api.hotkey.new(...):enable()</p>
+    </section>
 
     
 
+    <section>
     <a name="disableall"></a>
     <h3><a href="#disableall">disableall</a></h3>
     <code>api.hotkey.disableall()</code>
     <p>Disables all hotkeys; automatically called when user config reloads.</p>
+    </section>
 
     
 
+    <section>
     <a name="new"></a>
     <h3><a href="#new">new</a></h3>
     <code>api.hotkey.new(mods, key, fn) -> hotkey</code>
     <p>Creates a new hotkey that can be enabled. Mods is a table containing any of the elements {cmd, ctrl, alt, shift}. Key may be any 1-character string, or 'F1', 'Enter', etc. Both are case-insensitive. The hotkey has the public fields: key, mods, fn.</p>
+    </section>
 
     
 
+    <section>
     <a name="disable"></a>
     <h3><a href="#disable">disable</a></h3>
     <code>api.hotkey:disable() -> self</code>
     <p>Disables the given hotkey; does not remove it from api.hotkey.keys.</p>
+    </section>
 
     
 
+    <section>
     <a name="enable"></a>
     <h3><a href="#enable">enable</a></h3>
     <code>api.hotkey:enable() -> hotkey</code>
     <p>Registers the hotkey's fn as the callback when the user presses key while holding mods.</p>
+    </section>
 
     
 
-    <h2>Submodules</h2>
-
     
-
-    None.
 
     
 

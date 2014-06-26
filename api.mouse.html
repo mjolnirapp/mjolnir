@@ -2,7 +2,9 @@
 
   <head>
     <title>Hydra docs: api.mouse module</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+
     <style type="text/css">
       * {
         -webkit-box-sizing: border-box;
@@ -13,11 +15,19 @@
       body {
         margin: 0;
         background-color: #eee;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Helvetica Neue', sans-serif;
       }
 
       h1 {
         margin-top: 0;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+      }
+
+      section:last-of-type {
+        border-bottom: 1px solid #ccc;
       }
 
       a {
@@ -46,14 +56,14 @@
 
   <div class="container">
     <h1>
-      
-      <a href="api.html">api</a>
-      
-      <a href="api.mouse.html">mouse</a>
-      
+<code>
+      <a href="api.html">api</a>.<a href="api.mouse.html">mouse</a>
+</code>
     </h1>
 
-    <h2>Functions for manipulating the mouse cursor.</h2>
+    <p>Functions for manipulating the mouse cursor.</p>
+
+    
 
     <ul>
       
@@ -65,25 +75,25 @@
 
     
 
+    <section>
     <a name="get"></a>
     <h3><a href="#get">get</a></h3>
     <code>api.mouse.get() -> point</code>
     <p>Returns the current location of the mouse on the current screen as a point.</p>
+    </section>
 
     
 
+    <section>
     <a name="set"></a>
     <h3><a href="#set">set</a></h3>
     <code>api.mouse.set(point)</code>
     <p>Moves the mouse to the given location on the current screen.</p>
+    </section>
 
     
 
-    <h2>Submodules</h2>
-
     
-
-    None.
 
     
 
