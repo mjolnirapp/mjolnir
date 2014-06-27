@@ -77,6 +77,8 @@
       
       <li>api.<a href="#errorhandler">errorhandler</a></li>
       
+      <li>api.<a href="#exec">exec</a></li>
+      
       <li>api.<a href="#fileexists">fileexists</a></li>
       
       <li>api.<a href="#focushydra">focushydra</a></li>
@@ -101,7 +103,7 @@
     <a name="alert"></a>
     <h3><a href="#alert">alert</a></h3>
     <code>api.alert(str, seconds = 2)</code>
-    <p>Shows a message in large words briefly in the middle of the screen.</p>
+    <p>Shows a message in large words briefly in the middle of the screen; does tostring() on its argument for convenience..</p>
     </section>
 
     
@@ -138,6 +140,15 @@
     <h3><a href="#errorhandler">errorhandler</a></h3>
     <code>api.errorhandler = function(err)</code>
     <p>Error handler for api.call; intended for you to set, not for third party libs</p>
+    </section>
+
+    
+
+    <section>
+    <a name="exec"></a>
+    <h3><a href="#exec">exec</a></h3>
+    <code>api.exec(command) -> string</code>
+    <p>Runs a shell function and returns stdout as a string (without trailing newline).</p>
     </section>
 
     
@@ -248,11 +259,15 @@
       
       <li><a href="api.screen.html">screen</a></li>
       
+      <li><a href="api.settings.html">settings</a></li>
+      
       <li><a href="api.textgrid.html">textgrid</a></li>
       
       <li><a href="api.timer.html">timer</a></li>
       
       <li><a href="api.updates.html">updates</a></li>
+      
+      <li><a href="api.utf8.html">utf8</a></li>
       
       <li><a href="api.webview.html">webview</a></li>
       
