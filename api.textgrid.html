@@ -51,8 +51,8 @@
 
       <section id="clear">
         <h3><a href="#clear">clear</a></h3>
-        <code>api.textgrid:clear(bg)</code>
-        <p>Clears the textgrid and sets its background color to bg, a CSS-like string.</p>
+        <code>api.textgrid:clear()</code>
+        <p>Replaces all the textgrid's text with space characters.</p>
       </section>
 
       
@@ -129,10 +129,42 @@
 
       
 
+      <section id="setbg">
+        <h3><a href="#setbg">setbg</a></h3>
+        <code>api.textgrid:setbg(str)</code>
+        <p>Sets the textgrid's background color to the given 6-digit hex string.</p>
+      </section>
+
+      
+
       <section id="set">
         <h3><a href="#set">set</a></h3>
-        <code>api.textgrid:set(str, x, y, fg, bg)</code>
-        <p>Sets the given string at the given position; str is a 1-character UTF-8 encoded string; x and y are grid spaces; fg and bg are optional CSS-like strings.</p>
+        <code>api.textgrid:setchar(str, x, y)</code>
+        <p>Sets the given 1-character UTF-8 encoded string at the given grid coordinates.</p>
+      </section>
+
+      
+
+      <section id="setcharbg">
+        <h3><a href="#setcharbg">setcharbg</a></h3>
+        <code>api.textgrid:setcharbg(str, x, y)</code>
+        <p>Sets the textgrid's background color to the given 6-digit hex string at the given coordinate.</p>
+      </section>
+
+      
+
+      <section id="setcharfg">
+        <h3><a href="#setcharfg">setcharfg</a></h3>
+        <code>api.textgrid:setcharfg(str, x, y)</code>
+        <p>Sets the textgrid's foreground color to the given 6-digit hex string at the given coordinate.</p>
+      </section>
+
+      
+
+      <section id="setfg">
+        <h3><a href="#setfg">setfg</a></h3>
+        <code>api.textgrid:setfg(str)</code>
+        <p>Sets the textgrid's foreground color to the given 6-digit hex string.</p>
       </section>
 
       
@@ -192,7 +224,15 @@
         
         <li>api.textgrid.<a href="#resized">resized</a></li>
         
+        <li>api.textgrid.<a href="#setbg">setbg</a></li>
+        
         <li>api.textgrid.<a href="#set">set</a></li>
+        
+        <li>api.textgrid.<a href="#setcharbg">setcharbg</a></li>
+        
+        <li>api.textgrid.<a href="#setcharfg">setcharfg</a></li>
+        
+        <li>api.textgrid.<a href="#setfg">setfg</a></li>
         
         <li>api.textgrid.<a href="#settitle">settitle</a></li>
         
