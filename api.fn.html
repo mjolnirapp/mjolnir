@@ -36,7 +36,7 @@
       <section id="contains">
         <h3><a href="#contains">contains</a></h3>
         <code>api.fn.contains(t, el) -> bool</code>
-        <p>Returns whether a table contains a given element.</p>
+        <p>Returns whether the table contains the given element.</p>
       </section>
 
       
@@ -44,7 +44,15 @@
       <section id="filter">
         <h3><a href="#filter">filter</a></h3>
         <code>api.fn.filter(t, fn) -> t</code>
-        <p>Returns a table of the elements in t in which t(el) is truthy.</p>
+        <p>Returns a table of the elements in t in which fn(el) is truthy.</p>
+      </section>
+
+      
+
+      <section id="find">
+        <h3><a href="#find">find</a></h3>
+        <code>api.fn.find(t, fn) -> el</code>
+        <p>Returns the first element where fn(el) is truthy.</p>
       </section>
 
       
@@ -60,7 +68,7 @@
       <section id="map">
         <h3><a href="#map">map</a></h3>
         <code>api.fn.map(t, fn) -> t</code>
-        <p>Returns a table of the results of t(el) on every el in t.</p>
+        <p>Returns a table of the results of fn(el) on every el in t.</p>
       </section>
 
       
@@ -91,6 +99,8 @@
         <li>api.fn.<a href="#contains">contains</a></li>
         
         <li>api.fn.<a href="#filter">filter</a></li>
+        
+        <li>api.fn.<a href="#find">find</a></li>
         
         <li>api.fn.<a href="#indexof">indexof</a></li>
         
