@@ -4,96 +4,56 @@
     <title>Hydra docs: api.utf8 module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.utf8.html">utf8</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.utf8.html">utf8</a>
+        </code>
+      </h1>
 
-    <p>Utilities for handling UTF-8 strings 'correctly'.</p>
+      <p>Utilities for handling UTF-8 strings 'correctly'.</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.utf8.<a href="#chars">chars</a></li>
+
+      <section id="chars">
+        <h3><a href="#chars">chars</a></h3>
+        <code>api.utf8.chars(str) -> {str, ...}</code>
+        <p>Splits the string into groups of (UTF-8 encoded) strings representing what humans would consider individual characters.<br><br>The result is a sequential table, such that table.concat(result) produces the original string.</p>
+      </section>
+
       
-      <li>api.utf8.<a href="#count">count</a></li>
+
+      <section id="count">
+        <h3><a href="#count">count</a></h3>
+        <code>api.utf8.count(str) -> int</code>
+        <p>Returns the number of characters as humans would count them.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.utf8.<a href="#chars">chars</a></li>
+        
+        <li>api.utf8.<a href="#count">count</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="chars"></a>
-    <h3><a href="#chars">chars</a></h3>
-    <code>api.utf8.chars(str) -> {str, ...}</code>
-    <p>Splits the string into groups of (UTF-8 encoded) strings representing what humans would consider individual characters.<br><br>The result is a sequential table, such that table.concat(result) produces the original string.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="count"></a>
-    <h3><a href="#count">count</a></h3>
-    <code>api.utf8.count(str) -> int</code>
-    <p>Returns the number of characters as humans would count them.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 

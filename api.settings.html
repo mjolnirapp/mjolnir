@@ -4,96 +4,56 @@
     <title>Hydra docs: api.settings module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.settings.html">settings</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.settings.html">settings</a>
+        </code>
+      </h1>
 
-    <p>Functions for user-defined settings that persist across Hydra launches.</p>
+      <p>Functions for user-defined settings that persist across Hydra launches.</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.settings.<a href="#get">get</a></li>
+
+      <section id="get">
+        <h3><a href="#get">get</a></h3>
+        <code>api.settings.get(key) -> val</code>
+        <p>Gets the Lua value for the given string key.</p>
+      </section>
+
       
-      <li>api.settings.<a href="#set">set</a></li>
+
+      <section id="set">
+        <h3><a href="#set">set</a></h3>
+        <code>api.settings.set(key, val)</code>
+        <p>Saves the given value for the string key; value must be a string, number, boolean, nil, or a table of any of these, recursively.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.settings.<a href="#get">get</a></li>
+        
+        <li>api.settings.<a href="#set">set</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="get"></a>
-    <h3><a href="#get">get</a></h3>
-    <code>api.settings.get(key) -> val</code>
-    <p>Gets the Lua value for the given string key.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="set"></a>
-    <h3><a href="#set">set</a></h3>
-    <code>api.settings.set(key, val)</code>
-    <p>Saves the given value for the string key; value must be a string, number, boolean, nil, or a table of any of these, recursively.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 

@@ -4,129 +4,86 @@
     <title>Hydra docs: api.log module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.log.html">log</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.log.html">log</a>
+        </code>
+      </h1>
 
-    <p>Functionality to assist with debugging and experimentation.</p>
+      <p>Functionality to assist with debugging and experimentation.</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.log.<a href="#addhandler">addhandler</a></li>
+
+      <section id="addhandler">
+        <h3><a href="#addhandler">addhandler</a></h3>
+        <code>api.log.addhandler(fn(str)) -> index</code>
+        <p>Registers a function to handle new log lines.</p>
+      </section>
+
       
-      <li>api.log.<a href="#lines">lines</a></li>
+
+      <section id="lines">
+        <h3><a href="#lines">lines</a></h3>
+        <code>api.log.lines = {}</code>
+        <p>List of lines logged so far; caps at api.log.maxlines. You may clear it by setting it to {} yourself.</p>
+      </section>
+
       
-      <li>api.log.<a href="#maxlines">maxlines</a></li>
+
+      <section id="maxlines">
+        <h3><a href="#maxlines">maxlines</a></h3>
+        <code>api.log.maxlines = 500</code>
+        <p>Maximum number of lines to be logged.</p>
+      </section>
+
       
-      <li>api.log.<a href="#removehandler">removehandler</a></li>
+
+      <section id="removehandler">
+        <h3><a href="#removehandler">removehandler</a></h3>
+        <code>api.log.removehandler(index)</code>
+        <p>Unregisters a function that handles new log lines.</p>
+      </section>
+
       
-      <li>api.log.<a href="#show">show</a></li>
+
+      <section id="show">
+        <h3><a href="#show">show</a></h3>
+        <code>api.log.show() -> textgrid</code>
+        <p>Opens a textgrid that can browse all logs.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.log.<a href="#addhandler">addhandler</a></li>
+        
+        <li>api.log.<a href="#lines">lines</a></li>
+        
+        <li>api.log.<a href="#maxlines">maxlines</a></li>
+        
+        <li>api.log.<a href="#removehandler">removehandler</a></li>
+        
+        <li>api.log.<a href="#show">show</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="addhandler"></a>
-    <h3><a href="#addhandler">addhandler</a></h3>
-    <code>api.log.addhandler(fn(str)) -> index</code>
-    <p>Registers a function to handle new log lines.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="lines"></a>
-    <h3><a href="#lines">lines</a></h3>
-    <code>api.log.lines = {}</code>
-    <p>List of lines logged so far; caps at api.log.maxlines. You may clear it by setting it to {} yourself.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="maxlines"></a>
-    <h3><a href="#maxlines">maxlines</a></h3>
-    <code>api.log.maxlines = 500</code>
-    <p>Maximum number of lines to be logged.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="removehandler"></a>
-    <h3><a href="#removehandler">removehandler</a></h3>
-    <code>api.log.removehandler(index)</code>
-    <p>Unregisters a function that handles new log lines.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="show"></a>
-    <h3><a href="#show">show</a></h3>
-    <code>api.log.show() -> textgrid</code>
-    <p>Opens a textgrid that can browse all logs.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 

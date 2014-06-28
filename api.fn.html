@@ -4,151 +4,106 @@
     <title>Hydra docs: api.fn module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.fn.html">fn</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.fn.html">fn</a>
+        </code>
+      </h1>
 
-    <p>Super-helpful functional programming utilities.</p>
+      <p>Super-helpful functional programming utilities.</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.fn.<a href="#concat">concat</a></li>
+
+      <section id="concat">
+        <h3><a href="#concat">concat</a></h3>
+        <code>api.fn.concat(t1, t2)</code>
+        <p>Adds all elements of t2 to the end of t1.</p>
+      </section>
+
       
-      <li>api.fn.<a href="#contains">contains</a></li>
+
+      <section id="contains">
+        <h3><a href="#contains">contains</a></h3>
+        <code>api.fn.contains(t, el) -> bool</code>
+        <p>Returns whether a table contains a given element.</p>
+      </section>
+
       
-      <li>api.fn.<a href="#filter">filter</a></li>
+
+      <section id="filter">
+        <h3><a href="#filter">filter</a></h3>
+        <code>api.fn.filter(t, fn) -> t</code>
+        <p>Returns a table of the elements in t in which t(el) is truthy.</p>
+      </section>
+
       
-      <li>api.fn.<a href="#indexof">indexof</a></li>
+
+      <section id="indexof">
+        <h3><a href="#indexof">indexof</a></h3>
+        <code>api.fn.indexof(t, el) -> int or nil</code>
+        <p>Returns the index of a given element in a table, or nil if not found.</p>
+      </section>
+
       
-      <li>api.fn.<a href="#map">map</a></li>
+
+      <section id="map">
+        <h3><a href="#map">map</a></h3>
+        <code>api.fn.map(t, fn) -> t</code>
+        <p>Returns a table of the results of t(el) on every el in t.</p>
+      </section>
+
       
-      <li>api.fn.<a href="#mapcat">mapcat</a></li>
+
+      <section id="mapcat">
+        <h3><a href="#mapcat">mapcat</a></h3>
+        <code>api.fn.mapcat(t, fn) -> t2</code>
+        <p>Runs fn(el) for every el in t, and assuming the results are tables, combines them into a new table.</p>
+      </section>
+
       
-      <li>api.fn.<a href="#reduce">reduce</a></li>
+
+      <section id="reduce">
+        <h3><a href="#reduce">reduce</a></h3>
+        <code>api.fn.reduce(t, fn) -> t2</code>
+        <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there's only one left.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.fn.<a href="#concat">concat</a></li>
+        
+        <li>api.fn.<a href="#contains">contains</a></li>
+        
+        <li>api.fn.<a href="#filter">filter</a></li>
+        
+        <li>api.fn.<a href="#indexof">indexof</a></li>
+        
+        <li>api.fn.<a href="#map">map</a></li>
+        
+        <li>api.fn.<a href="#mapcat">mapcat</a></li>
+        
+        <li>api.fn.<a href="#reduce">reduce</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="concat"></a>
-    <h3><a href="#concat">concat</a></h3>
-    <code>api.fn.concat(t1, t2)</code>
-    <p>Adds all elements of t2 to the end of t1.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="contains"></a>
-    <h3><a href="#contains">contains</a></h3>
-    <code>api.fn.contains(t, el) -> bool</code>
-    <p>Returns whether a table contains a given element.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="filter"></a>
-    <h3><a href="#filter">filter</a></h3>
-    <code>api.fn.filter(t, fn) -> t</code>
-    <p>Returns a table of the elements in t in which t(el) is truthy.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="indexof"></a>
-    <h3><a href="#indexof">indexof</a></h3>
-    <code>api.fn.indexof(t, el) -> int or nil</code>
-    <p>Returns the index of a given element in a table, or nil if not found.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="map"></a>
-    <h3><a href="#map">map</a></h3>
-    <code>api.fn.map(t, fn) -> t</code>
-    <p>Returns a table of the results of t(el) on every el in t.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="mapcat"></a>
-    <h3><a href="#mapcat">mapcat</a></h3>
-    <code>api.fn.mapcat(t, fn) -> t2</code>
-    <p>Runs fn(el) for every el in t, and assuming the results are tables, combines them into a new table.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="reduce"></a>
-    <h3><a href="#reduce">reduce</a></h3>
-    <code>api.fn.reduce(t, fn) -> t2</code>
-    <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there's only one left.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 

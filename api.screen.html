@@ -4,173 +4,126 @@
     <title>Hydra docs: api.screen module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.screen.html">screen</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.screen.html">screen</a>
+        </code>
+      </h1>
 
-    <p>Manipulate monitors (aka screens).</p>
+      <p>Manipulate monitors (aka screens).</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.screen.<a href="#allscreens">allscreens</a></li>
+
+      <section id="allscreens">
+        <h3><a href="#allscreens">allscreens</a></h3>
+        <code>api.screen.allscreens() -> screen[]</code>
+        <p>Returns all the screens there are.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#frame">frame</a></li>
+
+      <section id="frame">
+        <h3><a href="#frame">frame</a></h3>
+        <code>api.screen.frame(screen) -> rect</code>
+        <p>Returns a screen's frame in its own coordinate space.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#mainscreen">mainscreen</a></li>
+
+      <section id="mainscreen">
+        <h3><a href="#mainscreen">mainscreen</a></h3>
+        <code>api.screen.mainscreen() -> screen</code>
+        <p>Returns the 'main' screen, i.e. the one containing the currently focused window.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#settint">settint</a></li>
+
+      <section id="settint">
+        <h3><a href="#settint">settint</a></h3>
+        <code>api.screen.settint(redarray, greenarray, bluearray)</code>
+        <p>Set the tint on a screen; experimental.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#vislbleframe">vislbleframe</a></li>
+
+      <section id="vislbleframe">
+        <h3><a href="#vislbleframe">vislbleframe</a></h3>
+        <code>api.screen.visibleframe(screen) -> rect</code>
+        <p>Returns a screen's frame in its own coordinate space, without the dock or menu.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></li>
+
+      <section id="frame_including_dock_and_menu">
+        <h3><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></h3>
+        <code>api.screen:frame_including_dock_and_menu() -> rect</code>
+        <p>Returns the screen's rect in absolute coordinates, including the dock and menu.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></li>
+
+      <section id="frame_without_dock_or_menu">
+        <h3><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></h3>
+        <code>api.screen:frame_without_dock_or_menu() -> rect</code>
+        <p>Returns the screen's rect in absolute coordinates, without the dock or menu.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#next">next</a></li>
+
+      <section id="next">
+        <h3><a href="#next">next</a></h3>
+        <code>api.screen:next() -> screen</code>
+        <p>Returns the screen 'after' this one; I have no idea how they're ordered though.</p>
+      </section>
+
       
-      <li>api.screen.<a href="#previous">previous</a></li>
+
+      <section id="previous">
+        <h3><a href="#previous">previous</a></h3>
+        <code>api.screen:previous() -> screen</code>
+        <p>Returns the screen 'before' this one; I have no idea how they're ordered though.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.screen.<a href="#allscreens">allscreens</a></li>
+        
+        <li>api.screen.<a href="#frame">frame</a></li>
+        
+        <li>api.screen.<a href="#mainscreen">mainscreen</a></li>
+        
+        <li>api.screen.<a href="#settint">settint</a></li>
+        
+        <li>api.screen.<a href="#vislbleframe">vislbleframe</a></li>
+        
+        <li>api.screen.<a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></li>
+        
+        <li>api.screen.<a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></li>
+        
+        <li>api.screen.<a href="#next">next</a></li>
+        
+        <li>api.screen.<a href="#previous">previous</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="allscreens"></a>
-    <h3><a href="#allscreens">allscreens</a></h3>
-    <code>api.screen.allscreens() -> screen[]</code>
-    <p>Returns all the screens there are.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="frame"></a>
-    <h3><a href="#frame">frame</a></h3>
-    <code>api.screen.frame(screen) -> rect</code>
-    <p>Returns a screen's frame in its own coordinate space.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="mainscreen"></a>
-    <h3><a href="#mainscreen">mainscreen</a></h3>
-    <code>api.screen.mainscreen() -> screen</code>
-    <p>Returns the 'main' screen, i.e. the one containing the currently focused window.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="settint"></a>
-    <h3><a href="#settint">settint</a></h3>
-    <code>api.screen.settint(redarray, greenarray, bluearray)</code>
-    <p>Set the tint on a screen; experimental.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="vislbleframe"></a>
-    <h3><a href="#vislbleframe">vislbleframe</a></h3>
-    <code>api.screen.visibleframe(screen) -> rect</code>
-    <p>Returns a screen's frame in its own coordinate space, without the dock or menu.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="frame_including_dock_and_menu"></a>
-    <h3><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></h3>
-    <code>api.screen:frame_including_dock_and_menu() -> rect</code>
-    <p>Returns the screen's rect in absolute coordinates, including the dock and menu.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="frame_without_dock_or_menu"></a>
-    <h3><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></h3>
-    <code>api.screen:frame_without_dock_or_menu() -> rect</code>
-    <p>Returns the screen's rect in absolute coordinates, without the dock or menu.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="next"></a>
-    <h3><a href="#next">next</a></h3>
-    <code>api.screen:next() -> screen</code>
-    <p>Returns the screen 'after' this one; I have no idea how they're ordered though.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="previous"></a>
-    <h3><a href="#previous">previous</a></h3>
-    <code>api.screen:previous() -> screen</code>
-    <p>Returns the screen 'before' this one; I have no idea how they're ordered though.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 

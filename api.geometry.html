@@ -4,151 +4,106 @@
     <title>Hydra docs: api.geometry module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.geometry.html">geometry</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.geometry.html">geometry</a>
+        </code>
+      </h1>
 
-    <p>Mathy stuff.</p>
+      <p>Mathy stuff.</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.geometry.<a href="#hypot">hypot</a></li>
+
+      <section id="hypot">
+        <h3><a href="#hypot">hypot</a></h3>
+        <code>api.geometry.hypot(point) -> number</code>
+        <p>Returns hypotenuse of a line defined from 0,0 to point.</p>
+      </section>
+
       
-      <li>api.geometry.<a href="#intersectionrect">intersectionrect</a></li>
+
+      <section id="intersectionrect">
+        <h3><a href="#intersectionrect">intersectionrect</a></h3>
+        <code>api.geometry.intersectionrect(rect1, rect2) -> rect3</code>
+        <p>Returns the intersection of two rects as a new rect.</p>
+      </section>
+
       
-      <li>api.geometry.<a href="#point">point</a></li>
+
+      <section id="point">
+        <h3><a href="#point">point</a></h3>
+        <code>api.geometry.point(x, y) -> point</code>
+        <p>Convenience function for creating a point-table.</p>
+      </section>
+
       
-      <li>api.geometry.<a href="#rect">rect</a></li>
+
+      <section id="rect">
+        <h3><a href="#rect">rect</a></h3>
+        <code>api.geometry.rect(x, y, w, y) -> rect</code>
+        <p>Convenience function for creating a rect-table.</p>
+      </section>
+
       
-      <li>api.geometry.<a href="#rectmidpoint">rectmidpoint</a></li>
+
+      <section id="rectmidpoint">
+        <h3><a href="#rectmidpoint">rectmidpoint</a></h3>
+        <code>api.geometry.rectmidpoint(r) -> point</code>
+        <p>Returns the midpoint of a rect.</p>
+      </section>
+
       
-      <li>api.geometry.<a href="#rotateccw">rotateccw</a></li>
+
+      <section id="rotateccw">
+        <h3><a href="#rotateccw">rotateccw</a></h3>
+        <code>api.geometry.rotateccw(point, aroundpoint, ntimes = 1) -> point</code>
+        <p>Rotates a point around another point N times.</p>
+      </section>
+
       
-      <li>api.geometry.<a href="#size">size</a></li>
+
+      <section id="size">
+        <h3><a href="#size">size</a></h3>
+        <code>api.geometry.size(w, h) -> size</code>
+        <p>Convenience function for creating a size-table.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.geometry.<a href="#hypot">hypot</a></li>
+        
+        <li>api.geometry.<a href="#intersectionrect">intersectionrect</a></li>
+        
+        <li>api.geometry.<a href="#point">point</a></li>
+        
+        <li>api.geometry.<a href="#rect">rect</a></li>
+        
+        <li>api.geometry.<a href="#rectmidpoint">rectmidpoint</a></li>
+        
+        <li>api.geometry.<a href="#rotateccw">rotateccw</a></li>
+        
+        <li>api.geometry.<a href="#size">size</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="hypot"></a>
-    <h3><a href="#hypot">hypot</a></h3>
-    <code>api.geometry.hypot(point) -> number</code>
-    <p>Returns hypotenuse of a line defined from 0,0 to point.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="intersectionrect"></a>
-    <h3><a href="#intersectionrect">intersectionrect</a></h3>
-    <code>api.geometry.intersectionrect(rect1, rect2) -> rect3</code>
-    <p>Returns the intersection of two rects as a new rect.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="point"></a>
-    <h3><a href="#point">point</a></h3>
-    <code>api.geometry.point(x, y) -> point</code>
-    <p>Convenience function for creating a point-table.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="rect"></a>
-    <h3><a href="#rect">rect</a></h3>
-    <code>api.geometry.rect(x, y, w, y) -> rect</code>
-    <p>Convenience function for creating a rect-table.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="rectmidpoint"></a>
-    <h3><a href="#rectmidpoint">rectmidpoint</a></h3>
-    <code>api.geometry.rectmidpoint(r) -> point</code>
-    <p>Returns the midpoint of a rect.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="rotateccw"></a>
-    <h3><a href="#rotateccw">rotateccw</a></h3>
-    <code>api.geometry.rotateccw(point, aroundpoint, ntimes = 1) -> point</code>
-    <p>Rotates a point around another point N times.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="size"></a>
-    <h3><a href="#size">size</a></h3>
-    <code>api.geometry.size(w, h) -> size</code>
-    <p>Convenience function for creating a size-table.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 

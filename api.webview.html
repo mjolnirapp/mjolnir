@@ -4,206 +4,156 @@
     <title>Hydra docs: api.webview module</title>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css"/>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
-      * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        background-color: #eee;
-        font-family: 'Helvetica Neue', sans-serif;
-      }
-
-      h1 {
-        margin-top: 0;
-      }
-
-      section {
-        border-top: 1px solid #ccc;
-      }
-
-      section:last-of-type {
-        border-bottom: 1px solid #ccc;
-      }
-
-      a {
-        color: #2e8b57;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .container {
-        max-width: 700px;
-        min-height: 100%;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #fff;
-        -webkit-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-        box-shadow: 0px 0px 25px 0px rgba(50, 50, 50, 0.75);
-      }
-    </style>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
 
   <body>
 
-  <div class="container">
-    <h1>
-<code>
-      <a href="api.html">api</a>.<a href="api.webview.html">webview</a>
-</code>
-    </h1>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <code>
+          <a href="api.html">api</a>.<a href="api.webview.html">webview</a>
+        </code>
+      </h1>
 
-    <p>For showing stuff in web views!</p>
+      <p>For showing stuff in web views!</p>
+    </header>
 
     
 
-    <ul>
+    <div class="container">
       
-      <li>api.webview.<a href="#clicked">clicked</a></li>
+
+      <section id="clicked">
+        <h3><a href="#clicked">clicked</a></h3>
+        <code>api.webview.clicked = function(str)</code>
+        <p>When a link is clicked with a URL like 'hydra:foo', this function is called (if set) with 'foo' as its argument.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#closed">closed</a></li>
+
+      <section id="closed">
+        <h3><a href="#closed">closed</a></h3>
+        <code>api.webview.closed = function()</code>
+        <p>Called (if set) when the webview closes.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#open">open</a></li>
+
+      <section id="open">
+        <h3><a href="#open">open</a></h3>
+        <code>api.webview.open()</code>
+        <p>Opens and returns a new webview instance; as with all other Hydra objects, it's just a table, and you're free to set whatever keys you want on it.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#loadfile">loadfile</a></li>
+
+      <section id="loadfile">
+        <h3><a href="#loadfile">loadfile</a></h3>
+        <code>api.webview:loadfile(path)</code>
+        <p>Loads the given file in the web view.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#loadstring">loadstring</a></li>
+
+      <section id="loadstring">
+        <h3><a href="#loadstring">loadstring</a></h3>
+        <code>api.webview:loadstring(string, basepath)</code>
+        <p>Loads the given string in the webview; basepath must be an absolute path.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#loadurl">loadurl</a></li>
+
+      <section id="loadurl">
+        <h3><a href="#loadurl">loadurl</a></h3>
+        <code>api.webview:loadurl(url)</code>
+        <p>Loads the given URL in the webview.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#setborderless">setborderless</a></li>
+
+      <section id="setborderless">
+        <h3><a href="#setborderless">setborderless</a></h3>
+        <code>api.webview:setborderless(bool)</code>
+        <p>Set whether a webview window has a border.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#sethasshadow">sethasshadow</a></li>
+
+      <section id="sethasshadow">
+        <h3><a href="#sethasshadow">sethasshadow</a></h3>
+        <code>api.webview:sethasshadow(bool)</code>
+        <p>Set whether a webview window has a shadow.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#setignoresmouse">setignoresmouse</a></li>
+
+      <section id="setignoresmouse">
+        <h3><a href="#setignoresmouse">setignoresmouse</a></h3>
+        <code>api.webview:setignoresmouse(bool)</code>
+        <p>Set whether a webview window can be interacted with via the mouse.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#setlevel">setlevel</a></li>
+
+      <section id="setlevel">
+        <h3><a href="#setlevel">setlevel</a></h3>
+        <code>api.webview:setlevel(level)</code>
+        <p>When level is -1, window is always below all others; when 0, window is normal; when 1, window is above all others.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#settitle">settitle</a></li>
+
+      <section id="settitle">
+        <h3><a href="#settitle">settitle</a></h3>
+        <code>api.webview:settitle(string)</code>
+        <p>Set the title of a webview window.</p>
+      </section>
+
       
-      <li>api.webview.<a href="#window">window</a></li>
+
+      <section id="window">
+        <h3><a href="#window">window</a></h3>
+        <code>api.webview:window() -> window</code>
+        <p>Return the api.window that represents the given webview.</p>
+      </section>
+
       
-    </ul>
+    </div>
 
-    
+    <div class="structure">
+      <h2>Methods</h2>
+      <ul>
+        
+        <li>api.webview.<a href="#clicked">clicked</a></li>
+        
+        <li>api.webview.<a href="#closed">closed</a></li>
+        
+        <li>api.webview.<a href="#open">open</a></li>
+        
+        <li>api.webview.<a href="#loadfile">loadfile</a></li>
+        
+        <li>api.webview.<a href="#loadstring">loadstring</a></li>
+        
+        <li>api.webview.<a href="#loadurl">loadurl</a></li>
+        
+        <li>api.webview.<a href="#setborderless">setborderless</a></li>
+        
+        <li>api.webview.<a href="#sethasshadow">sethasshadow</a></li>
+        
+        <li>api.webview.<a href="#setignoresmouse">setignoresmouse</a></li>
+        
+        <li>api.webview.<a href="#setlevel">setlevel</a></li>
+        
+        <li>api.webview.<a href="#settitle">settitle</a></li>
+        
+        <li>api.webview.<a href="#window">window</a></li>
+        
+      </ul>
 
-    <section>
-    <a name="clicked"></a>
-    <h3><a href="#clicked">clicked</a></h3>
-    <code>api.webview.clicked = function(str)</code>
-    <p>When a link is clicked with a URL like 'hydra:foo', this function is called (if set) with 'foo' as its argument.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="closed"></a>
-    <h3><a href="#closed">closed</a></h3>
-    <code>api.webview.closed = function()</code>
-    <p>Called (if set) when the webview closes.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="open"></a>
-    <h3><a href="#open">open</a></h3>
-    <code>api.webview.open()</code>
-    <p>Opens and returns a new webview instance; as with all other Hydra objects, it's just a table, and you're free to set whatever keys you want on it.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="loadfile"></a>
-    <h3><a href="#loadfile">loadfile</a></h3>
-    <code>api.webview:loadfile(path)</code>
-    <p>Loads the given file in the web view.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="loadstring"></a>
-    <h3><a href="#loadstring">loadstring</a></h3>
-    <code>api.webview:loadstring(string, basepath)</code>
-    <p>Loads the given string in the webview; basepath must be an absolute path.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="loadurl"></a>
-    <h3><a href="#loadurl">loadurl</a></h3>
-    <code>api.webview:loadurl(url)</code>
-    <p>Loads the given URL in the webview.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="setborderless"></a>
-    <h3><a href="#setborderless">setborderless</a></h3>
-    <code>api.webview:setborderless(bool)</code>
-    <p>Set whether a webview window has a border.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="sethasshadow"></a>
-    <h3><a href="#sethasshadow">sethasshadow</a></h3>
-    <code>api.webview:sethasshadow(bool)</code>
-    <p>Set whether a webview window has a shadow.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="setignoresmouse"></a>
-    <h3><a href="#setignoresmouse">setignoresmouse</a></h3>
-    <code>api.webview:setignoresmouse(bool)</code>
-    <p>Set whether a webview window can be interacted with via the mouse.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="setlevel"></a>
-    <h3><a href="#setlevel">setlevel</a></h3>
-    <code>api.webview:setlevel(level)</code>
-    <p>When level is -1, window is always below all others; when 0, window is normal; when 1, window is above all others.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="settitle"></a>
-    <h3><a href="#settitle">settitle</a></h3>
-    <code>api.webview:settitle(string)</code>
-    <p>Set the title of a webview window.</p>
-    </section>
-
-    
-
-    <section>
-    <a name="window"></a>
-    <h3><a href="#window">window</a></h3>
-    <code>api.webview:window() -> window</code>
-    <p>Return the api.window that represents the given webview.</p>
-    </section>
-
-    
-
-    
+      
+    </div>
 
     
 
