@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: notify module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -48,6 +48,22 @@
 
         
         <li><a href="notify.html">notify</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#register">register</a></li>
+        
+        <li><a href="#show">show</a></li>
+        
+        <li><a href="#unregister">unregister</a></li>
+        
+        <li><a href="#unregisterall">unregisterall</a></li>
+        
+
+        </ul>
 
         
 
@@ -121,8 +137,40 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>notify</h1>
+      <p>Apple's built-in notifications system.</p>
+
+      
+
+      <section id="register">
+        <h3><a href="#register">register</a></h3>
+        <code>notify.register(tag, fn()) -> id</code>
+        <p>Registers a function to be called when an Apple notification with the given tag is clicked.</p>
+      </section>
+
+      
+
+      <section id="show">
+        <h3><a href="#show">show</a></h3>
+        <code>notify.show(title, subtitle, text, tag)</code>
+        <p>Show an Apple notification. Tag is a unique string that identifies this notification, and will be passed to notify.clicked() if the notification is clicked. None of the strings are optional, though they may each be blank.</p>
+      </section>
+
+      
+
+      <section id="unregister">
+        <h3><a href="#unregister">unregister</a></h3>
+        <code>notify.unregister(id)</code>
+        <p>Unregisters a function to no longer be called when an Apple notification with the given tag is clicked.</p>
+      </section>
+
+      
+
+      <section id="unregisterall">
+        <h3><a href="#unregisterall">unregisterall</a></h3>
+        <code>notify.unregisterall()</code>
+        <p>Unregisters all functions registered for notification-clicks; called automatically when user config reloads.</p>
+      </section>
 
       
     </div>

@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: hotkey module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -66,6 +66,24 @@
 
         
 
+        <ul>
+
+        
+        <li><a href="#bind">bind</a></li>
+        
+        <li><a href="#disableall">disableall</a></li>
+        
+        <li><a href="#new">new</a></li>
+        
+        <li><a href="#disable">disable</a></li>
+        
+        <li><a href="#enable">enable</a></li>
+        
+
+        </ul>
+
+        
+
         
         <li><a href="json.html">json</a></li>
 
@@ -121,8 +139,48 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>hotkey</h1>
+      <p>Manage global hotkeys.</p>
+
+      
+
+      <section id="bind">
+        <h3><a href="#bind">bind</a></h3>
+        <code>hotkey.bind(...) -> hotkey</code>
+        <p>Shortcut for: return hotkey.new(...):enable()</p>
+      </section>
+
+      
+
+      <section id="disableall">
+        <h3><a href="#disableall">disableall</a></h3>
+        <code>hotkey.disableall()</code>
+        <p>Disables all hotkeys; automatically called when user config reloads.</p>
+      </section>
+
+      
+
+      <section id="new">
+        <h3><a href="#new">new</a></h3>
+        <code>hotkey.new(mods, key, fn) -> hotkey</code>
+        <p>Creates a new hotkey that can be enabled. Mods is a table containing any of the elements {cmd, ctrl, alt, shift}. Key may be any 1-character string, or 'F1', 'Enter', etc. Both are case-insensitive. The hotkey has the public fields: key, mods, fn.</p>
+      </section>
+
+      
+
+      <section id="disable">
+        <h3><a href="#disable">disable</a></h3>
+        <code>hotkey:disable() -> self</code>
+        <p>Disables the given hotkey; does not remove it from hotkey.keys.</p>
+      </section>
+
+      
+
+      <section id="enable">
+        <h3><a href="#enable">enable</a></h3>
+        <code>hotkey:enable() -> hotkey</code>
+        <p>Registers the hotkey's fn as the callback when the user presses key while holding mods.</p>
+      </section>
 
       
     </div>

@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: menu module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -53,6 +53,18 @@
 
         
         <li><a href="menu.html">menu</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#hide">hide</a></li>
+        
+        <li><a href="#show">show</a></li>
+        
+
+        </ul>
 
         
 
@@ -121,8 +133,24 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>menu</h1>
+      <p>Control Hydra's menu-bar icon.</p>
+
+      
+
+      <section id="hide">
+        <h3><a href="#hide">hide</a></h3>
+        <code>menu.hide()</code>
+        <p>Hides Hydra's menubar icon.</p>
+      </section>
+
+      
+
+      <section id="show">
+        <h3><a href="#show">show</a></h3>
+        <code>menu.show(fn() -> itemstable)</code>
+        <p>Shows Hyra's menubar icon. The function should return a table of tables with keys: title, fn, checked (optional), disabled (optional)</p>
+      </section>
 
       
     </div>

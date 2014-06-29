@@ -1,0 +1,279 @@
+<html>
+
+  <head>
+    <title>Hydra docs: application module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <h2>Modules</h2>
+      <ul>
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="webview.html">webview</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#applicationforpid">applicationforpid</a></li>
+        
+        <li><a href="#applicationsforbundleid">applicationsforbundleid</a></li>
+        
+        <li><a href="#launchorfocus">launchorfocus</a></li>
+        
+        <li><a href="#runningapplications">runningapplications</a></li>
+        
+        <li><a href="#activate">activate</a></li>
+        
+        <li><a href="#allwindows">allwindows</a></li>
+        
+        <li><a href="#bundleid">bundleid</a></li>
+        
+        <li><a href="#hide">hide</a></li>
+        
+        <li><a href="#ishidden">ishidden</a></li>
+        
+        <li><a href="#kill">kill</a></li>
+        
+        <li><a href="#kill9">kill9</a></li>
+        
+        <li><a href="#title">title</a></li>
+        
+        <li><a href="#unhide">unhide</a></li>
+        
+        <li><a href="#visiblewindows">visiblewindows</a></li>
+        
+
+        </ul>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <h1>application</h1>
+      <p>Manipulate running applications.</p>
+
+      
+
+      <section id="applicationforpid">
+        <h3><a href="#applicationforpid">applicationforpid</a></h3>
+        <code>application.applicationforpid(pid) -> app or nil</code>
+        <p>Returns the running app for the given pid, if it exists.</p>
+      </section>
+
+      
+
+      <section id="applicationsforbundleid">
+        <h3><a href="#applicationsforbundleid">applicationsforbundleid</a></h3>
+        <code>application.applicationsforbundleid(bundleid) -> app[]</code>
+        <p>Returns any running apps that have the given bundleid.</p>
+      </section>
+
+      
+
+      <section id="launchorfocus">
+        <h3><a href="#launchorfocus">launchorfocus</a></h3>
+        <code>application.launchorfocus(name)</code>
+        <p>Launches the app with the given name, or activates it if it's already running.</p>
+      </section>
+
+      
+
+      <section id="runningapplications">
+        <h3><a href="#runningapplications">runningapplications</a></h3>
+        <code>application.runningapplications() -> app[]</code>
+        <p>Returns all running apps.</p>
+      </section>
+
+      
+
+      <section id="activate">
+        <h3><a href="#activate">activate</a></h3>
+        <code>application:activate() -> bool</code>
+        <p>Tries to activate the app (make it focused) and returns its success.</p>
+      </section>
+
+      
+
+      <section id="allwindows">
+        <h3><a href="#allwindows">allwindows</a></h3>
+        <code>application:allwindows() -> window[]</code>
+        <p>Returns all open windows owned by the given app.</p>
+      </section>
+
+      
+
+      <section id="bundleid">
+        <h3><a href="#bundleid">bundleid</a></h3>
+        <code>application:bundleid() -> string</code>
+        <p>Returns the bundle identifier of the app.</p>
+      </section>
+
+      
+
+      <section id="hide">
+        <h3><a href="#hide">hide</a></h3>
+        <code>application:hide()</code>
+        <p>Hides the app (and all its windows).</p>
+      </section>
+
+      
+
+      <section id="ishidden">
+        <h3><a href="#ishidden">ishidden</a></h3>
+        <code>application:ishidden() -> bool</code>
+        <p>Returns whether the app is currently hidden.</p>
+      </section>
+
+      
+
+      <section id="kill">
+        <h3><a href="#kill">kill</a></h3>
+        <code>application:kill()</code>
+        <p>Tries to terminate the app.</p>
+      </section>
+
+      
+
+      <section id="kill9">
+        <h3><a href="#kill9">kill9</a></h3>
+        <code>application:kill9()</code>
+        <p>Assuredly terminates the app.</p>
+      </section>
+
+      
+
+      <section id="title">
+        <h3><a href="#title">title</a></h3>
+        <code>application:title() -> string</code>
+        <p>Returns the localized name of the app (in UTF8).</p>
+      </section>
+
+      
+
+      <section id="unhide">
+        <h3><a href="#unhide">unhide</a></h3>
+        <code>application:unhide()</code>
+        <p>Unhides the app (and all its windows) if it's hidden.</p>
+      </section>
+
+      
+
+      <section id="visiblewindows">
+        <h3><a href="#visiblewindows">visiblewindows</a></h3>
+        <code>application:visiblewindows() -> win[]</code>
+        <p>Returns only the app's windows that are visible.</p>
+      </section>
+
+      
+    </div>
+
+  </body>
+</html>

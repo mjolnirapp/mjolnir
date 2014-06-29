@@ -1,0 +1,229 @@
+<html>
+
+  <head>
+    <title>Hydra docs: screen module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <h2>Modules</h2>
+      <ul>
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="webview.html">webview</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#allscreens">allscreens</a></li>
+        
+        <li><a href="#frame">frame</a></li>
+        
+        <li><a href="#mainscreen">mainscreen</a></li>
+        
+        <li><a href="#settint">settint</a></li>
+        
+        <li><a href="#vislbleframe">vislbleframe</a></li>
+        
+        <li><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></li>
+        
+        <li><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></li>
+        
+        <li><a href="#next">next</a></li>
+        
+        <li><a href="#previous">previous</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <h1>screen</h1>
+      <p>Manipulate monitors (aka screens).</p>
+
+      
+
+      <section id="allscreens">
+        <h3><a href="#allscreens">allscreens</a></h3>
+        <code>screen.allscreens() -> screen[]</code>
+        <p>Returns all the screens there are.</p>
+      </section>
+
+      
+
+      <section id="frame">
+        <h3><a href="#frame">frame</a></h3>
+        <code>screen.frame(screen) -> rect</code>
+        <p>Returns a screen's frame in its own coordinate space.</p>
+      </section>
+
+      
+
+      <section id="mainscreen">
+        <h3><a href="#mainscreen">mainscreen</a></h3>
+        <code>screen.mainscreen() -> screen</code>
+        <p>Returns the 'main' screen, i.e. the one containing the currently focused window.</p>
+      </section>
+
+      
+
+      <section id="settint">
+        <h3><a href="#settint">settint</a></h3>
+        <code>screen.settint(redarray, greenarray, bluearray)</code>
+        <p>Set the tint on a screen; experimental.</p>
+      </section>
+
+      
+
+      <section id="vislbleframe">
+        <h3><a href="#vislbleframe">vislbleframe</a></h3>
+        <code>screen.visibleframe(screen) -> rect</code>
+        <p>Returns a screen's frame in its own coordinate space, without the dock or menu.</p>
+      </section>
+
+      
+
+      <section id="frame_including_dock_and_menu">
+        <h3><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></h3>
+        <code>screen:frame_including_dock_and_menu() -> rect</code>
+        <p>Returns the screen's rect in absolute coordinates, including the dock and menu.</p>
+      </section>
+
+      
+
+      <section id="frame_without_dock_or_menu">
+        <h3><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></h3>
+        <code>screen:frame_without_dock_or_menu() -> rect</code>
+        <p>Returns the screen's rect in absolute coordinates, without the dock or menu.</p>
+      </section>
+
+      
+
+      <section id="next">
+        <h3><a href="#next">next</a></h3>
+        <code>screen:next() -> screen</code>
+        <p>Returns the screen 'after' this one; I have no idea how they're ordered though.</p>
+      </section>
+
+      
+
+      <section id="previous">
+        <h3><a href="#previous">previous</a></h3>
+        <code>screen:previous() -> screen</code>
+        <p>Returns the screen 'before' this one; I have no idea how they're ordered though.</p>
+      </section>
+
+      
+    </div>
+
+  </body>
+</html>

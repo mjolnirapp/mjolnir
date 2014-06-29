@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: updates module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -23,6 +23,18 @@
 
         
         <li><a href="updates.html">updates</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#available">available</a></li>
+        
+        <li><a href="#check">check</a></li>
+        
+
+        </ul>
 
         
 
@@ -121,8 +133,24 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>updates</h1>
+      <p>Check for and install Hydra updates.</p>
+
+      
+
+      <section id="available">
+        <h3><a href="#available">available</a></h3>
+        <code>updates.available = function(isavailable)</code>
+        <p>Called after updates.check() runs, with a boolean parameter specifying whether an update is available. Default implementation pushes a notification when an update is available with the tag 'showupdate'.</p>
+      </section>
+
+      
+
+      <section id="check">
+        <h3><a href="#check">check</a></h3>
+        <code>updates.check()</code>
+        <p>Checks for an update. If one is available, calls updates.available(true); otherwise calls updates.available(false).</p>
+      </section>
 
       
     </div>

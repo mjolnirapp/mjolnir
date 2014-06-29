@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: settings module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -96,6 +96,18 @@
 
         
 
+        <ul>
+
+        
+        <li><a href="#get">get</a></li>
+        
+        <li><a href="#set">set</a></li>
+        
+
+        </ul>
+
+        
+
         
         <li><a href="textgrid.html">textgrid</a></li>
 
@@ -121,8 +133,24 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>settings</h1>
+      <p>Functions for user-defined settings that persist across Hydra launches.</p>
+
+      
+
+      <section id="get">
+        <h3><a href="#get">get</a></h3>
+        <code>settings.get(key) -> val</code>
+        <p>Gets the Lua value for the given string key.</p>
+      </section>
+
+      
+
+      <section id="set">
+        <h3><a href="#set">set</a></h3>
+        <code>settings.set(key, val)</code>
+        <p>Saves the given value for the string key; value must be a string, number, boolean, nil, or a table of any of these, recursively.</p>
+      </section>
 
       
     </div>

@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: pathwatcher module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -18,6 +18,22 @@
 
         
         <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#new">new</a></li>
+        
+        <li><a href="#stopall">stopall</a></li>
+        
+        <li><a href="#start">start</a></li>
+        
+        <li><a href="#stop">stop</a></li>
+        
+
+        </ul>
 
         
 
@@ -121,8 +137,40 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>pathwatcher</h1>
+      <p>Watch paths recursively for changes.</p>
+
+      
+
+      <section id="new">
+        <h3><a href="#new">new</a></h3>
+        <code>pathwatcher.new(path, fn())</code>
+        <p>Returns a new pathwatcher that can be started and stopped. Contains fields: path, fn.</p>
+      </section>
+
+      
+
+      <section id="stopall">
+        <h3><a href="#stopall">stopall</a></h3>
+        <code>pathwatcher.stopall()</code>
+        <p>Calls p:stop() for all started pathwatchers; called automatically when user config reloads.</p>
+      </section>
+
+      
+
+      <section id="start">
+        <h3><a href="#start">start</a></h3>
+        <code>pathwatcher:start()</code>
+        <p>Registers pathwatcher's fn as a callback when pathwatcher's path or any descendent changes.</p>
+      </section>
+
+      
+
+      <section id="stop">
+        <h3><a href="#stop">stop</a></h3>
+        <code>pathwatcher:stop()</code>
+        <p>Unregisters pathwatcher's fn so it won't be called again until the pathwatcher is restarted.</p>
+      </section>
 
       
     </div>

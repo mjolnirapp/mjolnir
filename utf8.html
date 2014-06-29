@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: utf8 module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -33,6 +33,18 @@
 
         
         <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#chars">chars</a></li>
+        
+        <li><a href="#count">count</a></li>
+        
+
+        </ul>
 
         
 
@@ -121,8 +133,24 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation</p>
+      <h1>utf8</h1>
+      <p>Utilities for handling UTF-8 strings 'correctly'.</p>
+
+      
+
+      <section id="chars">
+        <h3><a href="#chars">chars</a></h3>
+        <code>utf8.chars(str) -> {str, ...}</code>
+        <p>Splits the string into groups of (UTF-8 encoded) strings representing what humans would consider individual characters.<br><br>The result is a sequential table, such that table.concat(result) produces the original string.</p>
+      </section>
+
+      
+
+      <section id="count">
+        <h3><a href="#count">count</a></h3>
+        <code>utf8.count(str) -> int</code>
+        <p>Returns the number of characters as humans would count them.</p>
+      </section>
 
       
     </div>

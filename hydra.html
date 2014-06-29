@@ -1,0 +1,279 @@
+<html>
+
+  <head>
+    <title>Hydra docs: hydra module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <h2>Modules</h2>
+      <ul>
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#alert">alert</a></li>
+        
+        <li><a href="#check_accessibility">check_accessibility</a></li>
+        
+        <li><a href="#fileexists">fileexists</a></li>
+        
+        <li><a href="#focushydra">focushydra</a></li>
+        
+        <li><a href="#call">call</a></li>
+        
+        <li><a href="#douserfile">douserfile</a></li>
+        
+        <li><a href="#errorhandler">errorhandler</a></li>
+        
+        <li><a href="#exec">exec</a></li>
+        
+        <li><a href="#reload">reload</a></li>
+        
+        <li><a href="#repl">repl</a></li>
+        
+        <li><a href="#resourcesdir">resourcesdir</a></li>
+        
+        <li><a href="#userfile">userfile</a></li>
+        
+        <li><a href="#uuid">uuid</a></li>
+        
+        <li><a href="#showabout">showabout</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="webview.html">webview</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <h1>hydra</h1>
+      <p>General stuff.</p>
+
+      
+
+      <section id="alert">
+        <h3><a href="#alert">alert</a></h3>
+        <code>alert(str, seconds = 2)</code>
+        <p>Shows a message in large words briefly in the middle of the screen; does tostring() on its argument for convenience..</p>
+      </section>
+
+      
+
+      <section id="check_accessibility">
+        <h3><a href="#check_accessibility">check_accessibility</a></h3>
+        <code>check_accessibility(shouldprompt) -> isenabled</code>
+        <p>Returns whether accessibility is enabled. If passed `true`, prompts the user to enable it.</p>
+      </section>
+
+      
+
+      <section id="fileexists">
+        <h3><a href="#fileexists">fileexists</a></h3>
+        <code>fileexists(path) -> exists, isdir</code>
+        <p>Checks if a file exists, and whether it's a directory.</p>
+      </section>
+
+      
+
+      <section id="focushydra">
+        <h3><a href="#focushydra">focushydra</a></h3>
+        <code>focushydra()</code>
+        <p>Makes Hydra the currently focused app; useful in combination with textgrids.</p>
+      </section>
+
+      
+
+      <section id="call">
+        <h3><a href="#call">call</a></h3>
+        <code>hydra.call(fn, ...) -> ...</code>
+        <p>Just like pcall, except that failures are handled using hydra.errorhandler</p>
+      </section>
+
+      
+
+      <section id="douserfile">
+        <h3><a href="#douserfile">douserfile</a></h3>
+        <code>hydra.douserfile(name)</code>
+        <p>Convenience wrapper around dofile() and hydra.userfile(name)</p>
+      </section>
+
+      
+
+      <section id="errorhandler">
+        <h3><a href="#errorhandler">errorhandler</a></h3>
+        <code>hydra.errorhandler = function(err)</code>
+        <p>Error handler for hydra.call; intended for you to set, not for third party libs</p>
+      </section>
+
+      
+
+      <section id="exec">
+        <h3><a href="#exec">exec</a></h3>
+        <code>hydra.exec(command) -> string</code>
+        <p>Runs a shell function and returns stdout as a string (without trailing newline).</p>
+      </section>
+
+      
+
+      <section id="reload">
+        <h3><a href="#reload">reload</a></h3>
+        <code>hydra.reload()</code>
+        <p>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</p>
+      </section>
+
+      
+
+      <section id="repl">
+        <h3><a href="#repl">repl</a></h3>
+        <code>hydra.repl() -> textgrid</code>
+        <p>Opens a readline-like REPL (Read-Eval-Print-Loop) that has full access to Hydra's API; type 'help' for more info.</p>
+      </section>
+
+      
+
+      <section id="resourcesdir">
+        <h3><a href="#resourcesdir">resourcesdir</a></h3>
+        <code>hydra.resourcesdir -> string</code>
+        <p>The path of the built-in lua source files, with no trailing slash.</p>
+      </section>
+
+      
+
+      <section id="userfile">
+        <h3><a href="#userfile">userfile</a></h3>
+        <code>hydra.userfile(name)</code>
+        <p>Returns the full path to the file ~/.hydra/{name}.lua</p>
+      </section>
+
+      
+
+      <section id="uuid">
+        <h3><a href="#uuid">uuid</a></h3>
+        <code>hydra.uuid() -> string</code>
+        <p>Returns a UUID as a string</p>
+      </section>
+
+      
+
+      <section id="showabout">
+        <h3><a href="#showabout">showabout</a></h3>
+        <code>showabout()</code>
+        <p>Displays the standard OS X about panel; implicitly focuses Hydra.</p>
+      </section>
+
+      
+    </div>
+
+  </body>
+</html>
