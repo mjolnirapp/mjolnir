@@ -12,83 +12,22 @@
       <h2>Modules</h2>
       <ul>
         
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
         <li><a href="ext.html">ext</a></li>
 
         
 
         
-        <li><a href="pathwatcher.html">pathwatcher</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
-
-        
-
-        
-        <li><a href="logger.html">logger</a></li>
-
-        
-
-        
-        <li><a href="utf8.html">utf8</a></li>
-
-        
-
-        
-        <li><a href="hydra.html">hydra</a></li>
-
-        
-
-        <ul>
-
-        
-        <li><a href="#alert">alert</a></li>
-        
-        <li><a href="#check_accessibility">check_accessibility</a></li>
-        
-        <li><a href="#fileexists">fileexists</a></li>
-        
-        <li><a href="#focushydra">focushydra</a></li>
-        
-        <li><a href="#call">call</a></li>
-        
-        <li><a href="#douserfile">douserfile</a></li>
-        
-        <li><a href="#errorhandler">errorhandler</a></li>
-        
-        <li><a href="#exec">exec</a></li>
-        
-        <li><a href="#reload">reload</a></li>
-        
-        <li><a href="#repl">repl</a></li>
-        
-        <li><a href="#resourcesdir">resourcesdir</a></li>
-        
-        <li><a href="#userfile">userfile</a></li>
-        
-        <li><a href="#uuid">uuid</a></li>
-        
-        <li><a href="#showabout">showabout</a></li>
-        
-
-        </ul>
-
-        
-
-        
-        <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="notify.html">notify</a></li>
-
-        
-
-        
-        <li><a href="menu.html">menu</a></li>
+        <li><a href="fnutils.html">fnutils</a></li>
 
         
 
@@ -103,12 +42,58 @@
         
 
         
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#alert">alert</a></li>
+        
+        <li><a href="#call">call</a></li>
+        
+        <li><a href="#check_accessibility">check_accessibility</a></li>
+        
+        <li><a href="#douserfile">douserfile</a></li>
+        
+        <li><a href="#errorhandler">errorhandler</a></li>
+        
+        <li><a href="#exec">exec</a></li>
+        
+        <li><a href="#fileexists">fileexists</a></li>
+        
+        <li><a href="#focushydra">focushydra</a></li>
+        
+        <li><a href="#reload">reload</a></li>
+        
+        <li><a href="#repl">repl</a></li>
+        
+        <li><a href="#resourcesdir">resourcesdir</a></li>
+        
+        <li><a href="#showabout">showabout</a></li>
+        
+        <li><a href="#userfile">userfile</a></li>
+        
+        <li><a href="#uuid">uuid</a></li>
+        
+
+        </ul>
+
+        
+
+        
         <li><a href="json.html">json</a></li>
 
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
 
         
 
@@ -118,7 +103,12 @@
         
 
         
-        <li><a href="webview.html">webview</a></li>
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
 
         
 
@@ -138,17 +128,27 @@
         
 
         
-        <li><a href="fnutils.html">fnutils</a></li>
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="webview.html">webview</a></li>
 
         
 
         
         <li><a href="window.html">window</a></li>
-
-        
-
-        
-        <li><a href="application.html">application</a></li>
 
         
 
@@ -164,32 +164,8 @@
 
       <section id="alert">
         <h3><a href="#alert">alert</a></h3>
-        <code>alert(str, seconds = 2)</code>
+        <code>hydra.alert(str, seconds = 2)</code>
         <p>Shows a message in large words briefly in the middle of the screen; does tostring() on its argument for convenience..</p>
-      </section>
-
-      
-
-      <section id="check_accessibility">
-        <h3><a href="#check_accessibility">check_accessibility</a></h3>
-        <code>check_accessibility(shouldprompt) -> isenabled</code>
-        <p>Returns whether accessibility is enabled. If passed `true`, prompts the user to enable it.</p>
-      </section>
-
-      
-
-      <section id="fileexists">
-        <h3><a href="#fileexists">fileexists</a></h3>
-        <code>fileexists(path) -> exists, isdir</code>
-        <p>Checks if a file exists, and whether it's a directory.</p>
-      </section>
-
-      
-
-      <section id="focushydra">
-        <h3><a href="#focushydra">focushydra</a></h3>
-        <code>focushydra()</code>
-        <p>Makes Hydra the currently focused app; useful in combination with textgrids.</p>
       </section>
 
       
@@ -198,6 +174,14 @@
         <h3><a href="#call">call</a></h3>
         <code>hydra.call(fn, ...) -> ...</code>
         <p>Just like pcall, except that failures are handled using hydra.errorhandler</p>
+      </section>
+
+      
+
+      <section id="check_accessibility">
+        <h3><a href="#check_accessibility">check_accessibility</a></h3>
+        <code>hydra.check_accessibility(shouldprompt) -> isenabled</code>
+        <p>Returns whether accessibility is enabled. If passed `true`, prompts the user to enable it.</p>
       </section>
 
       
@@ -226,6 +210,22 @@
 
       
 
+      <section id="fileexists">
+        <h3><a href="#fileexists">fileexists</a></h3>
+        <code>hydra.fileexists(path) -> exists, isdir</code>
+        <p>Checks if a file exists, and whether it's a directory.</p>
+      </section>
+
+      
+
+      <section id="focushydra">
+        <h3><a href="#focushydra">focushydra</a></h3>
+        <code>hydra.focushydra()</code>
+        <p>Makes Hydra the currently focused app; useful in combination with textgrids.</p>
+      </section>
+
+      
+
       <section id="reload">
         <h3><a href="#reload">reload</a></h3>
         <code>hydra.reload()</code>
@@ -250,6 +250,14 @@
 
       
 
+      <section id="showabout">
+        <h3><a href="#showabout">showabout</a></h3>
+        <code>hydra.showabout()</code>
+        <p>Displays the standard OS X about panel; implicitly focuses Hydra.</p>
+      </section>
+
+      
+
       <section id="userfile">
         <h3><a href="#userfile">userfile</a></h3>
         <code>hydra.userfile(name)</code>
@@ -262,14 +270,6 @@
         <h3><a href="#uuid">uuid</a></h3>
         <code>hydra.uuid() -> string</code>
         <p>Returns a UUID as a string</p>
-      </section>
-
-      
-
-      <section id="showabout">
-        <h3><a href="#showabout">showabout</a></h3>
-        <code>showabout()</code>
-        <p>Displays the standard OS X about panel; implicitly focuses Hydra.</p>
       </section>
 
       
