@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -133,25 +135,26 @@
     </div>
 
     <div id="module">
-      <h1>settings</h1>
-      <p>Functions for user-defined settings that persist across Hydra launches.</p>
+      <header>
+        <h1>settings</h1>
+        <p>Functions for user-defined settings that persist across Hydra launches.</p>
+
+      </header>
 
       
-
       <section id="get">
         <h3><a href="#get">get</a></h3>
         <code>settings.get(key) -> val</code>
         <p>Gets the Lua value for the given string key.</p>
+
       </section>
-
       
-
       <section id="set">
         <h3><a href="#set">set</a></h3>
         <code>settings.set(key, val)</code>
         <p>Saves the given value for the string key; value must be a string, number, boolean, nil, or a table of any of these, recursively.</p>
-      </section>
 
+      </section>
       
     </div>
 

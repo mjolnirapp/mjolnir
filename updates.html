@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -133,25 +135,26 @@
     </div>
 
     <div id="module">
-      <h1>updates</h1>
-      <p>Check for and install Hydra updates.</p>
+      <header>
+        <h1>updates</h1>
+        <p>Check for and install Hydra updates.</p>
+
+      </header>
 
       
-
       <section id="available">
         <h3><a href="#available">available</a></h3>
         <code>updates.available = function(isavailable)</code>
-        <p>Called after updates.check() runs, with a boolean parameter specifying whether an update is available. Default implementation pushes a notification when an update is available with the tag 'showupdate'.</p>
+        <p>Called after updates.check() runs, with a boolean parameter specifying whether an update is available. Default implementation pushes a notification when an update is available with the tag &#39;showupdate&#39;.</p>
+
       </section>
-
       
-
       <section id="check">
         <h3><a href="#check">check</a></h3>
         <code>updates.check()</code>
         <p>Checks for an update. If one is available, calls updates.available(true); otherwise calls updates.available(false).</p>
-      </section>
 
+      </section>
       
     </div>
 

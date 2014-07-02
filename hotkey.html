@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -139,49 +141,47 @@
     </div>
 
     <div id="module">
-      <h1>hotkey</h1>
-      <p>Manage global hotkeys.</p>
+      <header>
+        <h1>hotkey</h1>
+        <p>Manage global hotkeys.</p>
+
+      </header>
 
       
-
       <section id="bind">
         <h3><a href="#bind">bind</a></h3>
         <code>hotkey.bind(...) -> hotkey</code>
         <p>Shortcut for: return hotkey.new(...):enable()</p>
+
       </section>
-
       
-
       <section id="disableall">
         <h3><a href="#disableall">disableall</a></h3>
         <code>hotkey.disableall()</code>
         <p>Disables all hotkeys; automatically called when user config reloads.</p>
+
       </section>
-
       
-
       <section id="new">
         <h3><a href="#new">new</a></h3>
         <code>hotkey.new(mods, key, fn) -> hotkey</code>
-        <p>Creates a new hotkey that can be enabled. Mods is a table containing any of the elements {cmd, ctrl, alt, shift}. Key may be any 1-character string, or 'F1', 'Enter', etc. Both are case-insensitive. The hotkey has the public fields: key, mods, fn.</p>
+        <p>Creates a new hotkey that can be enabled. Mods is a table containing any of the elements {cmd, ctrl, alt, shift}. Key may be any 1-character string, or &#39;F1&#39;, &#39;Enter&#39;, etc. Both are case-insensitive. The hotkey has the public fields: key, mods, fn.</p>
+
       </section>
-
       
-
       <section id="disable">
         <h3><a href="#disable">disable</a></h3>
         <code>hotkey:disable() -> self</code>
         <p>Disables the given hotkey; does not remove it from hotkey.keys.</p>
+
       </section>
-
       
-
       <section id="enable">
         <h3><a href="#enable">enable</a></h3>
         <code>hotkey:enable() -> hotkey</code>
-        <p>Registers the hotkey's fn as the callback when the user presses key while holding mods.</p>
-      </section>
+        <p>Registers the hotkey&#39;s fn as the callback when the user presses key while holding mods.</p>
 
+      </section>
       
     </div>
 

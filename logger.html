@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -139,49 +141,47 @@
     </div>
 
     <div id="module">
-      <h1>logger</h1>
-      <p>Functionality to assist with debugging and experimentation.</p>
+      <header>
+        <h1>logger</h1>
+        <p>Functionality to assist with debugging and experimentation.</p>
+
+      </header>
 
       
-
       <section id="addhandler">
         <h3><a href="#addhandler">addhandler</a></h3>
         <code>logger.addhandler(fn(str)) -> index</code>
         <p>Registers a function to handle new log lines.</p>
+
       </section>
-
       
-
       <section id="lines">
         <h3><a href="#lines">lines</a></h3>
         <code>logger.lines = {}</code>
         <p>List of lines logged so far; caps at logger.maxlines. You may clear it by setting it to {} yourself.</p>
+
       </section>
-
       
-
       <section id="maxlines">
         <h3><a href="#maxlines">maxlines</a></h3>
         <code>logger.maxlines = 500</code>
         <p>Maximum number of lines to be logged.</p>
+
       </section>
-
       
-
       <section id="removehandler">
         <h3><a href="#removehandler">removehandler</a></h3>
         <code>logger.removehandler(index)</code>
         <p>Unregisters a function that handles new log lines.</p>
+
       </section>
-
       
-
       <section id="show">
         <h3><a href="#show">show</a></h3>
         <code>logger.show() -> textgrid</code>
         <p>Opens a textgrid that can browse all logs.</p>
-      </section>
 
+      </section>
       
     </div>
 

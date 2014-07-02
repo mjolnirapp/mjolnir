@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -147,81 +149,75 @@
     </div>
 
     <div id="module">
-      <h1>screen</h1>
-      <p>Manipulate monitors (aka screens).</p>
+      <header>
+        <h1>screen</h1>
+        <p>Manipulate monitors (aka screens).</p>
+
+      </header>
 
       
-
       <section id="allscreens">
         <h3><a href="#allscreens">allscreens</a></h3>
         <code>screen.allscreens() -> screen[]</code>
         <p>Returns all the screens there are.</p>
+
       </section>
-
       
-
       <section id="frame">
         <h3><a href="#frame">frame</a></h3>
         <code>screen.frame(screen) -> rect</code>
-        <p>Returns a screen's frame in its own coordinate space.</p>
+        <p>Returns a screen&#39;s frame in its own coordinate space.</p>
+
       </section>
-
       
-
       <section id="mainscreen">
         <h3><a href="#mainscreen">mainscreen</a></h3>
         <code>screen.mainscreen() -> screen</code>
-        <p>Returns the 'main' screen, i.e. the one containing the currently focused window.</p>
+        <p>Returns the &#39;main&#39; screen, i.e. the one containing the currently focused window.</p>
+
       </section>
-
       
-
       <section id="settint">
         <h3><a href="#settint">settint</a></h3>
         <code>screen.settint(redarray, greenarray, bluearray)</code>
         <p>Set the tint on a screen; experimental.</p>
+
       </section>
-
       
-
       <section id="vislbleframe">
         <h3><a href="#vislbleframe">vislbleframe</a></h3>
         <code>screen.visibleframe(screen) -> rect</code>
-        <p>Returns a screen's frame in its own coordinate space, without the dock or menu.</p>
+        <p>Returns a screen&#39;s frame in its own coordinate space, without the dock or menu.</p>
+
       </section>
-
       
-
       <section id="frame_including_dock_and_menu">
         <h3><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></h3>
         <code>screen:frame_including_dock_and_menu() -> rect</code>
-        <p>Returns the screen's rect in absolute coordinates, including the dock and menu.</p>
+        <p>Returns the screen&#39;s rect in absolute coordinates, including the dock and menu.</p>
+
       </section>
-
       
-
       <section id="frame_without_dock_or_menu">
         <h3><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></h3>
         <code>screen:frame_without_dock_or_menu() -> rect</code>
-        <p>Returns the screen's rect in absolute coordinates, without the dock or menu.</p>
+        <p>Returns the screen&#39;s rect in absolute coordinates, without the dock or menu.</p>
+
       </section>
-
       
-
       <section id="next">
         <h3><a href="#next">next</a></h3>
         <code>screen:next() -> screen</code>
-        <p>Returns the screen 'after' this one; I have no idea how they're ordered though.</p>
+        <p>Returns the screen &#39;after&#39; this one; I have no idea how they&#39;re ordered though.</p>
+
       </section>
-
       
-
       <section id="previous">
         <h3><a href="#previous">previous</a></h3>
         <code>screen:previous() -> screen</code>
-        <p>Returns the screen 'before' this one; I have no idea how they're ordered though.</p>
-      </section>
+        <p>Returns the screen &#39;before&#39; this one; I have no idea how they&#39;re ordered though.</p>
 
+      </section>
       
     </div>
 

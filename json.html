@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -133,25 +135,26 @@
     </div>
 
     <div id="module">
-      <h1>json</h1>
-      <p>Functions for converting between Lua values and JSON strings.</p>
+      <header>
+        <h1>json</h1>
+        <p>Functions for converting between Lua values and JSON strings.</p>
+
+      </header>
 
       
-
       <section id="decode">
         <h3><a href="#decode">decode</a></h3>
         <code>json.decode(str) -> val</code>
         <p>Returns a Lua value representing the given JSON string.</p>
+
       </section>
-
       
-
       <section id="encode">
         <h3><a href="#encode">encode</a></h3>
         <code>json.encode(val[, prettyprint?]) -> str</code>
         <p>Returns a JSON string representing the given value; if prettyprint is true, the resulting string will be quite beautiful.</p>
-      </section>
 
+      </section>
       
     </div>
 

@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -126,7 +128,7 @@
         
         <li><a href="#loadurl">loadurl</a></li>
         
-        <li><a href="#setborderless">setborderless</a></li>
+        <li><a href="#sethasborder">sethasborder</a></li>
         
         <li><a href="#sethasshadow">sethasshadow</a></li>
         
@@ -153,105 +155,96 @@
     </div>
 
     <div id="module">
-      <h1>webview</h1>
-      <p>For showing stuff in web views!</p>
+      <header>
+        <h1>webview</h1>
+        <p>For showing stuff in web views!</p>
+
+      </header>
 
       
-
       <section id="clicked">
         <h3><a href="#clicked">clicked</a></h3>
         <code>webview.clicked = function(str)</code>
-        <p>When a link is clicked with a URL like 'hydra:foo', this function is called (if set) with 'foo' as its argument.</p>
+        <p>When a link is clicked with a URL like &#39;hydra:foo&#39;, this function is called (if set) with &#39;foo&#39; as its argument.</p>
+
       </section>
-
       
-
       <section id="closed">
         <h3><a href="#closed">closed</a></h3>
         <code>webview.closed = function()</code>
         <p>Called (if set) when the webview closes.</p>
+
       </section>
-
       
-
       <section id="open">
         <h3><a href="#open">open</a></h3>
         <code>webview.open()</code>
-        <p>Opens and returns a new webview instance; as with all other Hydra objects, it's just a table, and you're free to set whatever keys you want on it.</p>
+        <p>Opens and returns a new webview instance; as with all other Hydra objects, it&#39;s just a table, and you&#39;re free to set whatever keys you want on it.</p>
+
       </section>
-
       
-
       <section id="loadfile">
         <h3><a href="#loadfile">loadfile</a></h3>
         <code>webview:loadfile(path)</code>
         <p>Loads the given file in the web view.</p>
+
       </section>
-
       
-
       <section id="loadstring">
         <h3><a href="#loadstring">loadstring</a></h3>
         <code>webview:loadstring(string, basepath)</code>
         <p>Loads the given string in the webview; basepath must be an absolute path.</p>
+
       </section>
-
       
-
       <section id="loadurl">
         <h3><a href="#loadurl">loadurl</a></h3>
         <code>webview:loadurl(url)</code>
         <p>Loads the given URL in the webview.</p>
+
       </section>
-
       
-
-      <section id="setborderless">
-        <h3><a href="#setborderless">setborderless</a></h3>
-        <code>webview:setborderless(bool)</code>
+      <section id="sethasborder">
+        <h3><a href="#sethasborder">sethasborder</a></h3>
+        <code>webview:sethasborder(bool)</code>
         <p>Set whether a webview window has a border.</p>
+
       </section>
-
       
-
       <section id="sethasshadow">
         <h3><a href="#sethasshadow">sethasshadow</a></h3>
         <code>webview:sethasshadow(bool)</code>
         <p>Set whether a webview window has a shadow.</p>
+
       </section>
-
       
-
       <section id="setignoresmouse">
         <h3><a href="#setignoresmouse">setignoresmouse</a></h3>
         <code>webview:setignoresmouse(bool)</code>
         <p>Set whether a webview window can be interacted with via the mouse.</p>
+
       </section>
-
       
-
       <section id="setlevel">
         <h3><a href="#setlevel">setlevel</a></h3>
         <code>webview:setlevel(level)</code>
         <p>When level is -1, window is always below all others; when 0, window is normal; when 1, window is above all others.</p>
+
       </section>
-
       
-
       <section id="settitle">
         <h3><a href="#settitle">settitle</a></h3>
         <code>webview:settitle(string)</code>
         <p>Set the title of a webview window.</p>
+
       </section>
-
       
-
       <section id="window">
         <h3><a href="#window">window</a></h3>
         <code>webview:window() -> window</code>
         <p>Return the window that represents the given webview.</p>
-      </section>
 
+      </section>
       
     </div>
 

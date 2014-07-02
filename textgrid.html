@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -130,6 +132,10 @@
         
         <li><a href="#setfg">setfg</a></li>
         
+        <li><a href="#sethasborder">sethasborder</a></li>
+        
+        <li><a href="#sethasshadow">sethasshadow</a></li>
+        
         <li><a href="#settitle">settitle</a></li>
         
         <li><a href="#usefont">usefont</a></li>
@@ -171,177 +177,173 @@
     </div>
 
     <div id="module">
-      <h1>textgrid</h1>
-      <p>Super easy in-Hydra GUI windows.</p>
+      <header>
+        <h1>textgrid</h1>
+        <p>Super easy in-Hydra GUI windows.</p>
+
+      </header>
 
       
-
       <section id="closeall">
         <h3><a href="#closeall">closeall</a></h3>
         <code>textgrid.closeall()</code>
         <p>Closes all non-protected textgrids; called automatically when user config is reloaded.</p>
+
       </section>
-
       
-
       <section id="open">
         <h3><a href="#open">open</a></h3>
         <code>textgrid.open() -> textgrid</code>
         <p>Opens a new textgrid window.</p>
+
       </section>
-
       
-
       <section id="textgrids">
         <h3><a href="#textgrids">textgrids</a></h3>
         <code>textgrid.textgrids = {}</code>
         <p>All currently open textgrid windows; do not mutate this at all.</p>
+
       </section>
-
       
-
       <section id="clear">
         <h3><a href="#clear">clear</a></h3>
         <code>textgrid:clear()</code>
-        <p>Replaces all the textgrid's text with space characters.</p>
+        <p>Replaces all the textgrid&#39;s text with space characters.</p>
+
       </section>
-
       
-
       <section id="close">
         <h3><a href="#close">close</a></h3>
         <code>textgrid:close()</code>
         <p>Closes the given textgrid window.</p>
+
       </section>
-
       
-
       <section id="closed">
         <h3><a href="#closed">closed</a></h3>
         <code>textgrid:closed = function()</code>
         <p>Calls the given function when the textgrid is closed. Defaults to nil.</p>
+
       </section>
-
       
-
       <section id="focus">
         <h3><a href="#focus">focus</a></h3>
         <code>textgrid:focus()</code>
         <p>Brings the textgrid to front and focuses it; implicitly focuses Hydra.</p>
+
       </section>
-
       
-
       <section id="getfont">
         <h3><a href="#getfont">getfont</a></h3>
         <code>textgrid:getfont() -> name, pointsize</code>
         <p>Gets the name and pointsize currently used in the textgrid.</p>
+
       </section>
-
       
-
       <section id="getsize">
         <h3><a href="#getsize">getsize</a></h3>
         <code>textgrid:getsize() -> size</code>
         <p>Returns the size (nubmer of rows and columns) as a size-table with keys {x,y}.</p>
+
       </section>
-
       
-
       <section id="keydown">
         <h3><a href="#keydown">keydown</a></h3>
         <code>textgrid:keydown = function(t)</code>
         <p>Calls the given function when a key is pressed in the focused textgrid. The table t contains keys {ctrl, alt, cmd, key}. Defaults to nil.</p>
+
       </section>
-
       
-
       <section id="protect">
         <h3><a href="#protect">protect</a></h3>
         <code>textgrid:protect()</code>
         <p>Prevents the textgrid from closing when your config is reloaded.</p>
+
       </section>
-
       
-
       <section id="resize">
         <h3><a href="#resize">resize</a></h3>
         <code>textgrid:resize(size)</code>
         <p>Resizes the textgrid to the number of rows and columns given in the size-table with keys {x,y}.</p>
+
       </section>
-
       
-
       <section id="resized">
         <h3><a href="#resized">resized</a></h3>
         <code>textgrid:resized = function()</code>
         <p>Calls the given function when the textgrid is resized. Defaults to nil.</p>
+
       </section>
-
       
-
       <section id="setbg">
         <h3><a href="#setbg">setbg</a></h3>
         <code>textgrid:setbg(str)</code>
-        <p>Sets the textgrid's background color to the given 6-digit hex string.</p>
+        <p>Sets the textgrid&#39;s background color to the given 6-digit hex string.</p>
+
       </section>
-
       
-
       <section id="set">
         <h3><a href="#set">set</a></h3>
         <code>textgrid:setchar(str, x, y)</code>
         <p>Sets the given 1-character UTF-8 encoded string at the given grid coordinates.</p>
+
       </section>
-
       
-
       <section id="setcharbg">
         <h3><a href="#setcharbg">setcharbg</a></h3>
         <code>textgrid:setcharbg(str, x, y)</code>
-        <p>Sets the textgrid's background color to the given 6-digit hex string at the given coordinate.</p>
+        <p>Sets the textgrid&#39;s background color to the given 6-digit hex string at the given coordinate.</p>
+
       </section>
-
       
-
       <section id="setcharfg">
         <h3><a href="#setcharfg">setcharfg</a></h3>
         <code>textgrid:setcharfg(str, x, y)</code>
-        <p>Sets the textgrid's foreground color to the given 6-digit hex string at the given coordinate.</p>
+        <p>Sets the textgrid&#39;s foreground color to the given 6-digit hex string at the given coordinate.</p>
+
       </section>
-
       
-
       <section id="setfg">
         <h3><a href="#setfg">setfg</a></h3>
         <code>textgrid:setfg(str)</code>
-        <p>Sets the textgrid's foreground color to the given 6-digit hex string.</p>
+        <p>Sets the textgrid&#39;s foreground color to the given 6-digit hex string.</p>
+
       </section>
-
       
+      <section id="sethasborder">
+        <h3><a href="#sethasborder">sethasborder</a></h3>
+        <code>textgrid:sethasborder(bool)</code>
+        <p>Set whether a textgrid window has a border.</p>
 
+      </section>
+      
+      <section id="sethasshadow">
+        <h3><a href="#sethasshadow">sethasshadow</a></h3>
+        <code>textgrid:sethasshadow(bool)</code>
+        <p>Set whether a textgrid window has a shadow.</p>
+
+      </section>
+      
       <section id="settitle">
         <h3><a href="#settitle">settitle</a></h3>
         <code>textgrid:settitle(title)</code>
         <p>Changes the title of the textgrid window.</p>
+
       </section>
-
       
-
       <section id="usefont">
         <h3><a href="#usefont">usefont</a></h3>
         <code>textgrid:usefont(name, pointsize)</code>
         <p>Sets the new font of the textgrid, potentially changing its visible size (no resize event is fired).</p>
+
       </section>
-
       
-
       <section id="window">
         <h3><a href="#window">window</a></h3>
         <code>textgrid:window() -> window</code>
         <p>Returns the window that represents this textgrid.</p>
-      </section>
 
+      </section>
       
     </div>
 

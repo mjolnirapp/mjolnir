@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -137,41 +139,40 @@
     </div>
 
     <div id="module">
-      <h1>pathwatcher</h1>
-      <p>Watch paths recursively for changes.</p>
+      <header>
+        <h1>pathwatcher</h1>
+        <p>Watch paths recursively for changes.</p>
+
+      </header>
 
       
-
       <section id="new">
         <h3><a href="#new">new</a></h3>
         <code>pathwatcher.new(path, fn())</code>
         <p>Returns a new pathwatcher that can be started and stopped. Contains fields: path, fn.</p>
+
       </section>
-
       
-
       <section id="stopall">
         <h3><a href="#stopall">stopall</a></h3>
         <code>pathwatcher.stopall()</code>
         <p>Calls p:stop() for all started pathwatchers; called automatically when user config reloads.</p>
+
       </section>
-
       
-
       <section id="start">
         <h3><a href="#start">start</a></h3>
         <code>pathwatcher:start()</code>
-        <p>Registers pathwatcher's fn as a callback when pathwatcher's path or any descendent changes.</p>
+        <p>Registers pathwatcher&#39;s fn as a callback when pathwatcher&#39;s path or any descendent changes.</p>
+
       </section>
-
       
-
       <section id="stop">
         <h3><a href="#stop">stop</a></h3>
         <code>pathwatcher:stop()</code>
-        <p>Unregisters pathwatcher's fn so it won't be called again until the pathwatcher is restarted.</p>
-      </section>
+        <p>Unregisters pathwatcher&#39;s fn so it won&#39;t be called again until the pathwatcher is restarted.</p>
 
+      </section>
       
     </div>
 

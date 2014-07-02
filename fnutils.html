@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -37,6 +39,8 @@
         <li><a href="#concat">concat</a></li>
         
         <li><a href="#contains">contains</a></li>
+        
+        <li><a href="#each">each</a></li>
         
         <li><a href="#filter">filter</a></li>
         
@@ -145,73 +149,75 @@
     </div>
 
     <div id="module">
-      <h1>fnutils</h1>
-      <p>Super-helpful functional programming utilities.</p>
+      <header>
+        <h1>fnutils</h1>
+        <p>Super-helpful functional programming utilities.</p>
+
+      </header>
 
       
-
       <section id="concat">
         <h3><a href="#concat">concat</a></h3>
         <code>fnutils.concat(t1, t2)</code>
         <p>Adds all elements of t2 to the end of t1.</p>
+
       </section>
-
       
-
       <section id="contains">
         <h3><a href="#contains">contains</a></h3>
         <code>fnutils.contains(t, el) -> bool</code>
         <p>Returns whether the table contains the given element.</p>
+
       </section>
-
       
+      <section id="each">
+        <h3><a href="#each">each</a></h3>
+        <code>fnutils.each(t, fn) -> t</code>
+        <p>Runs fn(el) for every el in t.</p>
 
+      </section>
+      
       <section id="filter">
         <h3><a href="#filter">filter</a></h3>
         <code>fnutils.filter(t, fn) -> t</code>
         <p>Returns a table of the elements in t in which fn(el) is truthy.</p>
+
       </section>
-
       
-
       <section id="find">
         <h3><a href="#find">find</a></h3>
         <code>fnutils.find(t, fn) -> el</code>
         <p>Returns the first element where fn(el) is truthy.</p>
+
       </section>
-
       
-
       <section id="indexof">
         <h3><a href="#indexof">indexof</a></h3>
         <code>fnutils.indexof(t, el) -> int or nil</code>
         <p>Returns the index of a given element in a table, or nil if not found.</p>
+
       </section>
-
       
-
       <section id="map">
         <h3><a href="#map">map</a></h3>
         <code>fnutils.map(t, fn) -> t</code>
         <p>Returns a table of the results of fn(el) on every el in t.</p>
+
       </section>
-
       
-
       <section id="mapcat">
         <h3><a href="#mapcat">mapcat</a></h3>
         <code>fnutils.mapcat(t, fn) -> t2</code>
         <p>Runs fn(el) for every el in t, and assuming the results are tables, combines them into a new table.</p>
+
       </section>
-
       
-
       <section id="reduce">
         <h3><a href="#reduce">reduce</a></h3>
         <code>fnutils.reduce(t, fn) -> t2</code>
-        <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there's only one left.</p>
-      </section>
+        <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there&#39;s only one left.</p>
 
+      </section>
       
     </div>
 

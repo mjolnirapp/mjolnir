@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -161,137 +163,126 @@
     </div>
 
     <div id="module">
-      <h1>hydra</h1>
-      <p>General stuff.</p>
+      <header>
+        <h1>hydra</h1>
+        <p>General stuff.</p>
+
+      </header>
 
       
-
       <section id="alert">
         <h3><a href="#alert">alert</a></h3>
         <code>hydra.alert(str, seconds = 2)</code>
         <p>Shows a message in large words briefly in the middle of the screen; does tostring() on its argument for convenience..</p>
+
       </section>
-
       
-
       <section id="call">
         <h3><a href="#call">call</a></h3>
         <code>hydra.call(fn, ...) -> ...</code>
         <p>Just like pcall, except that failures are handled using hydra.errorhandler</p>
+
       </section>
-
       
-
       <section id="check_accessibility">
         <h3><a href="#check_accessibility">check_accessibility</a></h3>
         <code>hydra.check_accessibility(shouldprompt) -> isenabled</code>
-        <p>Returns whether accessibility is enabled. If passed `true`, prompts the user to enable it.</p>
+        <p>Returns whether accessibility is enabled. If passed <code>true</code>, prompts the user to enable it.</p>
+
       </section>
-
       
-
       <section id="douserfile">
         <h3><a href="#douserfile">douserfile</a></h3>
         <code>hydra.douserfile(name)</code>
         <p>Convenience wrapper around dofile() and hydra.userfile(name)</p>
+
       </section>
-
       
-
       <section id="errorhandler">
         <h3><a href="#errorhandler">errorhandler</a></h3>
         <code>hydra.errorhandler = function(err)</code>
         <p>Error handler for hydra.call; intended for you to set, not for third party libs</p>
+
       </section>
-
       
-
       <section id="exec">
         <h3><a href="#exec">exec</a></h3>
         <code>hydra.exec(command) -> string</code>
         <p>Runs a shell function and returns stdout as a string (without trailing newline).</p>
+
       </section>
-
       
-
       <section id="fileexists">
         <h3><a href="#fileexists">fileexists</a></h3>
         <code>hydra.fileexists(path) -> exists, isdir</code>
-        <p>Checks if a file exists, and whether it's a directory.</p>
+        <p>Checks if a file exists, and whether it&#39;s a directory.</p>
+
       </section>
-
       
-
       <section id="focushydra">
         <h3><a href="#focushydra">focushydra</a></h3>
         <code>hydra.focushydra()</code>
         <p>Makes Hydra the currently focused app; useful in combination with textgrids.</p>
+
       </section>
-
       
-
       <section id="indock">
         <h3><a href="#indock">indock</a></h3>
         <code>hydra.indock() -> bool</code>
         <p>Returns whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
+
       </section>
-
       
-
       <section id="putindock">
         <h3><a href="#putindock">putindock</a></h3>
         <code>hydra.putindock(bool)</code>
         <p>Sets whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
+
       </section>
-
       
-
       <section id="reload">
         <h3><a href="#reload">reload</a></h3>
         <code>hydra.reload()</code>
         <p>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</p>
+
       </section>
-
       
-
       <section id="repl">
         <h3><a href="#repl">repl</a></h3>
-        <code>hydra.repl() -> textgrid</code>
-        <p>Opens a readline-like REPL (Read-Eval-Print-Loop) that has full access to Hydra's API; type 'help' for more info.</p>
+        <code>hydra.repl([opts]) -> textgrid</code>
+        <p>Opens a readline-like REPL (Read-Eval-Print-Loop) that has full access to Hydra&#39;s API; type &#39;help&#39; for more info.</p>
+
+<p>Optional <code>opts</code> arg can be a table with keys: inputcolor, stdoutcolor, resultcolor, backgroundcolor.</p>
+
       </section>
-
       
-
       <section id="resourcesdir">
         <h3><a href="#resourcesdir">resourcesdir</a></h3>
         <code>hydra.resourcesdir -> string</code>
         <p>The path of the built-in lua source files, with no trailing slash.</p>
+
       </section>
-
       
-
       <section id="showabout">
         <h3><a href="#showabout">showabout</a></h3>
         <code>hydra.showabout()</code>
         <p>Displays the standard OS X about panel; implicitly focuses Hydra.</p>
+
       </section>
-
       
-
       <section id="userfile">
         <h3><a href="#userfile">userfile</a></h3>
         <code>hydra.userfile(name)</code>
         <p>Returns the full path to the file ~/.hydra/{name}.lua</p>
+
       </section>
-
       
-
       <section id="uuid">
         <h3><a href="#uuid">uuid</a></h3>
         <code>hydra.uuid() -> string</code>
         <p>Returns a UUID as a string</p>
-      </section>
 
+      </section>
       
     </div>
 

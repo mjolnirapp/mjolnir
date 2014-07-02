@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: <root> module</title>
+    <title>Hydra docs: Hydra API module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -121,90 +123,88 @@
     </div>
 
     <div id="module">
-      <h1><root></h1>
-      <p>Hydra documenetation.
+      <header>
+        <h1>Hydra API</h1>
+        <h3>Some definitions</h3>
 
-### Some definitions
-
-When we say a function returns a `window` or `hotkey`, we're really
-talking about a Lua table that represents these things. You're free to
+<p>When we say a function returns a <code>window</code> or <code>hotkey</code>, we&#39;re really
+talking about a Lua table that represents these things. You&#39;re free to
 set any keys on it that you please. The only rule is that Hydra is
 free to store keys on them that start with an underscore for its
-internals, so don't use an underscore.
+internals, so don&#39;t use an underscore.</p>
 
-Much of the Hydra API takes a few geometrical types, like `point`,
-`size`, and `rect`. These are just tables. Points have keys x and y,
+<p>Much of the Hydra API takes a few geometrical types, like <code>point</code>,
+<code>size</code>, and <code>rect</code>. These are just tables. Points have keys x and y,
 sizes have keys w and h, and rects have all four keys. So you could
-use a rect where a point or size is needed if you wanted.
+use a rect where a point or size is needed if you wanted.</p>
 
+<h3>The REPL</h3>
 
-### The REPL
+<p>First and foremost is the <code>repl</code> module, which is great for exploring
+and experimenting with Hydra&#39;s API. It&#39;s very similar to the terminal,
+having readline-like functionality built-in.</p>
 
-First and foremost is the `repl` module, which is great for exploring
-and experimenting with Hydra's API. It's very similar to the terminal,
-having readline-like functionality built-in.
+<h3>Where to begin</h3>
 
+<p>Since this is primarily a window manager, you&#39;ll probably want to look
+at the <code>window</code> and <code>hotkey</code> modules first. Even using just these two
+modules, you could make a very useful config.</p>
 
-### Where to begin
+<p>But to make your config a little more full-featured, look into the
+<code>menu</code>, <code>autolaunch</code>, <code>pathwatcher</code>, <code>updates</code>, and <code>notify</code>
+modules. At the very least, the <code>menu</code> module is handy for knowing at
+a glance whether Hydra is running or not.</p>
 
-Since this is primarily a window manager, you'll probably want to look
-at the `window` and `hotkey` modules first. Even using just these two
-modules, you could make a very useful config.
+<p>When using the <code>window</code> module, you may find that you need a window&#39;s
+application; look in the <code>application</code> module for what they can do.</p>
 
-But to make your config a little more full-featured, look into the
-`menu`, `autolaunch`, `pathwatcher`, `updates`, and `notify`
-modules. At the very least, the `menu` module is handy for knowing at
-a glance whether Hydra is running or not.
+<p>Windows also belong to a screen, which is represented by the <code>screen</code>
+module. You&#39;ll find Hydra&#39;s coordinate system detailed there.</p>
 
-When using the `window` module, you may find that you need a window's
-application; look in the `application` module for what they can do.
-
-Windows also belong to a screen, which is represented by the `screen`
-module. You'll find Hydra's coordinate system detailed there.
-
-The `settings` module is there for when you need to store and retrieve
+<p>The <code>settings</code> module is there for when you need to store and retrieve
 Lua values between launches of Hydra (e.g. when you restart your
-computer).
+computer).</p>
 
-The `hydra` module has a few functions that don't really belong in any
-other module. It's worth a peek.
+<p>The <code>hydra</code> module has a few functions that don&#39;t really belong in any
+other module. It&#39;s worth a peek.</p>
 
-The `timer` module is generally useful, for running one-off delayed
-functions, or running a function regularly at an interval.
+<p>The <code>timer</code> module is generally useful, for running one-off delayed
+functions, or running a function regularly at an interval.</p>
 
-If you're into functional programming, check out the `fnutils` module
-for things like map, reduce, filter, etc.
+<p>If you&#39;re into functional programming, check out the <code>fnutils</code> module
+for things like map, reduce, filter, etc.</p>
 
-The `textgrid` module is perfect for almost any custom GUI task, such
+<p>The <code>textgrid</code> module is perfect for almost any custom GUI task, such
 as one-off dialog boxes, list choosers, displaying documentation,
-having a readline-like REPL (see the `repl` module), window hints,
-really almost anything. It's a bit low-level, but I suspect we'll
-start seeing higher-level wrapper APIs for common tasks soon.
+having a readline-like REPL (see the <code>repl</code> module), window hints,
+really almost anything. It&#39;s a bit low-level, but I suspect we&#39;ll
+start seeing higher-level wrapper APIs for common tasks soon.</p>
 
-The `mouse` module is excellent for getting and setting the position
+<p>The <code>mouse</code> module is excellent for getting and setting the position
 of the mouse; in an upcoming version, it will also have a callback
-system for when the mouse has moved.
+system for when the mouse has moved.</p>
 
-The `geometry` and `utf8` modules are just there for convenience. You
-may never need them.
+<p>The <code>geometry</code> and <code>utf8</code> modules are just there for convenience. You
+may never need them.</p>
 
-If you want to read a scrollback of your errors, the `logger` module
+<p>If you want to read a scrollback of your errors, the <code>logger</code> module
 stores all printed information, and comes with a custom textgrid that
-displays it conveniently for you.
+displays it conveniently for you.</p>
 
-You probably won't ever need to touch the `json`, but it's there in
-case you need to. Hydra's internals use it for its documentation
-system.
+<p>You probably won&#39;t ever need to touch the <code>json</code>, but it&#39;s there in
+case you need to. Hydra&#39;s internals use it for its documentation
+system.</p>
 
-Check out the sample configs to see many of these modules in action.
+<p>Check out the sample configs to see many of these modules in action.</p>
 
+<h3>Third party modules</h3>
 
-### Third party modules
+<ul>
+<li>The wiki is the definitive location for third party modules.</li>
+<li>Third party modules are encouraged to reside under <code>ext</code>.</li>
+</ul>
 
-- The wiki is the definitive location for third party modules.
-- Third party modules are encouraged to reside under `ext`.
-
-</p>
+      </header>
 
       
     </div>

@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -133,25 +135,28 @@
     </div>
 
     <div id="module">
-      <h1>utf8</h1>
-      <p>Utilities for handling UTF-8 strings 'correctly'.</p>
+      <header>
+        <h1>utf8</h1>
+        <p>Utilities for handling UTF-8 strings &#39;correctly&#39;.</p>
+
+      </header>
 
       
-
       <section id="chars">
         <h3><a href="#chars">chars</a></h3>
         <code>utf8.chars(str) -> {str, ...}</code>
-        <p>Splits the string into groups of (UTF-8 encoded) strings representing what humans would consider individual characters.<br><br>The result is a sequential table, such that table.concat(result) produces the original string.</p>
+        <p>Splits the string into groups of (UTF-8 encoded) strings representing what humans would consider individual characters.</p>
+
+<p>The result is a sequential table, such that table.concat(result) produces the original string.</p>
+
       </section>
-
       
-
       <section id="count">
         <h3><a href="#count">count</a></h3>
         <code>utf8.count(str) -> int</code>
         <p>Returns the number of characters as humans would count them.</p>
-      </section>
 
+      </section>
       
     </div>
 

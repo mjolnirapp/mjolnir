@@ -9,7 +9,9 @@
   <body>
 
     <div id="modules">
-      <h2>Modules</h2>
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
       <ul>
         
         <li><a href="application.html">application</a></li>
@@ -151,97 +153,89 @@
     </div>
 
     <div id="module">
-      <h1>timer</h1>
-      <p>Execute functions with various timing rules.</p>
+      <header>
+        <h1>timer</h1>
+        <p>Execute functions with various timing rules.</p>
+
+      </header>
 
       
-
       <section id="days">
         <h3><a href="#days">days</a></h3>
         <code>timer.days(n) -> sec</code>
         <p>Returns the number of days in seconds.</p>
+
       </section>
-
       
-
       <section id="doafter">
         <h3><a href="#doafter">doafter</a></h3>
         <code>timer.doafter(sec, fn())</code>
         <p>Runs the function after sec seconds.</p>
+
       </section>
-
       
-
       <section id="hours">
         <h3><a href="#hours">hours</a></h3>
         <code>timer.hours(n) -> sec</code>
         <p>Returns the number of hours in seconds.</p>
+
       </section>
-
       
-
       <section id="minutes">
         <h3><a href="#minutes">minutes</a></h3>
         <code>timer.minutes(n) -> sec</code>
         <p>Returns the number of minutes in seconds.</p>
+
       </section>
-
       
-
       <section id="new">
         <h3><a href="#new">new</a></h3>
         <code>timer.new(seconds, fn) -> timer</code>
         <p>Creates a new timer that can be started. Has the fields: seconds, fn.</p>
+
       </section>
-
       
-
       <section id="runonce">
         <h3><a href="#runonce">runonce</a></h3>
         <code>timer.runonce(fn())</code>
         <p>Runs the function exactly once in the entire lifespan of Hydra; reset only when you quit/restart.</p>
+
       </section>
-
       
-
       <section id="seconds">
         <h3><a href="#seconds">seconds</a></h3>
         <code>timer.seconds(n) -> sec</code>
         <p>Returns the number of seconds in seconds.</p>
+
       </section>
-
       
-
       <section id="stopall">
         <h3><a href="#stopall">stopall</a></h3>
         <code>timer.stopall()</code>
         <p>Stops all running timers; called automatically when user config reloads.</p>
+
       </section>
-
       
-
       <section id="weeks">
         <h3><a href="#weeks">weeks</a></h3>
         <code>timer.weeks(n) -> sec</code>
         <p>Returns the number of weeks in seconds.</p>
+
       </section>
-
       
-
       <section id="start">
         <h3><a href="#start">start</a></h3>
         <code>timer:start() -> timer</code>
         <p>Begins to execute timer.fn every timer.seconds; calling this does not cause an initial firing of the timer immediately.</p>
+
       </section>
-
       
-
       <section id="stop">
         <h3><a href="#stop">stop</a></h3>
         <code>timer:stop() -> timer</code>
-        <p>Stops the timer's fn from getting called until started again.</p>
-      </section>
+        <p>Stops the timer&#39;s fn from getting called until started again.</p>
 
+      </section>
       
     </div>
 
