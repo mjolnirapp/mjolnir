@@ -164,13 +164,11 @@
 </tr>
 </tbody></table>
 
-<h3>Sample config</h3>
-
-<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/sample_config.lua">the official sample config</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
-
 <h3>Some definitions</h3>
 
-<p>When we say a function returns a <code>window</code> or <code>hotkey</code>, we&#39;re really talking about a Lua table that represents these things. You&#39;re free to set any keys on it that you please. The only rule is that Hydra is free to store keys on them that start with an underscore for its internals, so don&#39;t use an underscore.</p>
+<p>Your &quot;config&quot; means your <code>~/.hydra/init.lua</code> file, and more generally anything it does. The directory <code>~/.hydra/</code> is automatically on your require-path, so you can require other files with <code>require</code> or the helpful functions in the <code>hydra</code> module.</p>
+
+<p>When we say a function returns a <code>window</code> or <code>hotkey</code> or basically any non-Lua type, we really mean it returns a Lua table that represents these things. You&#39;re free to set any keys on it that you please. The only rule is that Hydra is free to store keys on them that start with an underscore for its internals, so avoid using an underscore in your key names.</p>
 
 <p>Much of the Hydra API takes a few geometrical types, like <code>point</code>, <code>size</code>, and <code>rect</code>. These are just tables. Points have keys x and y, sizes have keys w and h, and rects have all four keys. So you could use a rect where a point or size is needed if you wanted.</p>
 
@@ -207,6 +205,10 @@
 <p>You probably won&#39;t ever need to touch the <code>json</code>, but it&#39;s there in case you need to. Hydra&#39;s internals use it for its documentation system.</p>
 
 <p>Check out the sample configs to see many of these modules in action.</p>
+
+<h3>Sample config</h3>
+
+<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/sample_config.lua">the official sample config</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
 
 <h3>Third party modules</h3>
 
