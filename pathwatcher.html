@@ -143,6 +143,11 @@
         <h1>pathwatcher</h1>
         <p>Watch paths recursively for changes.</p>
 
+<p>This simple example watches your Hydra directory for changes, and when it sees a change, reloads your configs:</p>
+
+<pre><code>pathwatcher.new(os.getenv(&quot;HOME&quot;) .. &quot;/.hydra/&quot;, hydra.reload):start()
+</code></pre>
+
       </header>
 
       

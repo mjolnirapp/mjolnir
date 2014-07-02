@@ -94,3 +94,7 @@ table th, table td {
     border: 1px solid #ccc;
     padding: 10px 20px;
 }
+
+p {
+    max-width: 600px;
+}

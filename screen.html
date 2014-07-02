@@ -151,7 +151,13 @@
     <div id="module">
       <header>
         <h1>screen</h1>
-        <p>Manipulate monitors (aka screens).</p>
+        <p>Manipulate screens (i.e. monitors).</p>
+
+<p>You usually get a screen through a window (see <code>window.screen</code>). But you can get screens by themselves through this module, albeit not in any defined/useful order.</p>
+
+<p>Hydra&#39;s coordinate system assumes a grid that is the union of every screen&#39;s rect (see <code>screen.frame_including_dock_and_menu</code>).</p>
+
+<p>Every window&#39;s position (i.e. <code>topleft</code>) and size are relative to this grid, and they&#39;re usually within the grid. A window that&#39;s semi-offscreen only intersects the grid.</p>
 
       </header>
 

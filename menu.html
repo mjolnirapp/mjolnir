@@ -139,6 +139,17 @@
         <h1>menu</h1>
         <p>Control Hydra&#39;s menu-bar icon.</p>
 
+<p>Here&#39;s a simple example:</p>
+
+<pre><code>menu.show(function()
+  return {
+    {title = &#39;About Hydra&#39;, fn = hydra.showabout},
+    {title = &#39;-&#39;},
+    {title = &#39;Quit&#39;, fn = os.exit},
+  }
+end)
+</code></pre>
+
       </header>
 
       
