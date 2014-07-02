@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: json module</title>
+    <title>Hydra docs: repl module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -53,18 +53,6 @@
 
         
 
-        <ul>
-
-        
-        <li><a href="#decode">decode</a></li>
-        
-        <li><a href="#encode">encode</a></li>
-        
-
-        </ul>
-
-        
-
         
         <li><a href="logger.html">logger</a></li>
 
@@ -92,6 +80,16 @@
 
         
         <li><a href="repl.html">repl</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#open">open</a></li>
+        
+
+        </ul>
 
         
 
@@ -141,23 +139,20 @@
 
     <div id="module">
       <header>
-        <h1>json</h1>
-        <p>Functions for converting between Lua values and JSON strings.</p>
+        <h1>repl</h1>
+        <p>The REPL (Read-Eval-Print-Loop) is excellent for exploring and experiment with Hydra&#39;s API.</p>
+
+<p>It has most of the familiar readline-like keybindings, including C-b, C-f, M-b, M-f to navigate your text, C-p and C-n to browse command history, etc.</p>
+
+<p>Type <code>help</code> in the REPL for info on how to use the documentation system.</p>
 
       </header>
 
       
-      <section id="decode">
-        <h3><a href="#decode">decode</a></h3>
-        <code>json.decode(str) -> val</code>
-        <p>Returns a Lua value representing the given JSON string.</p>
-
-      </section>
-      
-      <section id="encode">
-        <h3><a href="#encode">encode</a></h3>
-        <code>json.encode(val[, prettyprint?]) -> str</code>
-        <p>Returns a JSON string representing the given value; if prettyprint is true, the resulting string will be quite beautiful.</p>
+      <section id="open">
+        <h3><a href="#open">open</a></h3>
+        <code>repl.open([opts]) -> textgrid</code>
+        <p>Opens a new REPL; the <code>opts</code> parameter is an optional table with keys: inputcolor, stdoutcolor, resultcolor, backgroundcolor; these are 6-digit CSS-like hex strings.</p>
 
       </section>
       
