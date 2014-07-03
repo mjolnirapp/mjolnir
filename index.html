@@ -176,6 +176,12 @@
 
 <p>First and foremost is the <code>repl</code> module, which is great for exploring and experimenting with Hydra&#39;s API. It&#39;s very similar to the terminal, having readline-like functionality built-in.</p>
 
+<h3>A note about modularization</h3>
+
+<p>If you only have <code>~/.hydra/init.lua</code>, you can skip this section. But if you want to extract code into new files under <code>~/.hydra/</code> or put extensions there, there&#39;s a bit you should know first:</p>
+
+<p>You can use Lua&#39;s built-in <code>require</code> function to require files under <code>~/.hydra/</code>. But <code>require</code> has a caching mechanism! Don&#39;t use this if you&#39;re actively developing an extension, or if you&#39;re just splitting your <code>init.lua</code> file into multiple files. <em>It won&#39;t reload after the first time!</em> Instead, use the <code>hydra.douserfile</code> function. It combines the built-in <code>dofile</code> Lua function with <code>hydra.userfile</code> to find a file in <code>~/.hydra/</code> and run it with no caching behavior.</p>
+
 <h3>Where to begin</h3>
 
 <p>Since this is primarily a window manager, you&#39;ll probably want to look at the <code>window</code> and <code>hotkey</code> modules first. Even using just these two modules, you could make a very useful config.</p>
