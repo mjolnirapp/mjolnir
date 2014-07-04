@@ -148,7 +148,15 @@
     <div id="module">
       <header>
         <h1>hotkey</h1>
-        <p>Manage global hotkeys.</p>
+        <p>Create and manage global hotkeys.</p>
+
+<p>The <code>mods</code> field is case-insensitive and may any of the following strings: &quot;cmd&quot;, &quot;ctrl&quot;, &quot;alt&quot;, or &quot;shift&quot;.</p>
+
+<p>The <code>key</code> field is case-insensitive and may be any single-character string; it may also be any of the following strings:</p>
+
+<p>F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15, F16, F17, F18, F19, F20<br>
+PAD, PAD*, PAD+, PAD/, PAD-, PAD=, PAD0, PAD1, PAD2, PAD3, PAD4, PAD5, PAD6, PAD7, PAD8, PAD9, PAD_CLEAR, PAD_ENTER<br>
+RETURN, TAB, SPACE, DELETE, ESCAPE, HELP, HOME, PAGE_UP, FORWARD_DELETE, END, PAGE_DOWN, LEFT, RIGHT, DOWN, UP</p>
 
       </header>
 
@@ -170,7 +178,7 @@
       <section id="new">
         <h3><a href="#new">new</a></h3>
         <code>hotkey.new(mods, key, fn) -> hotkey</code>
-        <p>Creates a new hotkey that can be enabled. Mods is a table containing any of the elements {cmd, ctrl, alt, shift}. Key may be any 1-character string, or &#39;F1&#39;, &#39;Enter&#39;, etc. Both are case-insensitive. The hotkey has the public fields: key, mods, fn.</p>
+        <p>Creates a new hotkey that can be enabled. The hotkey has the public fields: key, mods, fn.</p>
 
       </section>
       
