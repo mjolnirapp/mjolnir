@@ -79,6 +79,11 @@
         
 
         
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
         <li><a href="repl.html">repl</a></li>
 
         
@@ -116,8 +121,6 @@
         
         <li><a href="#new">new</a></li>
         
-        <li><a href="#runonce">runonce</a></li>
-        
         <li><a href="#seconds">seconds</a></li>
         
         <li><a href="#stopall">stopall</a></li>
@@ -140,11 +143,6 @@
 
         
         <li><a href="utf8.html">utf8</a></li>
-
-        
-
-        
-        <li><a href="webview.html">webview</a></li>
 
         
 
@@ -200,13 +198,6 @@
 
       </section>
       
-      <section id="runonce">
-        <h3><a href="#runonce">runonce</a></h3>
-        <code>timer.runonce(fn())</code>
-        <p>Runs the function exactly once in the entire lifespan of Hydra; reset only when you quit/restart.</p>
-
-      </section>
-      
       <section id="seconds">
         <h3><a href="#seconds">seconds</a></h3>
         <code>timer.seconds(n) -> sec</code>
@@ -230,14 +221,14 @@
       
       <section id="start">
         <h3><a href="#start">start</a></h3>
-        <code>timer:start() -> timer</code>
+        <code>timer:start() -> self</code>
         <p>Begins to execute timer.fn every timer.seconds; calling this does not cause an initial firing of the timer immediately.</p>
 
       </section>
       
       <section id="stop">
         <h3><a href="#stop">stop</a></h3>
-        <code>timer:stop() -> timer</code>
+        <code>timer:stop() -> self</code>
         <p>Stops the timer&#39;s fn from getting called until started again.</p>
 
       </section>

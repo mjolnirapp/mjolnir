@@ -79,6 +79,11 @@
         
 
         
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
         <li><a href="repl.html">repl</a></li>
 
         
@@ -114,11 +119,6 @@
         
 
         
-        <li><a href="webview.html">webview</a></li>
-
-        
-
-        
         <li><a href="window.html">window</a></li>
 
         
@@ -134,9 +134,13 @@
         
         <li><a href="#visiblewindows">visiblewindows</a></li>
         
+        <li><a href="#windowforid">windowforid</a></li>
+        
         <li><a href="#application">application</a></li>
         
         <li><a href="#becomemain">becomemain</a></li>
+        
+        <li><a href="#close">close</a></li>
         
         <li><a href="#focus">focus</a></li>
         
@@ -149,6 +153,8 @@
         <li><a href="#focuswindow_west">focuswindow_west</a></li>
         
         <li><a href="#frame">frame</a></li>
+        
+        <li><a href="#id">id</a></li>
         
         <li><a href="#isminimized">isminimized</a></li>
         
@@ -247,6 +253,13 @@
 
       </section>
       
+      <section id="windowforid">
+        <h3><a href="#windowforid">windowforid</a></h3>
+        <code>window.windowforid() -> win or nil</code>
+        <p>Returns the window for the given id, or nil if it&#39;s an invalid id.</p>
+
+      </section>
+      
       <section id="application">
         <h3><a href="#application">application</a></h3>
         <code>window:application() -> app</code>
@@ -258,6 +271,13 @@
         <h3><a href="#becomemain">becomemain</a></h3>
         <code>window:becomemain() -> bool</code>
         <p>Make this window the main window of the given application; deos not implicitly focus the app.</p>
+
+      </section>
+      
+      <section id="close">
+        <h3><a href="#close">close</a></h3>
+        <code>window:close() -> bool</code>
+        <p>Closes the window; returns whether it succeeded.</p>
 
       </section>
       
@@ -300,6 +320,13 @@
         <h3><a href="#frame">frame</a></h3>
         <code>window:frame() -> rect</code>
         <p>Get the frame of the window in absolute coordinates.</p>
+
+      </section>
+      
+      <section id="id">
+        <h3><a href="#id">id</a></h3>
+        <code>window:id() -> number, sometimes nil</code>
+        <p>Returns a unique number identifying this window.</p>
 
       </section>
       

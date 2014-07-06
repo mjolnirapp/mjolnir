@@ -79,6 +79,11 @@
         
 
         
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
         <li><a href="repl.html">repl</a></li>
 
         
@@ -101,23 +106,25 @@
         <ul>
 
         
-        <li><a href="#closeall">closeall</a></li>
+        <li><a href="#create">create</a></li>
         
-        <li><a href="#open">open</a></li>
-        
-        <li><a href="#textgrids">textgrids</a></li>
+        <li><a href="#destroyall">destroyall</a></li>
         
         <li><a href="#clear">clear</a></li>
         
-        <li><a href="#close">close</a></li>
-        
         <li><a href="#closed">closed</a></li>
+        
+        <li><a href="#destroy">destroy</a></li>
         
         <li><a href="#focus">focus</a></li>
         
         <li><a href="#getfont">getfont</a></li>
         
         <li><a href="#getsize">getsize</a></li>
+        
+        <li><a href="#hide">hide</a></li>
+        
+        <li><a href="#id">id</a></li>
         
         <li><a href="#keydown">keydown</a></li>
         
@@ -142,6 +149,8 @@
         <li><a href="#sethasshadow">sethasshadow</a></li>
         
         <li><a href="#settitle">settitle</a></li>
+        
+        <li><a href="#show">show</a></li>
         
         <li><a href="#usefont">usefont</a></li>
         
@@ -168,11 +177,6 @@
         
 
         
-        <li><a href="webview.html">webview</a></li>
-
-        
-
-        
         <li><a href="window.html">window</a></li>
 
         
@@ -189,24 +193,17 @@
       </header>
 
       
-      <section id="closeall">
-        <h3><a href="#closeall">closeall</a></h3>
-        <code>textgrid.closeall()</code>
-        <p>Closes all non-protected textgrids; called automatically when user config is reloaded.</p>
+      <section id="create">
+        <h3><a href="#create">create</a></h3>
+        <code>textgrid.create() -> textgrid</code>
+        <p>Creates a new (hidden) textgrid window.</p>
 
       </section>
       
-      <section id="open">
-        <h3><a href="#open">open</a></h3>
-        <code>textgrid.open() -> textgrid</code>
-        <p>Opens a new textgrid window.</p>
-
-      </section>
-      
-      <section id="textgrids">
-        <h3><a href="#textgrids">textgrids</a></h3>
-        <code>textgrid.textgrids = {}</code>
-        <p>All currently open textgrid windows; do not mutate this at all.</p>
+      <section id="destroyall">
+        <h3><a href="#destroyall">destroyall</a></h3>
+        <code>textgrid.destroyall()</code>
+        <p>Destroys all non-protected textgrids; called automatically when user config is reloaded.</p>
 
       </section>
       
@@ -217,17 +214,17 @@
 
       </section>
       
-      <section id="close">
-        <h3><a href="#close">close</a></h3>
-        <code>textgrid:close()</code>
-        <p>Closes the given textgrid window.</p>
+      <section id="closed">
+        <h3><a href="#closed">closed</a></h3>
+        <code>textgrid:closed(fn())</code>
+        <p>Calls the given function when the textgrid is closed.</p>
 
       </section>
       
-      <section id="closed">
-        <h3><a href="#closed">closed</a></h3>
-        <code>textgrid:closed = function()</code>
-        <p>Calls the given function when the textgrid is closed. Defaults to nil.</p>
+      <section id="destroy">
+        <h3><a href="#destroy">destroy</a></h3>
+        <code>textgrid:destroy()</code>
+        <p>Destroy the given textgrid window; after calling this, it can no longer be used; to temporarily hide it, use textgrid:hide() instead.</p>
 
       </section>
       
@@ -252,17 +249,31 @@
 
       </section>
       
+      <section id="hide">
+        <h3><a href="#hide">hide</a></h3>
+        <code>textgrid:hide()</code>
+        <p>Hides the textgrid; if shown again, will appear in same place.</p>
+
+      </section>
+      
+      <section id="id">
+        <h3><a href="#id">id</a></h3>
+        <code>textgrid:id() -> number</code>
+        <p>Returns a unique identifier for the textgrid&#39;s window.</p>
+
+      </section>
+      
       <section id="keydown">
         <h3><a href="#keydown">keydown</a></h3>
-        <code>textgrid:keydown = function(t)</code>
-        <p>Calls the given function when a key is pressed in the focused textgrid. The table t contains keys {ctrl, alt, cmd, key}. Defaults to nil.</p>
+        <code>textgrid:keydown(fn(t))</code>
+        <p>Calls the given function when a key is pressed in the focused textgrid. The table t contains keys {ctrl, alt, cmd, key}.</p>
 
       </section>
       
       <section id="protect">
         <h3><a href="#protect">protect</a></h3>
         <code>textgrid:protect()</code>
-        <p>Prevents the textgrid from closing when your config is reloaded.</p>
+        <p>Prevents the textgrid from being destroyed when your config is reloaded.</p>
 
       </section>
       
@@ -275,8 +286,8 @@
       
       <section id="resized">
         <h3><a href="#resized">resized</a></h3>
-        <code>textgrid:resized = function()</code>
-        <p>Calls the given function when the textgrid is resized. Defaults to nil.</p>
+        <code>textgrid:resized(fn())</code>
+        <p>Calls the given function when the textgrid is resized.</p>
 
       </section>
       
@@ -336,6 +347,13 @@
 
       </section>
       
+      <section id="show">
+        <h3><a href="#show">show</a></h3>
+        <code>textgrid:show()</code>
+        <p>Shows the textgrid; does not focus it, use tg:window():focus() for that.</p>
+
+      </section>
+      
       <section id="usefont">
         <h3><a href="#usefont">usefont</a></h3>
         <code>textgrid:usefont(name, pointsize)</code>
@@ -346,7 +364,7 @@
       <section id="window">
         <h3><a href="#window">window</a></h3>
         <code>textgrid:window() -> window</code>
-        <p>Returns the window that represents this textgrid.</p>
+        <p>Return a window (i.e. of the <code>window</code> module) that represents the given textgrid.</p>
 
       </section>
       

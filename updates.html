@@ -79,6 +79,11 @@
         
 
         
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
         <li><a href="repl.html">repl</a></li>
 
         
@@ -115,6 +120,10 @@
         
         <li><a href="#check">check</a></li>
         
+        <li><a href="#currentversion">currentversion</a></li>
+        
+        <li><a href="#getversions">getversions</a></li>
+        
 
         </ul>
 
@@ -122,11 +131,6 @@
 
         
         <li><a href="utf8.html">utf8</a></li>
-
-        
-
-        
-        <li><a href="webview.html">webview</a></li>
 
         
 
@@ -158,6 +162,20 @@
         <h3><a href="#check">check</a></h3>
         <code>updates.check()</code>
         <p>Checks for an update. If one is available, calls updates.available(true); otherwise calls updates.available(false).</p>
+
+      </section>
+      
+      <section id="currentversion">
+        <h3><a href="#currentversion">currentversion</a></h3>
+        <code>updates.currentversion() -> string</code>
+        <p>Low-level function to get current Hydra version; used by updates.check; you probably want to use updates.check instead of using this directly.</p>
+
+      </section>
+      
+      <section id="getversions">
+        <h3><a href="#getversions">getversions</a></h3>
+        <code>updates.getversions(fn(versions))</code>
+        <p>Low-level function to get list of available Hydra versions; used by updates.check; you probably want to use updates.check instead of using this directly.</p>
 
       </section>
       

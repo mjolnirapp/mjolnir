@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: json module</title>
+    <title>Hydra docs: pprint module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -53,18 +53,6 @@
 
         
 
-        <ul>
-
-        
-        <li><a href="#decode">decode</a></li>
-        
-        <li><a href="#encode">encode</a></li>
-        
-
-        </ul>
-
-        
-
         
         <li><a href="logger.html">logger</a></li>
 
@@ -92,6 +80,22 @@
 
         
         <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#ipairs">ipairs</a></li>
+        
+        <li><a href="#keys">keys</a></li>
+        
+        <li><a href="#pairs">pairs</a></li>
+        
+        <li><a href="#values">values</a></li>
+        
+
+        </ul>
 
         
 
@@ -141,23 +145,37 @@
 
     <div id="module">
       <header>
-        <h1>json</h1>
-        <p>Functions for converting between Lua values and JSON strings.</p>
+        <h1>pprint</h1>
+        <p>Simple table printing module. pprint itself is callable on tables to pretty-print them.</p>
 
       </header>
 
       
-      <section id="decode">
-        <h3><a href="#decode">decode</a></h3>
-        <code>json.decode(str) -> val</code>
-        <p>Returns a Lua value representing the given JSON string.</p>
+      <section id="ipairs">
+        <h3><a href="#ipairs">ipairs</a></h3>
+        <code>pprint.ipairs(tbl)</code>
+        <p>Pretty-prints the table as an array.</p>
 
       </section>
       
-      <section id="encode">
-        <h3><a href="#encode">encode</a></h3>
-        <code>json.encode(val[, prettyprint?]) -> str</code>
-        <p>Returns a JSON string representing the given value; if prettyprint is true, the resulting string will be quite beautiful.</p>
+      <section id="keys">
+        <h3><a href="#keys">keys</a></h3>
+        <code>pprint.keys(tbl)</code>
+        <p>Pretty-prints comma-separated list of keys.</p>
+
+      </section>
+      
+      <section id="pairs">
+        <h3><a href="#pairs">pairs</a></h3>
+        <code>pprint.pairs(tbl)</code>
+        <p>Pretty-prints the table.</p>
+
+      </section>
+      
+      <section id="values">
+        <h3><a href="#values">values</a></h3>
+        <code>pprint.values(tbl)</code>
+        <p>Pretty-prints comma-separated list of values.</p>
 
       </section>
       

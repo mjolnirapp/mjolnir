@@ -52,7 +52,11 @@
         
         <li><a href="#mapcat">mapcat</a></li>
         
+        <li><a href="#partial">partial</a></li>
+        
         <li><a href="#reduce">reduce</a></li>
+        
+        <li><a href="#sequence">sequence</a></li>
         
 
         </ul>
@@ -105,6 +109,11 @@
         
 
         
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
         <li><a href="repl.html">repl</a></li>
 
         
@@ -136,11 +145,6 @@
 
         
         <li><a href="utf8.html">utf8</a></li>
-
-        
-
-        
-        <li><a href="webview.html">webview</a></li>
 
         
 
@@ -217,10 +221,24 @@
 
       </section>
       
+      <section id="partial">
+        <h3><a href="#partial">partial</a></h3>
+        <code>fnutils.partial(fn, ...) -> fn'</code>
+        <p>Returns fn partially applied to arg (...).</p>
+
+      </section>
+      
       <section id="reduce">
         <h3><a href="#reduce">reduce</a></h3>
         <code>fnutils.reduce(t, fn) -> t2</code>
         <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there&#39;s only one left.</p>
+
+      </section>
+      
+      <section id="sequence">
+        <h3><a href="#sequence">sequence</a></h3>
+        <code>fnutils.sequence(...) -> fn</code>
+        <p>Returns a list of the results of the passed functions.</p>
 
       </section>
       
