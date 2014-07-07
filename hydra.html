@@ -62,6 +62,8 @@
         
         <li><a href="#check_accessibility">check_accessibility</a></li>
         
+        <li><a href="#docsfile">docsfile</a></li>
+        
         <li><a href="#douserfile">douserfile</a></li>
         
         <li><a href="#errorhandler">errorhandler</a></li>
@@ -196,6 +198,13 @@
         <h3><a href="#check_accessibility">check_accessibility</a></h3>
         <code>hydra.check_accessibility(shouldprompt) -> isenabled</code>
         <p>Returns whether accessibility is enabled. If passed <code>true</code>, prompts the user to enable it.</p>
+
+      </section>
+      
+      <section id="docsfile">
+        <h3><a href="#docsfile">docsfile</a></h3>
+        <code>hydra.docsfile() -> string</code>
+        <p>Returns the path of a JSON file containing the docs, for you to generate pretty docs with. The top-level is a list of groups. Groups have keys: name (string), doc (string), items (list of items); Items have keys: name (string), def (string), doc (string).</p>
 
       </section>
       
