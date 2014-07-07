@@ -103,13 +103,11 @@
         
         <li><a href="#allscreens">allscreens</a></li>
         
-        <li><a href="#frame">frame</a></li>
-        
         <li><a href="#mainscreen">mainscreen</a></li>
         
         <li><a href="#settint">settint</a></li>
         
-        <li><a href="#visibleframe">visibleframe</a></li>
+        <li><a href="#frame">frame</a></li>
         
         <li><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></li>
         
@@ -118,6 +116,8 @@
         <li><a href="#next">next</a></li>
         
         <li><a href="#previous">previous</a></li>
+        
+        <li><a href="#visibleframe">visibleframe</a></li>
         
 
         </ul>
@@ -179,13 +179,6 @@
 
       </section>
       
-      <section id="frame">
-        <h3><a href="#frame">frame</a></h3>
-        <code>screen.frame(screen) -> rect</code>
-        <p>Returns a screen&#39;s frame in its own coordinate space.</p>
-
-      </section>
-      
       <section id="mainscreen">
         <h3><a href="#mainscreen">mainscreen</a></h3>
         <code>screen.mainscreen() -> screen</code>
@@ -200,10 +193,12 @@
 
       </section>
       
-      <section id="visibleframe">
-        <h3><a href="#visibleframe">visibleframe</a></h3>
-        <code>screen.visibleframe(screen) -> rect</code>
-        <p>Returns a screen&#39;s frame in its own coordinate space, without the dock or menu.</p>
+      <section id="frame">
+        <h3><a href="#frame">frame</a></h3>
+        <code>screen:frame(screen) -> rect</code>
+        <p>Returns a screen&#39;s frame in its own coordinate space.</p>
+
+<p>NOTE: you probably want to use screen:frame_including_dock_and_menu() instead.</p>
 
       </section>
       
@@ -232,6 +227,15 @@
         <h3><a href="#previous">previous</a></h3>
         <code>screen:previous() -> screen</code>
         <p>Returns the screen &#39;before&#39; this one (I have no idea how they&#39;re ordered though); this method wraps around to the last screen.</p>
+
+      </section>
+      
+      <section id="visibleframe">
+        <h3><a href="#visibleframe">visibleframe</a></h3>
+        <code>screen:visibleframe(screen) -> rect</code>
+        <p>Returns a screen&#39;s frame in its own coordinate space, without the dock or menu.</p>
+
+<p>NOTE: you probably want to use screen:frame_without_dock_or_menu() instead.</p>
 
       </section>
       
