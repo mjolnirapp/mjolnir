@@ -117,8 +117,6 @@
         
         <li><a href="#clear">clear</a></li>
         
-        <li><a href="#closed">closed</a></li>
-        
         <li><a href="#destroy">destroy</a></li>
         
         <li><a href="#focus">focus</a></li>
@@ -126,6 +124,8 @@
         <li><a href="#getfont">getfont</a></li>
         
         <li><a href="#getsize">getsize</a></li>
+        
+        <li><a href="#hidden">hidden</a></li>
         
         <li><a href="#hide">hide</a></li>
         
@@ -219,13 +219,6 @@
 
       </section>
       
-      <section id="closed">
-        <h3><a href="#closed">closed</a></h3>
-        <code>textgrid:closed(fn())</code>
-        <p>Calls the given function when the textgrid is closed.</p>
-
-      </section>
-      
       <section id="destroy">
         <h3><a href="#destroy">destroy</a></h3>
         <code>textgrid:destroy()</code>
@@ -251,6 +244,13 @@
         <h3><a href="#getsize">getsize</a></h3>
         <code>textgrid:getsize() -> size</code>
         <p>Returns the size (nubmer of rows and columns) as a size-table with keys {x,y}.</p>
+
+      </section>
+      
+      <section id="hidden">
+        <h3><a href="#hidden">hidden</a></h3>
+        <code>textgrid:hidden(fn())</code>
+        <p>Calls the given function when the textgrid is hidden, whether by the user or through the API.</p>
 
       </section>
       
