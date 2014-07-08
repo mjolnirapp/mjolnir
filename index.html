@@ -193,7 +193,15 @@
 
 <p>If you only have <code>~/.hydra/init.lua</code>, you can skip this section. But if you want to extract code into new files under <code>~/.hydra/</code> or put extensions there, there&#39;s a bit you should know first:</p>
 
-<p>You can use Lua&#39;s built-in <code>require</code> function to require files under <code>~/.hydra/</code>. But <code>require</code> has a caching mechanism! Don&#39;t use this if you&#39;re actively developing an extension, or if you&#39;re just splitting your <code>init.lua</code> file into multiple files. <em>It won&#39;t reload after the first time!</em> Instead, use the <code>hydra.douserfile</code> function. It combines the built-in <code>dofile</code> Lua function with <code>hydra.userfile</code> to find a file in <code>~/.hydra/</code> and run it with no caching behavior.</p>
+<p>The directory <code>~/.hydra/</code> is on the require-path, so if you do <code>require &quot;grid&quot;</code> then it will look for <code>~/.hydra/grid.lua</code> and load it if found. But <code>require</code> caches its modules by name, so requiring the same module twice will do nothing! To ensure that your module is loaded every time you run <code>hydra.reload()</code>, &quot;uncache&quot; it by deleting the module name from <code>package.loaded</code> like so:</p>
+
+<pre lang="lua"><code>--- ~/.hydra/init.lua
+
+require &quot;grid&quot;
+package.loaded[&quot;grid&quot;] = nil
+
+--- (the rest of your config is here...)
+</code></pre>
 
 <h3>Where to begin</h3>
 
@@ -227,7 +235,7 @@
 
 <h3>Sample config</h3>
 
-<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/sample_config.lua">the official sample config</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
+<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/Bootstrapping/sample_config.lua">the official sample config</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
 
 <h3>Third party modules</h3>
 
