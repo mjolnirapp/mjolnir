@@ -74,6 +74,8 @@
         
         <li><a href="#indock">indock</a></li>
         
+        <li><a href="#ipchandler">ipchandler</a></li>
+        
         <li><a href="#putindock">putindock</a></li>
         
         <li><a href="#reload">reload</a></li>
@@ -234,6 +236,16 @@
         <h3><a href="#indock">indock</a></h3>
         <code>hydra.indock() -> bool</code>
         <p>Returns whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
+
+      </section>
+      
+      <section id="ipchandler">
+        <h3><a href="#ipchandler">ipchandler</a></h3>
+        <code>hydra.ipchandler(str) -> value</code>
+        <p>The default handler for IPC, called by hydra-cli. Default implementation evals the string and returns the result.<br>
+You may override this function if for some reason you want to implement special evaluation rules for executing remote commands.<br>
+The return value of this function is always turned into a string via tostring() and returned to hydra-cli.<br>
+If an error occurs, the error message is returned instead.</p>
 
       </section>
       
