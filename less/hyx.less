@@ -1,0 +1,47 @@
+/*! Hyx.less v2.1.0 | MIT License | http://github.com/thinkxl/hyx.less */
+ 
+// apply a natural box layout model to all elements, http://www.paulirish.com/2012/box-sizing-border-box-ftw 
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+ 
+// Settings 
+@gutter: 1%;    // - distance between columns
+@grid-size: 12; // - num of columns
+@width: 100%;   // - space that we want to use for the grid
+ 
+// same size columns
+.syntax() when (@num < 1) { 
+    @num-of-cols: @num * @grid-size; 
+
+    &:last-child { 
+        margin-right: 0; 
+    }
+}
+ 
+// different size columns
+.syntax() when (@num > 1) { 
+    @num-of-cols: @num; 
+}
+ 
+.cols ( @num , @in-gutter: @gutter, @global-gutter: @gutter ) {
+    .syntax();
+    @col-size: ( @width / @grid-size ); 
+    @cols: ( @width / ( @col-size * @num-of-cols ) );
+    float: left;
+    width: ( @width - ( @global-gutter * ( @cols - 1 ) ) ) / @cols;
+    margin-right: @in-gutter; 
+}
+ 
+// grid Container
+.row { 
+    width: 100%; 
+ 
+    &:before,
+    &:after {
+        content: " "; 
+        display: table; 
+    }
+ 
+    &:after {
+        clear: both;
+    }
+}

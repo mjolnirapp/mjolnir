@@ -1,0 +1,374 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* 
+ * apply a natural box layout model to all elements, http://www.paulirish.com/2012/box-sizing-border-box-ftw 
+ */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+/* 
+ * Modular Scale - 16px @ 1:1.618    24px @ 1:1.618
+ * http://modularscale.com/scale/?px1=16&px2=24&ra1=1.618&ra2=0
+ */
+.headline-style,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 0.618em;
+  line-height: 1.618em;
+}
+h1 {
+  font-size: 2.618em;
+}
+h2 {
+  font-size: 2.427em;
+}
+h3 {
+  font-size: 1.618em;
+}
+h4 {
+  font-size: 1em;
+}
+h5 {
+  font-size: 0.927em;
+}
+p,
+ul,
+ol,
+dl,
+figcaption,
+blockquote {
+  margin-bottom: 1em;
+  font-size: 1em;
+  line-height: 1.618em;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+* Taking off list style from navigation
+*/
+nav ul,
+nav ol {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+/*
+* A better looking default horizontal rule
+*/
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+* Remove the gap between images, videos, audio and canvas and the bottom of
+* their containers: h5bp.com/i/440
+*/
+audio,
+canvas,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/*
+* Remove default fieldset styles.
+*/
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+* Allow only vertical resizing of textareas.
+*/
+textarea {
+  resize: vertical;
+}
+/*
+ * Stylish for blockquotes
+ */
+blockquote {
+  padding: 0 1.5em 0 1em;
+  border-left: 0.25em solid #e9e9e9;
+  color: #666;
+  font-size: 1em;
+  line-height: 1.5;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+.invisible {
+  visibility: hidden;
+}
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+* `contenteditable` attribute is included anywhere else in the document.
+* Otherwise it causes space to appear at the top and bottom of elements
+* that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+* `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*! Hyx.less v2.1.0 | MIT License | http://github.com/thinkxl/hyx.less */
+*,
+*:after,
+*:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.row {
+  width: 100%;
+}
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.col-1-2 {
+  float: left;
+  width: 48.5%;
+  margin-right: 3%;
+}
+.col-1-2:last-child {
+  margin-right: 0;
+}
+.col-1-3 {
+  float: left;
+  width: 31.333333333333332%;
+  margin-right: 3%;
+}
+.col-1-3:last-child {
+  margin-right: 0;
+}
+.fa-github-square {
+  color: #666;
+}
+.fa-facebook-square {
+  color: #3b5998;
+}
+.fa-twitter-square {
+  color: #55acee;
+}
+.fa-google-plus-square {
+  color: #dd4b39;
+}
+.fa-linkedin-square {
+  color: #0976b4;
+}
+.fa-pinterest-square {
+  color: #cc2127;
+}
+.fa-youtube-square {
+  color: #b31217;
+}
+.fa-instagram {
+  color: #3f729b;
+}
+.cool-edit * {
+  background: rgba(0, 0, 0, 0.1);
+}
+.button-cta {
+  display: table;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em 2em;
+  background-color: #2ecc71;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 0.618em;
+}
+.button-cta:hover {
+  background-color: #2cc46c;
+}
+.link {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.link:hover {
+  border-bottom: 1px solid #333;
+}
+.text-centered {
+  text-align: center;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+}
+pre code {
+  border-radius: 6px;
+}
+pre,
+code {
+  font-size: 16px;
+}
+code {
+  padding: 2px 4px;
+  background: #eee;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+.container {
+  margin: 0 auto;
+  width: 60.456em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.section {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+.section h2 {
+  margin-top: 0;
+  text-align: center;
+}
+#header {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #100d15;
+  color: #d8abea;
+}
+#header-icons {
+  text-align: right;
+  color: #fff;
+}
+#site-title {
+  font-weight: 500;
+}
+#slogan {
+  font-weight: 400;
+}
+#main {
+  text-align: center;
+  background-color: #100d15;
+  color: #d8abea;
+}
+#main h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#main p {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2em;
+  font-weight: 300;
+}
+#screenshots {
+  background-color: #eee;
+}
+.screenshot {
+  margin-top: 4em;
+}
+.screenshot:first-child {
+  margin-top: 0;
+}
+.more-screenshots {
+  font-size: 1.5em;
+}
+#statement {
+  text-align: center;
+  background-color: #100d15;
+  color: #d8abea;
+}
+#statement p {
+  font-size: 1.618em;
+}
+#social {
+  text-align: center;
+}
+.social-icons {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.social-icon {
+  display: inline-block;
+  margin-right: 0.218em;
+  font-size: 2em;
+}

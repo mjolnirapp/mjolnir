@@ -1,0 +1,42 @@
+// ## Span
+.span (@num) { 
+    .cols(@num, @in-gutter: 0, @out-gutter: 0); 
+}
+
+// ## Edit
+.edit() {
+	* {
+		background: rgba(0,0,0,0.1);
+	}
+}
+ 
+
+// ## Center
+//
+// Center elements
+//
+// **Note:** his method can cause elements to be blurry due to the element being placed on a “half pixel”. 
+// A solution for this is to set its parent element to preserve-3d. Like following:
+//
+//  .parent-element {
+//    -webkit-transform-style: preserve-3d;
+//    -moz-transform-style: preserve-3d;
+//    transform-style: preserve-3d;
+//  }
+.center(@dir) { position: absolute; }
+ 
+.center(@dir) when (@dir = v) {
+	top: 50%;
+	transform: translateY(-50%);
+}
+ 
+.center(@dir) when (@dir = h) {
+	left: 50%;
+	transform: translateX(-50%);
+}
+ 
+.center(@dir) when (@dir = both) {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

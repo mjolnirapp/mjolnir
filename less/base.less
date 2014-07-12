@@ -1,0 +1,204 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* 
+ * apply a natural box layout model to all elements, http://www.paulirish.com/2012/box-sizing-border-box-ftw 
+ */
+ 
+*, 
+*:before, 
+*:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+/* 
+ * Modular Scale - 16px @ 1:1.618    24px @ 1:1.618
+ * http://modularscale.com/scale/?px1=16&px2=24&ra1=1.618&ra2=0
+ */
+
+.headline-style {
+    margin-top: 0;
+    margin-bottom: 0.618em;
+    line-height: 1.618em; 
+}
+
+h1:extend(.headline-style) { font-size: 2.618em; }
+h2:extend(.headline-style) { font-size: 2.427em; }
+h3:extend(.headline-style) { font-size: 1.618em; }
+h4:extend(.headline-style) { font-size: 1em; }
+h5:extend(.headline-style) { font-size: 0.927em; }
+
+p, ul, ol, dl, figcaption, blockquote {
+    margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.618em; 
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+* Taking off list style from navigation
+*/
+
+nav ul, 
+nav ol { 
+    margin-left: 0; 
+    padding-left: 0; 
+    list-style: none; 
+}
+
+
+/*
+* A better looking default horizontal rule
+*/
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+* Remove the gap between images, videos, audio and canvas and the bottom of
+* their containers: h5bp.com/i/440
+*/
+
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+* Remove default fieldset styles.
+*/
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+* Allow only vertical resizing of textareas.
+*/
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * Stylish for blockquotes
+ */
+ 
+blockquote {
+    padding: 0 1.5em 0 1em;
+    border-left: 0.25em solid #e9e9e9;
+    color: #666;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+* Hide from both screenreaders and browsers: h5bp.com/u
+*/
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+* Hide only visually, but have it available for screenreaders: h5bp.com/v
+*/
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+* Extends the .visuallyhidden class to allow the element to be focusable
+* when navigated to via the keyboard: h5bp.com/p
+*/
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+* Hide visually and from screenreaders, but maintain layout
+*/
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+* `contenteditable` attribute is included anywhere else in the document.
+* Otherwise it causes space to appear at the top and bottom of elements
+* that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+* `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
