@@ -213,8 +213,8 @@
       
       <section id="activate">
         <h3><a href="#activate">activate</a></h3>
-        <code>application:activate() -> bool</code>
-        <p>Tries to activate the app (make it focused) and returns whether it succeeded.</p>
+        <code>application:activate(allwindows = false) -> bool</code>
+        <p>Tries to activate the app (make its key window focused) and returns whether it succeeded; if allwindows is true, all windows of the application are brought forward as well.</p>
 
       </section>
       
@@ -234,7 +234,7 @@
       
       <section id="hide">
         <h3><a href="#hide">hide</a></h3>
-        <code>application:hide()</code>
+        <code>application:hide() -> success</code>
         <p>Hides the app (and all its windows).</p>
 
       </section>
@@ -276,7 +276,7 @@
       
       <section id="unhide">
         <h3><a href="#unhide">unhide</a></h3>
-        <code>application:unhide()</code>
+        <code>application:unhide() -> success</code>
         <p>Unhides the app (and all its windows) if it&#39;s hidden.</p>
 
       </section>

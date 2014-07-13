@@ -198,10 +198,30 @@
 
 <p>If you only have <code>~/.hydra/init.lua</code>, you can skip this section. But if you want to extract code into new files under <code>~/.hydra/</code> or put extensions there, there&#39;s a bit you should know first:</p>
 
-<p>The directory <code>~/.hydra/</code> is on the require-path, so if you do <code>require &quot;grid&quot;</code> then it will look for <code>~/.hydra/grid.lua</code> and load it if found. But <code>require</code> caches its modules by name, so requiring the same module twice will do nothing! If you don&#39;t want caching behavior, use <code>dofile</code> instead:</p>
+<p>The directory <code>~/.hydra/</code> is on the require-path, so if you do <code>require &quot;grid&quot;</code> then it will look for <code>~/.hydra/grid.lua</code> and load it if found. </p>
+
+<h3>Caching</h3>
+
+<p>But <code>require</code> caches its modules by name, so requiring the same module twice will do nothing! </p>
 
 <pre lang="lua"><code>require &quot;grid&quot;                                   -- caches &quot;grid&quot; module
-dofile(package.searchpath(&quot;grid&quot;, package.path)) -- doesn&#39;t cache &quot;grid&quot; module
+</code></pre>
+
+<p>If you don&#39;t want caching behavior, you can: </p>
+
+<ol>
+<li>delete the module name from the built-in table <code>package.loaded</code> after the <code>require</code>:</li>
+</ol>
+
+<pre lang="lua"><code>require &quot;grid&quot;                                   -- caches &quot;grid&quot; module
+package.loaded[&quot;grid&quot;] = nil                     -- remove &quot;grid&quot; module from cache
+</code></pre>
+
+<ol>
+<li>use <code>dofile</code> instead:</li>
+</ol>
+
+<pre lang="lua"><code>dofile(package.searchpath(&quot;grid&quot;, package.path)) -- doesn&#39;t cache &quot;grid&quot; module
 </code></pre>
 
 <h3>Where to begin</h3>
@@ -236,7 +256,7 @@ dofile(package.searchpath(&quot;grid&quot;, package.path)) -- doesn&#39;t cache 
 
 <h3>Sample config</h3>
 
-<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/Bootstrapping/sample_config.lua">the official sample config</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
+<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/Bootstrapping/sample_init.lua">the official sample init</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
 
 <h3>Third party modules</h3>
 
