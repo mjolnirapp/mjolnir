@@ -1,0 +1,218 @@
+<html>
+
+  <head>
+    <title>Hydra docs: event module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="event.html">event</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#eventtap">eventtap</a></li>
+        
+        <li><a href="#eventtaptypes">eventtaptypes</a></li>
+        
+        <li><a href="#postkey">postkey</a></li>
+        
+        <li><a href="#start">start</a></li>
+        
+        <li><a href="#stop">stop</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>event</h1>
+        <p>For tapping into system events and stuff.</p>
+
+      </header>
+
+      
+      <section id="eventtap">
+        <h3><a href="#eventtap">eventtap</a></h3>
+        <code>event.eventtap(type, callback) -> event</code>
+        <p>Returns a new event tap with the given callback for the given events; is not started automatically.<br>
+The type param must be one of the values from the table <code>event.eventtaptypes</code>.<br>
+If the callback function returns nothing, the event is not modified; if it returns nil, the event is deleted from the OS X event system and not seen by any other apps; all other return values are reserved for future features to this API.<br>
+The callback usually takes no params, except for certain events:<br>
+  flagschanged: takes a table with any of the strings {&quot;cmd&quot;, &quot;alt&quot;, &quot;shift&quot;, &quot;ctrl&quot;, &quot;fn&quot;} as keys pointing to the value <code>true</code></p>
+
+      </section>
+      
+      <section id="eventtaptypes">
+        <h3><a href="#eventtaptypes">eventtaptypes</a></h3>
+        <code>event.eventtaptypes</code>
+        <p>Table for use with <code>event.eventtap</code>, with the following keys:<br>
+  leftmousedown, leftmouseup, leftmousedragged,<br>
+  rightmousedown, rightmouseup, rightmousedragged,<br>
+  middlemousedown, middlemouseup, middlemousedragged,<br>
+  keydown, keyup, mousemoved, flagschanged, scrollwheel</p>
+
+      </section>
+      
+      <section id="postkey">
+        <h3><a href="#postkey">postkey</a></h3>
+        <code>event.postkey(keycode, mods, dir = "both")</code>
+        <p>Posts a keyboard event. Keycode is a numeric value from <code>hotkey.keycodes</code>; dir is either &#39;down&#39;, &#39;up&#39;, or &#39;both&#39;; mods is a table with any of: {&#39;ctrl&#39;, &#39;alt&#39;, &#39;cmd&#39;, &#39;shift&#39;}<br>
+Sometimes doesn&#39;t work inside a hotkey callback for some reason.</p>
+
+      </section>
+      
+      <section id="start">
+        <h3><a href="#start">start</a></h3>
+        <code>event:start()</code>
+        <p>Starts an event; must be in stopped state.</p>
+
+      </section>
+      
+      <section id="stop">
+        <h3><a href="#stop">stop</a></h3>
+        <code>event:stop()</code>
+        <p>Stops an event; must be in started state.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>
