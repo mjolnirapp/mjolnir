@@ -193,8 +193,11 @@ The callback usually takes no params, except for certain events:<br>
       <section id="postkey">
         <h3><a href="#postkey">postkey</a></h3>
         <code>event.postkey(keycode, mods, dir = "both")</code>
-        <p>Posts a keyboard event. Keycode is a numeric value from <code>hotkey.keycodes</code>; dir is either &#39;down&#39;, &#39;up&#39;, or &#39;both&#39;; mods is a table with any of: {&#39;ctrl&#39;, &#39;alt&#39;, &#39;cmd&#39;, &#39;shift&#39;}<br>
-Sometimes doesn&#39;t work inside a hotkey callback for some reason.</p>
+        <p>Posts a keyboard event.<br>
+  keycode is a numeric value from <code>hotkey.keycodes</code><br>
+  dir is either &#39;press&#39;, &#39;release&#39;, or &#39;pressrelease&#39;<br>
+  mods is a table with any of: {&#39;ctrl&#39;, &#39;alt&#39;, &#39;cmd&#39;, &#39;shift&#39;}<br>
+Sometimes this doesn&#39;t work inside a hotkey callback for some reason.</p>
 
       </section>
       
