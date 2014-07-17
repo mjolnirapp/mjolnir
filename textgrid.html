@@ -1,0 +1,419 @@
+<html>
+
+  <head>
+    <title>Hydra docs: textgrid module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#create">create</a></li>
+        
+        <li><a href="#destroyall">destroyall</a></li>
+        
+        <li><a href="#clear">clear</a></li>
+        
+        <li><a href="#destroy">destroy</a></li>
+        
+        <li><a href="#focus">focus</a></li>
+        
+        <li><a href="#getfont">getfont</a></li>
+        
+        <li><a href="#getsize">getsize</a></li>
+        
+        <li><a href="#hidden">hidden</a></li>
+        
+        <li><a href="#hide">hide</a></li>
+        
+        <li><a href="#id">id</a></li>
+        
+        <li><a href="#keydown">keydown</a></li>
+        
+        <li><a href="#protect">protect</a></li>
+        
+        <li><a href="#resize">resize</a></li>
+        
+        <li><a href="#resized">resized</a></li>
+        
+        <li><a href="#setbg">setbg</a></li>
+        
+        <li><a href="#setchar">setchar</a></li>
+        
+        <li><a href="#setcharbg">setcharbg</a></li>
+        
+        <li><a href="#setcharfg">setcharfg</a></li>
+        
+        <li><a href="#setfg">setfg</a></li>
+        
+        <li><a href="#sethasborder">sethasborder</a></li>
+        
+        <li><a href="#sethasshadow">sethasshadow</a></li>
+        
+        <li><a href="#settitle">settitle</a></li>
+        
+        <li><a href="#show">show</a></li>
+        
+        <li><a href="#usefont">usefont</a></li>
+        
+        <li><a href="#window">window</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>textgrid</h1>
+        <p>Super easy in-Hydra GUI windows.</p>
+
+      </header>
+
+      
+      <section id="create">
+        <h3><a href="#create">create</a></h3>
+        <code>textgrid.create() -> textgrid</code>
+        <p>Creates a new (hidden) textgrid window.</p>
+
+      </section>
+      
+      <section id="destroyall">
+        <h3><a href="#destroyall">destroyall</a></h3>
+        <code>textgrid.destroyall()</code>
+        <p>Destroys all non-protected textgrids; called automatically when user config is reloaded.</p>
+
+      </section>
+      
+      <section id="clear">
+        <h3><a href="#clear">clear</a></h3>
+        <code>textgrid:clear()</code>
+        <p>Replaces all the textgrid&#39;s text with space characters.</p>
+
+      </section>
+      
+      <section id="destroy">
+        <h3><a href="#destroy">destroy</a></h3>
+        <code>textgrid:destroy()</code>
+        <p>Destroy the given textgrid window; after calling this, it can no longer be used; to temporarily hide it, use textgrid:hide() instead.</p>
+
+      </section>
+      
+      <section id="focus">
+        <h3><a href="#focus">focus</a></h3>
+        <code>textgrid:focus()</code>
+        <p>Brings the textgrid to front and focuses it; implicitly focuses Hydra.</p>
+
+      </section>
+      
+      <section id="getfont">
+        <h3><a href="#getfont">getfont</a></h3>
+        <code>textgrid:getfont() -> name, pointsize</code>
+        <p>Gets the name and pointsize currently used in the textgrid.</p>
+
+      </section>
+      
+      <section id="getsize">
+        <h3><a href="#getsize">getsize</a></h3>
+        <code>textgrid:getsize() -> size</code>
+        <p>Returns the size (nubmer of rows and columns) as a size-table with keys {x,y}.</p>
+
+      </section>
+      
+      <section id="hidden">
+        <h3><a href="#hidden">hidden</a></h3>
+        <code>textgrid:hidden(fn())</code>
+        <p>Calls the given function when the textgrid is hidden, whether by the user or through the API.</p>
+
+      </section>
+      
+      <section id="hide">
+        <h3><a href="#hide">hide</a></h3>
+        <code>textgrid:hide()</code>
+        <p>Hides the textgrid; if shown again, will appear in same place.</p>
+
+      </section>
+      
+      <section id="id">
+        <h3><a href="#id">id</a></h3>
+        <code>textgrid:id() -> number</code>
+        <p>Returns a unique identifier for the textgrid&#39;s window.</p>
+
+      </section>
+      
+      <section id="keydown">
+        <h3><a href="#keydown">keydown</a></h3>
+        <code>textgrid:keydown(fn(t))</code>
+        <p>Calls the given function when a key is pressed in the focused textgrid. The table t contains keys {ctrl, alt, cmd, key}.</p>
+
+      </section>
+      
+      <section id="protect">
+        <h3><a href="#protect">protect</a></h3>
+        <code>textgrid:protect()</code>
+        <p>Prevents the textgrid from being destroyed when your config is reloaded.</p>
+
+      </section>
+      
+      <section id="resize">
+        <h3><a href="#resize">resize</a></h3>
+        <code>textgrid:resize(size)</code>
+        <p>Resizes the textgrid to the number of rows and columns given in the size-table with keys {w,h}.</p>
+
+      </section>
+      
+      <section id="resized">
+        <h3><a href="#resized">resized</a></h3>
+        <code>textgrid:resized(fn())</code>
+        <p>Calls the given function when the textgrid is resized.</p>
+
+      </section>
+      
+      <section id="setbg">
+        <h3><a href="#setbg">setbg</a></h3>
+        <code>textgrid:setbg(str)</code>
+        <p>Sets the textgrid&#39;s background color to the given 6-digit hex string.</p>
+
+      </section>
+      
+      <section id="setchar">
+        <h3><a href="#setchar">setchar</a></h3>
+        <code>textgrid:setchar(str, x, y)</code>
+        <p>Sets the given 1-character UTF-8 encoded string at the given grid coordinates.</p>
+
+      </section>
+      
+      <section id="setcharbg">
+        <h3><a href="#setcharbg">setcharbg</a></h3>
+        <code>textgrid:setcharbg(str, x, y)</code>
+        <p>Sets the textgrid&#39;s background color to the given 6-digit hex string at the given coordinate.</p>
+
+      </section>
+      
+      <section id="setcharfg">
+        <h3><a href="#setcharfg">setcharfg</a></h3>
+        <code>textgrid:setcharfg(str, x, y)</code>
+        <p>Sets the textgrid&#39;s foreground color to the given 6-digit hex string at the given coordinate.</p>
+
+      </section>
+      
+      <section id="setfg">
+        <h3><a href="#setfg">setfg</a></h3>
+        <code>textgrid:setfg(str)</code>
+        <p>Sets the textgrid&#39;s foreground color to the given 6-digit hex string.</p>
+
+      </section>
+      
+      <section id="sethasborder">
+        <h3><a href="#sethasborder">sethasborder</a></h3>
+        <code>textgrid:sethasborder(bool)</code>
+        <p>Set whether a textgrid window has a border.</p>
+
+      </section>
+      
+      <section id="sethasshadow">
+        <h3><a href="#sethasshadow">sethasshadow</a></h3>
+        <code>textgrid:sethasshadow(bool)</code>
+        <p>Set whether a textgrid window has a shadow.</p>
+
+      </section>
+      
+      <section id="settitle">
+        <h3><a href="#settitle">settitle</a></h3>
+        <code>textgrid:settitle(title)</code>
+        <p>Changes the title of the textgrid window.</p>
+
+      </section>
+      
+      <section id="show">
+        <h3><a href="#show">show</a></h3>
+        <code>textgrid:show()</code>
+        <p>Shows the textgrid; does not focus it, use tg:window():focus() for that.</p>
+
+      </section>
+      
+      <section id="usefont">
+        <h3><a href="#usefont">usefont</a></h3>
+        <code>textgrid:usefont(name, pointsize)</code>
+        <p>Sets the new font of the textgrid, potentially changing its visible size (no resize event is fired).</p>
+
+      </section>
+      
+      <section id="window">
+        <h3><a href="#window">window</a></h3>
+        <code>textgrid:window() -> window</code>
+        <p>Return a window (i.e. of the <code>window</code> module) that represents the given textgrid.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

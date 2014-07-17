@@ -1,0 +1,230 @@
+<html>
+
+  <head>
+    <title>Hydra docs: notify module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#register">register</a></li>
+        
+        <li><a href="#show">show</a></li>
+        
+        <li><a href="#unregister">unregister</a></li>
+        
+        <li><a href="#unregisterall">unregisterall</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>notify</h1>
+        <p>Apple&#39;s built-in notifications system.</p>
+
+      </header>
+
+      
+      <section id="register">
+        <h3><a href="#register">register</a></h3>
+        <code>notify.register(tag, fn()) -> id</code>
+        <p>Registers a function to be called when an Apple notification with the given tag is clicked.</p>
+
+      </section>
+      
+      <section id="show">
+        <h3><a href="#show">show</a></h3>
+        <code>notify.show(title, subtitle, text, tag)</code>
+        <p>Show an Apple notification. Tag is a unique string that identifies this notification; any functions registered for the given tag will be called if the notification is clicked. None of the strings are optional, though they may each be blank.</p>
+
+      </section>
+      
+      <section id="unregister">
+        <h3><a href="#unregister">unregister</a></h3>
+        <code>notify.unregister(id)</code>
+        <p>Unregisters a function to no longer be called when an Apple notification with the given tag is clicked.</p>
+
+      </section>
+      
+      <section id="unregisterall">
+        <h3><a href="#unregisterall">unregisterall</a></h3>
+        <code>notify.unregisterall()</code>
+        <p>Unregisters all functions registered for notification-clicks; called automatically when user config reloads.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,528 @@
+<html>
+
+  <head>
+    <title>Hydra docs: window module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#allwindows">allwindows</a></li>
+        
+        <li><a href="#focusedwindow">focusedwindow</a></li>
+        
+        <li><a href="#orderedwindows">orderedwindows</a></li>
+        
+        <li><a href="#visiblewindows">visiblewindows</a></li>
+        
+        <li><a href="#windowforid">windowforid</a></li>
+        
+        <li><a href="#application">application</a></li>
+        
+        <li><a href="#becomemain">becomemain</a></li>
+        
+        <li><a href="#close">close</a></li>
+        
+        <li><a href="#focus">focus</a></li>
+        
+        <li><a href="#focuswindow_east">focuswindow_east</a></li>
+        
+        <li><a href="#focuswindow_north">focuswindow_north</a></li>
+        
+        <li><a href="#focuswindow_south">focuswindow_south</a></li>
+        
+        <li><a href="#focuswindow_west">focuswindow_west</a></li>
+        
+        <li><a href="#frame">frame</a></li>
+        
+        <li><a href="#id">id</a></li>
+        
+        <li><a href="#isminimized">isminimized</a></li>
+        
+        <li><a href="#isstandard">isstandard</a></li>
+        
+        <li><a href="#isvisible">isvisible</a></li>
+        
+        <li><a href="#maximize">maximize</a></li>
+        
+        <li><a href="#minimize">minimize</a></li>
+        
+        <li><a href="#otherwindows_allscreens">otherwindows_allscreens</a></li>
+        
+        <li><a href="#otherwindows_samescreen">otherwindows_samescreen</a></li>
+        
+        <li><a href="#role">role</a></li>
+        
+        <li><a href="#screen">screen</a></li>
+        
+        <li><a href="#setframe">setframe</a></li>
+        
+        <li><a href="#setsize">setsize</a></li>
+        
+        <li><a href="#settopleft">settopleft</a></li>
+        
+        <li><a href="#size">size</a></li>
+        
+        <li><a href="#subrole">subrole</a></li>
+        
+        <li><a href="#title">title</a></li>
+        
+        <li><a href="#topleft">topleft</a></li>
+        
+        <li><a href="#unminimize">unminimize</a></li>
+        
+        <li><a href="#windows_to_east">windows_to_east</a></li>
+        
+        <li><a href="#windows_to_north">windows_to_north</a></li>
+        
+        <li><a href="#windows_to_south">windows_to_south</a></li>
+        
+        <li><a href="#windows_to_west">windows_to_west</a></li>
+        
+
+        </ul>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>window</h1>
+        <p>Functions for managing any window.</p>
+
+<p>To get windows, see <code>window.focusedwindow</code> and <code>window.visiblewindows</code>.</p>
+
+<p>To get window geometrical attributes, see <code>window.{frame,size,topleft}</code>.</p>
+
+<p>To move and resize windows, see <code>window.set{frame,size,topleft}</code>.</p>
+
+<p>It may be handy to get a window&#39;s app or screen via <code>window.application</code> and <code>window.screen</code>.</p>
+
+<p>See the <code>screen</code> module for detailed explanation of how Hydra uses window/screen coordinates.</p>
+
+      </header>
+
+      
+      <section id="allwindows">
+        <h3><a href="#allwindows">allwindows</a></h3>
+        <code>window.allwindows() -> win[]</code>
+        <p>Returns all windows</p>
+
+      </section>
+      
+      <section id="focusedwindow">
+        <h3><a href="#focusedwindow">focusedwindow</a></h3>
+        <code>window.focusedwindow() -> window</code>
+        <p>Returns the focused window, or nil.</p>
+
+      </section>
+      
+      <section id="orderedwindows">
+        <h3><a href="#orderedwindows">orderedwindows</a></h3>
+        <code>window.orderedwindows() -> win[]</code>
+        <p>Returns all visible windows, ordered from front to back.</p>
+
+      </section>
+      
+      <section id="visiblewindows">
+        <h3><a href="#visiblewindows">visiblewindows</a></h3>
+        <code>window.visiblewindows() -> win[]</code>
+        <p>Get all windows on all screens that match window.isvisible.</p>
+
+      </section>
+      
+      <section id="windowforid">
+        <h3><a href="#windowforid">windowforid</a></h3>
+        <code>window.windowforid() -> win or nil</code>
+        <p>Returns the window for the given id, or nil if it&#39;s an invalid id.</p>
+
+      </section>
+      
+      <section id="application">
+        <h3><a href="#application">application</a></h3>
+        <code>window:application() -> app</code>
+        <p>Returns the app that the window belongs to.</p>
+
+      </section>
+      
+      <section id="becomemain">
+        <h3><a href="#becomemain">becomemain</a></h3>
+        <code>window:becomemain() -> bool</code>
+        <p>Make this window the main window of the given application; deos not implicitly focus the app.</p>
+
+      </section>
+      
+      <section id="close">
+        <h3><a href="#close">close</a></h3>
+        <code>window:close() -> bool</code>
+        <p>Closes the window; returns whether it succeeded.</p>
+
+      </section>
+      
+      <section id="focus">
+        <h3><a href="#focus">focus</a></h3>
+        <code>window:focus() -> bool</code>
+        <p>Try to make this window focused.</p>
+
+      </section>
+      
+      <section id="focuswindow_east">
+        <h3><a href="#focuswindow_east">focuswindow_east</a></h3>
+        <code>window:focuswindow_east()</code>
+        <p>Focus the first focus-able window to the east of this one.</p>
+
+      </section>
+      
+      <section id="focuswindow_north">
+        <h3><a href="#focuswindow_north">focuswindow_north</a></h3>
+        <code>window:focuswindow_north()</code>
+        <p>Focus the first focus-able window to the north of this one.</p>
+
+      </section>
+      
+      <section id="focuswindow_south">
+        <h3><a href="#focuswindow_south">focuswindow_south</a></h3>
+        <code>window:focuswindow_south()</code>
+        <p>Focus the first focus-able window to the south of this one.</p>
+
+      </section>
+      
+      <section id="focuswindow_west">
+        <h3><a href="#focuswindow_west">focuswindow_west</a></h3>
+        <code>window:focuswindow_west()</code>
+        <p>Focus the first focus-able window to the west of this one.</p>
+
+      </section>
+      
+      <section id="frame">
+        <h3><a href="#frame">frame</a></h3>
+        <code>window:frame() -> rect</code>
+        <p>Get the frame of the window in absolute coordinates.</p>
+
+      </section>
+      
+      <section id="id">
+        <h3><a href="#id">id</a></h3>
+        <code>window:id() -> number, sometimes nil</code>
+        <p>Returns a unique number identifying this window.</p>
+
+      </section>
+      
+      <section id="isminimized">
+        <h3><a href="#isminimized">isminimized</a></h3>
+        <code>window:isminimized() -> bool</code>
+        <p>True if the window is currently minimized in the dock.</p>
+
+      </section>
+      
+      <section id="isstandard">
+        <h3><a href="#isstandard">isstandard</a></h3>
+        <code>window:isstandard() -> bool</code>
+        <p>True if the window&#39;s subrole indicates it&#39;s &#39;a standard window&#39;.</p>
+
+      </section>
+      
+      <section id="isvisible">
+        <h3><a href="#isvisible">isvisible</a></h3>
+        <code>window:isvisible() -> bool</code>
+        <p>True if the app is not hidden or minimized.</p>
+
+      </section>
+      
+      <section id="maximize">
+        <h3><a href="#maximize">maximize</a></h3>
+        <code>window:maximize()</code>
+        <p>Make this window fill the whole screen its on, without covering the dock or menu.</p>
+
+      </section>
+      
+      <section id="minimize">
+        <h3><a href="#minimize">minimize</a></h3>
+        <code>window:minimize()</code>
+        <p>Minimizes the window.</p>
+
+      </section>
+      
+      <section id="otherwindows_allscreens">
+        <h3><a href="#otherwindows_allscreens">otherwindows_allscreens</a></h3>
+        <code>window:otherwindows_allscreens() -> win[]</code>
+        <p>Get every window except this one.</p>
+
+      </section>
+      
+      <section id="otherwindows_samescreen">
+        <h3><a href="#otherwindows_samescreen">otherwindows_samescreen</a></h3>
+        <code>window:otherwindows_samescreen() -> win[]</code>
+        <p>Get other windows on the same screen as self.</p>
+
+      </section>
+      
+      <section id="role">
+        <h3><a href="#role">role</a></h3>
+        <code>window:role() -> string</code>
+        <p>Returns the role of the window, whatever that means.</p>
+
+      </section>
+      
+      <section id="screen">
+        <h3><a href="#screen">screen</a></h3>
+        <code>window:screen()</code>
+        <p>Get the screen which most contains this window (by area).</p>
+
+      </section>
+      
+      <section id="setframe">
+        <h3><a href="#setframe">setframe</a></h3>
+        <code>window:setframe(rect)</code>
+        <p>Set the frame of the window in absolute coordinates.</p>
+
+      </section>
+      
+      <section id="setsize">
+        <h3><a href="#setsize">setsize</a></h3>
+        <code>window:setsize(size)</code>
+        <p>Resizes the window.</p>
+
+      </section>
+      
+      <section id="settopleft">
+        <h3><a href="#settopleft">settopleft</a></h3>
+        <code>window:settopleft(point)</code>
+        <p>Moves the window to the given point in absolute coordinate.</p>
+
+      </section>
+      
+      <section id="size">
+        <h3><a href="#size">size</a></h3>
+        <code>window:size() -> size</code>
+        <p>The size of the window.</p>
+
+      </section>
+      
+      <section id="subrole">
+        <h3><a href="#subrole">subrole</a></h3>
+        <code>window:subrole() -> string</code>
+        <p>Returns the subrole of the window, whatever that means.</p>
+
+      </section>
+      
+      <section id="title">
+        <h3><a href="#title">title</a></h3>
+        <code>window:title() -> string</code>
+        <p>Returns the title of the window (as UTF8).</p>
+
+      </section>
+      
+      <section id="topleft">
+        <h3><a href="#topleft">topleft</a></h3>
+        <code>window:topleft() -> point</code>
+        <p>The top-left corner of the window in absolute coordinates.</p>
+
+      </section>
+      
+      <section id="unminimize">
+        <h3><a href="#unminimize">unminimize</a></h3>
+        <code>window:unminimize()</code>
+        <p>Un-minimizes the window.</p>
+
+      </section>
+      
+      <section id="windows_to_east">
+        <h3><a href="#windows_to_east">windows_to_east</a></h3>
+        <code>window:windows_to_east()</code>
+        <p>Get all windows east of this one, ordered by closeness.</p>
+
+      </section>
+      
+      <section id="windows_to_north">
+        <h3><a href="#windows_to_north">windows_to_north</a></h3>
+        <code>window:windows_to_north()</code>
+        <p>Get all windows north of this one, ordered by closeness.</p>
+
+      </section>
+      
+      <section id="windows_to_south">
+        <h3><a href="#windows_to_south">windows_to_south</a></h3>
+        <code>window:windows_to_south()</code>
+        <p>Get all windows south of this one, ordered by closeness.</p>
+
+      </section>
+      
+      <section id="windows_to_west">
+        <h3><a href="#windows_to_west">windows_to_west</a></h3>
+        <code>window:windows_to_west()</code>
+        <p>Get all windows west of this one, ordered by closeness.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

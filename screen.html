@@ -1,0 +1,321 @@
+<html>
+
+  <head>
+    <title>Hydra docs: screen module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#allscreens">allscreens</a></li>
+        
+        <li><a href="#mainscreen">mainscreen</a></li>
+        
+        <li><a href="#settint">settint</a></li>
+        
+        <li><a href="#frame">frame</a></li>
+        
+        <li><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></li>
+        
+        <li><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></li>
+        
+        <li><a href="#next">next</a></li>
+        
+        <li><a href="#previous">previous</a></li>
+        
+        <li><a href="#toeast">toeast</a></li>
+        
+        <li><a href="#tonorth">tonorth</a></li>
+        
+        <li><a href="#tosouth">tosouth</a></li>
+        
+        <li><a href="#towest">towest</a></li>
+        
+        <li><a href="#visibleframe">visibleframe</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>screen</h1>
+        <p>Manipulate screens (i.e. monitors).</p>
+
+<p>You usually get a screen through a window (see <code>window.screen</code>). But you can get screens by themselves through this module, albeit not in any defined/useful order.</p>
+
+<p>Hydra&#39;s coordinate system assumes a grid that is the union of every screen&#39;s rect (see <code>screen.frame_including_dock_and_menu</code>).</p>
+
+<p>Every window&#39;s position (i.e. <code>topleft</code>) and size are relative to this grid, and they&#39;re usually within the grid. A window that&#39;s semi-offscreen only intersects the grid.</p>
+
+      </header>
+
+      
+      <section id="allscreens">
+        <h3><a href="#allscreens">allscreens</a></h3>
+        <code>screen.allscreens() -> screen[]</code>
+        <p>Returns all the screens there are.</p>
+
+      </section>
+      
+      <section id="mainscreen">
+        <h3><a href="#mainscreen">mainscreen</a></h3>
+        <code>screen.mainscreen() -> screen</code>
+        <p>Returns the &#39;main&#39; screen, i.e. the one containing the currently focused window.</p>
+
+      </section>
+      
+      <section id="settint">
+        <h3><a href="#settint">settint</a></h3>
+        <code>screen.settint(redarray, greenarray, bluearray)</code>
+        <p>Set the tint on a screen; experimental.</p>
+
+      </section>
+      
+      <section id="frame">
+        <h3><a href="#frame">frame</a></h3>
+        <code>screen:frame(screen) -> rect</code>
+        <p>Returns a screen&#39;s frame in its own coordinate space.</p>
+
+<p>NOTE: you probably want to use screen:frame_including_dock_and_menu() instead.</p>
+
+      </section>
+      
+      <section id="frame_including_dock_and_menu">
+        <h3><a href="#frame_including_dock_and_menu">frame_including_dock_and_menu</a></h3>
+        <code>screen:frame_including_dock_and_menu() -> rect</code>
+        <p>Returns the screen&#39;s rect in absolute coordinates, including the dock and menu.</p>
+
+      </section>
+      
+      <section id="frame_without_dock_or_menu">
+        <h3><a href="#frame_without_dock_or_menu">frame_without_dock_or_menu</a></h3>
+        <code>screen:frame_without_dock_or_menu() -> rect</code>
+        <p>Returns the screen&#39;s rect in absolute coordinates, without the dock or menu.</p>
+
+      </section>
+      
+      <section id="next">
+        <h3><a href="#next">next</a></h3>
+        <code>screen:next() -> screen</code>
+        <p>Returns the screen &#39;after&#39; this one (I have no idea how they&#39;re ordered though); this method wraps around to the first screen.</p>
+
+      </section>
+      
+      <section id="previous">
+        <h3><a href="#previous">previous</a></h3>
+        <code>screen:previous() -> screen</code>
+        <p>Returns the screen &#39;before&#39; this one (I have no idea how they&#39;re ordered though); this method wraps around to the last screen.</p>
+
+      </section>
+      
+      <section id="toeast">
+        <h3><a href="#toeast">toeast</a></h3>
+        <code>screen:toeast()</code>
+        <p>Get the first screen to the east of this one, ordered by proximity.</p>
+
+      </section>
+      
+      <section id="tonorth">
+        <h3><a href="#tonorth">tonorth</a></h3>
+        <code>screen:tonorth()</code>
+        <p>Get the first screen to the north of this one, ordered by proximity.</p>
+
+      </section>
+      
+      <section id="tosouth">
+        <h3><a href="#tosouth">tosouth</a></h3>
+        <code>screen:tosouth()</code>
+        <p>Get the first screen to the south of this one, ordered by proximity.</p>
+
+      </section>
+      
+      <section id="towest">
+        <h3><a href="#towest">towest</a></h3>
+        <code>screen:towest()</code>
+        <p>Get the first screen to the west of this one, ordered by proximity.</p>
+
+      </section>
+      
+      <section id="visibleframe">
+        <h3><a href="#visibleframe">visibleframe</a></h3>
+        <code>screen:visibleframe(screen) -> rect</code>
+        <p>Returns a screen&#39;s frame in its own coordinate space, without the dock or menu.</p>
+
+<p>NOTE: you probably want to use screen:frame_without_dock_or_menu() instead.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

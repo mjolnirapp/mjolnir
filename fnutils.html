@@ -1,0 +1,302 @@
+<html>
+
+  <head>
+    <title>Hydra docs: fnutils module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#concat">concat</a></li>
+        
+        <li><a href="#contains">contains</a></li>
+        
+        <li><a href="#copy">copy</a></li>
+        
+        <li><a href="#each">each</a></li>
+        
+        <li><a href="#filter">filter</a></li>
+        
+        <li><a href="#find">find</a></li>
+        
+        <li><a href="#indexof">indexof</a></li>
+        
+        <li><a href="#map">map</a></li>
+        
+        <li><a href="#mapcat">mapcat</a></li>
+        
+        <li><a href="#partial">partial</a></li>
+        
+        <li><a href="#reduce">reduce</a></li>
+        
+        <li><a href="#sequence">sequence</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>fnutils</h1>
+        <p>Super-helpful functional programming utilities.</p>
+
+      </header>
+
+      
+      <section id="concat">
+        <h3><a href="#concat">concat</a></h3>
+        <code>fnutils.concat(t1, t2)</code>
+        <p>Adds all elements of t2 to the end of t1.</p>
+
+      </section>
+      
+      <section id="contains">
+        <h3><a href="#contains">contains</a></h3>
+        <code>fnutils.contains(t, el) -> bool</code>
+        <p>Returns whether the table contains the given element.</p>
+
+      </section>
+      
+      <section id="copy">
+        <h3><a href="#copy">copy</a></h3>
+        <code>fnutils.copy(t) -> t2</code>
+        <p>Returns a new copy of t using pairs(t).</p>
+
+      </section>
+      
+      <section id="each">
+        <h3><a href="#each">each</a></h3>
+        <code>fnutils.each(t, fn) -> t</code>
+        <p>Runs fn(el) for every el in t.</p>
+
+      </section>
+      
+      <section id="filter">
+        <h3><a href="#filter">filter</a></h3>
+        <code>fnutils.filter(t, fn) -> t</code>
+        <p>Returns a table of the elements in t in which fn(el) is truthy.</p>
+
+      </section>
+      
+      <section id="find">
+        <h3><a href="#find">find</a></h3>
+        <code>fnutils.find(t, fn) -> el</code>
+        <p>Returns the first element where fn(el) is truthy.</p>
+
+      </section>
+      
+      <section id="indexof">
+        <h3><a href="#indexof">indexof</a></h3>
+        <code>fnutils.indexof(t, el) -> int or nil</code>
+        <p>Returns the index of a given element in a table, or nil if not found.</p>
+
+      </section>
+      
+      <section id="map">
+        <h3><a href="#map">map</a></h3>
+        <code>fnutils.map(t, fn) -> t</code>
+        <p>Returns a table of the results of fn(el) on every el in t.</p>
+
+      </section>
+      
+      <section id="mapcat">
+        <h3><a href="#mapcat">mapcat</a></h3>
+        <code>fnutils.mapcat(t, fn) -> t2</code>
+        <p>Runs fn(el) for every el in t, and assuming the results are tables, combines them into a new table.</p>
+
+      </section>
+      
+      <section id="partial">
+        <h3><a href="#partial">partial</a></h3>
+        <code>fnutils.partial(fn, ...) -> fn'</code>
+        <p>Returns fn partially applied to arg (...).</p>
+
+      </section>
+      
+      <section id="reduce">
+        <h3><a href="#reduce">reduce</a></h3>
+        <code>fnutils.reduce(t, fn) -> t2</code>
+        <p>Runs fn(el1, el2) for every el in t, then fn(result, el3), etc, until there&#39;s only one left.</p>
+
+      </section>
+      
+      <section id="sequence">
+        <h3><a href="#sequence">sequence</a></h3>
+        <code>fnutils.sequence(...) -> fn</code>
+        <p>Returns a list of the results of the passed functions.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,239 @@
+<html>
+
+  <head>
+    <title>Hydra docs: updates module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#changelogurl">changelogurl</a></li>
+        
+        <li><a href="#check">check</a></li>
+        
+        <li><a href="#currentversion">currentversion</a></li>
+        
+        <li><a href="#getversions">getversions</a></li>
+        
+        <li><a href="#verifyfile">verifyfile</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>updates</h1>
+        <p>Check for and install Hydra updates.</p>
+
+      </header>
+
+      
+      <section id="changelogurl">
+        <h3><a href="#changelogurl">changelogurl</a></h3>
+        <code>updates.changelogurl</code>
+        <p>String of the URL that contains the changelog, rendered via Markdown</p>
+
+      </section>
+      
+      <section id="check">
+        <h3><a href="#check">check</a></h3>
+        <code>updates.check(fn(isavailable))</code>
+        <p>Checks for an update. Calls the given function with a boolean representing whether a new update is available.</p>
+
+      </section>
+      
+      <section id="currentversion">
+        <h3><a href="#currentversion">currentversion</a></h3>
+        <code>updates.currentversion() -> number</code>
+        <p>Low-level function to get current Hydra version; used by updates.check; you probably want to use updates.check instead of using this directly.</p>
+
+      </section>
+      
+      <section id="getversions">
+        <h3><a href="#getversions">getversions</a></h3>
+        <code>updates.getversions(fn(versions))</code>
+        <p>Low-level function to get list of available Hydra versions; used by updates.check; you probably want to use updates.check instead of using this directly.</p>
+
+      </section>
+      
+      <section id="verifyfile">
+        <h3><a href="#verifyfile">verifyfile</a></h3>
+        <code>updates.verifyfile(sig, path) -> bool</code>
+        <p>Verifies the DSA signatue against the file at the given absolute path using Hydra&#39;s public key.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>
