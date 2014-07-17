@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: Hydra 1.0 API module</title>
+    <title>Hydra docs: Hydra API module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -19,32 +19,12 @@
         
 
         
-        <li><a href="applistener.html">applistener</a></li>
-
-        
-
-        
-        <li><a href="audio.html">audio</a></li>
-
-        
-
-        
         <li><a href="autolaunch.html">autolaunch</a></li>
 
         
 
         
         <li><a href="brightness.html">brightness</a></li>
-
-        
-
-        
-        <li><a href="dockicon.html">dockicon</a></li>
-
-        
-
-        
-        <li><a href="eventtap.html">eventtap</a></li>
 
         
 
@@ -65,11 +45,6 @@
 
         
         <li><a href="hotkey.html">hotkey</a></li>
-
-        
-
-        
-        <li><a href="http.html">http</a></li>
 
         
 
@@ -99,22 +74,12 @@
         
 
         
-        <li><a href="modalkey.html">modalkey</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
 
         
         <li><a href="notify.html">notify</a></li>
-
-        
-
-        
-        <li><a href="pasteboard.html">pasteboard</a></li>
 
         
 
@@ -174,7 +139,7 @@
 
     <div id="module">
       <header>
-        <h1>Hydra 1.0 API</h1>
+        <h1>Hydra API</h1>
         <h3>Project links</h3>
 
 <table><thead>
@@ -233,30 +198,10 @@
 
 <p>If you only have <code>~/.hydra/init.lua</code>, you can skip this section. But if you want to extract code into new files under <code>~/.hydra/</code> or put extensions there, there&#39;s a bit you should know first:</p>
 
-<p>The directory <code>~/.hydra/</code> is on the require-path, so if you do <code>require &quot;grid&quot;</code> then it will look for <code>~/.hydra/grid.lua</code> and load it if found. </p>
-
-<h3>Caching</h3>
-
-<p>But <code>require</code> caches its modules by name, so requiring the same module twice will do nothing! </p>
+<p>The directory <code>~/.hydra/</code> is on the require-path, so if you do <code>require &quot;grid&quot;</code> then it will look for <code>~/.hydra/grid.lua</code> and load it if found. But <code>require</code> caches its modules by name, so requiring the same module twice will do nothing! If you don&#39;t want caching behavior, use <code>dofile</code> instead:</p>
 
 <pre lang="lua"><code>require &quot;grid&quot;                                   -- caches &quot;grid&quot; module
-</code></pre>
-
-<p>If you don&#39;t want caching behavior, you can: </p>
-
-<ol>
-<li>delete the module name from the built-in table <code>package.loaded</code> after the <code>require</code>:</li>
-</ol>
-
-<pre lang="lua"><code>require &quot;grid&quot;                                   -- caches &quot;grid&quot; module
-package.loaded[&quot;grid&quot;] = nil                     -- remove &quot;grid&quot; module from cache
-</code></pre>
-
-<ol>
-<li>use <code>dofile</code> instead:</li>
-</ol>
-
-<pre lang="lua"><code>dofile(package.searchpath(&quot;grid&quot;, package.path)) -- doesn&#39;t cache &quot;grid&quot; module
+dofile(package.searchpath(&quot;grid&quot;, package.path)) -- doesn&#39;t cache &quot;grid&quot; module
 </code></pre>
 
 <h3>Where to begin</h3>
@@ -291,7 +236,7 @@ package.loaded[&quot;grid&quot;] = nil                     -- remove &quot;grid&
 
 <h3>Sample config</h3>
 
-<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/Bootstrapping/sample_init.lua">the official sample init</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
+<p>Take a look through <a href="https://github.com/sdegutis/hydra/blob/master/Hydra/Bootstrapping/sample_config.lua">the official sample config</a> to see a real-world example of a Hydra config. This is the same config that Hydra presents at your first launch as one you might want to try starting with.</p>
 
 <h3>Third party modules</h3>
 

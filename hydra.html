@@ -19,32 +19,12 @@
         
 
         
-        <li><a href="applistener.html">applistener</a></li>
-
-        
-
-        
-        <li><a href="audio.html">audio</a></li>
-
-        
-
-        
         <li><a href="autolaunch.html">autolaunch</a></li>
 
         
 
         
         <li><a href="brightness.html">brightness</a></li>
-
-        
-
-        
-        <li><a href="dockicon.html">dockicon</a></li>
-
-        
-
-        
-        <li><a href="eventtap.html">eventtap</a></li>
 
         
 
@@ -65,11 +45,6 @@
 
         
         <li><a href="hotkey.html">hotkey</a></li>
-
-        
-
-        
-        <li><a href="http.html">http</a></li>
 
         
 
@@ -97,11 +72,11 @@
         
         <li><a href="#focushydra">focushydra</a></li>
         
-        <li><a href="#licenses">licenses</a></li>
+        <li><a href="#indock">indock</a></li>
+        
+        <li><a href="#putindock">putindock</a></li>
         
         <li><a href="#reload">reload</a></li>
-        
-        <li><a href="#setosxshadows">setosxshadows</a></li>
         
         <li><a href="#showabout">showabout</a></li>
         
@@ -133,22 +108,12 @@
         
 
         
-        <li><a href="modalkey.html">modalkey</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
 
         
         <li><a href="notify.html">notify</a></li>
-
-        
-
-        
-        <li><a href="pasteboard.html">pasteboard</a></li>
 
         
 
@@ -270,10 +235,17 @@
 
       </section>
       
-      <section id="licenses">
-        <h3><a href="#licenses">licenses</a></h3>
-        <code>hydra.licenses -> string</code>
-        <p>Returns a string containing the licenses of all the third party software Hydra uses (i.e. Lua)</p>
+      <section id="indock">
+        <h3><a href="#indock">indock</a></h3>
+        <code>hydra.indock() -> bool</code>
+        <p>Returns whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
+
+      </section>
+      
+      <section id="putindock">
+        <h3><a href="#putindock">putindock</a></h3>
+        <code>hydra.putindock(bool)</code>
+        <p>Sets whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
 
       </section>
       
@@ -281,13 +253,6 @@
         <h3><a href="#reload">reload</a></h3>
         <code>hydra.reload()</code>
         <p>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</p>
-
-      </section>
-      
-      <section id="setosxshadows">
-        <h3><a href="#setosxshadows">setosxshadows</a></h3>
-        <code>hydra.setosxshadows(bool)</code>
-        <p>Sets whether OSX apps have shadows.</p>
 
       </section>
       

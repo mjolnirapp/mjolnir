@@ -43,8 +43,6 @@
         
         <li><a href="#kill9">kill9</a></li>
         
-        <li><a href="#kind">kind</a></li>
-        
         <li><a href="#pid">pid</a></li>
         
         <li><a href="#title">title</a></li>
@@ -59,32 +57,12 @@
         
 
         
-        <li><a href="applistener.html">applistener</a></li>
-
-        
-
-        
-        <li><a href="audio.html">audio</a></li>
-
-        
-
-        
         <li><a href="autolaunch.html">autolaunch</a></li>
 
         
 
         
         <li><a href="brightness.html">brightness</a></li>
-
-        
-
-        
-        <li><a href="dockicon.html">dockicon</a></li>
-
-        
-
-        
-        <li><a href="eventtap.html">eventtap</a></li>
 
         
 
@@ -105,11 +83,6 @@
 
         
         <li><a href="hotkey.html">hotkey</a></li>
-
-        
-
-        
-        <li><a href="http.html">http</a></li>
 
         
 
@@ -139,22 +112,12 @@
         
 
         
-        <li><a href="modalkey.html">modalkey</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
 
         
         <li><a href="notify.html">notify</a></li>
-
-        
-
-        
-        <li><a href="pasteboard.html">pasteboard</a></li>
 
         
 
@@ -250,8 +213,8 @@
       
       <section id="activate">
         <h3><a href="#activate">activate</a></h3>
-        <code>application:activate(allwindows = false) -> bool</code>
-        <p>Tries to activate the app (make its key window focused) and returns whether it succeeded; if allwindows is true, all windows of the application are brought forward as well.</p>
+        <code>application:activate() -> bool</code>
+        <p>Tries to activate the app (make it focused) and returns whether it succeeded.</p>
 
       </section>
       
@@ -271,7 +234,7 @@
       
       <section id="hide">
         <h3><a href="#hide">hide</a></h3>
-        <code>application:hide() -> success</code>
+        <code>application:hide()</code>
         <p>Hides the app (and all its windows).</p>
 
       </section>
@@ -297,13 +260,6 @@
 
       </section>
       
-      <section id="kind">
-        <h3><a href="#kind">kind</a></h3>
-        <code>application:kind() -> number</code>
-        <p>Returns 1 if the app is in the dock, 0 if not, and -1 if it can&#39;t even have GUI elements if it wanted to.</p>
-
-      </section>
-      
       <section id="pid">
         <h3><a href="#pid">pid</a></h3>
         <code>application:pid() -> number</code>
@@ -320,7 +276,7 @@
       
       <section id="unhide">
         <h3><a href="#unhide">unhide</a></h3>
-        <code>application:unhide() -> success</code>
+        <code>application:unhide()</code>
         <p>Unhides the app (and all its windows) if it&#39;s hidden.</p>
 
       </section>
