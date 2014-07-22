@@ -257,13 +257,14 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
   padding: 0.618em 2em;
-  background-color: #2ecc71;
+  background-color: #00923e;
   text-decoration: none;
   color: #fff;
-  border-radius: 0.618em;
+  border-bottom: 4px solid #006e2f;
 }
 .button-cta:hover {
-  background-color: #2cc46c;
+  background-color: #00883a;
+  border-bottom-color: #00642b;
 }
 .link {
   color: #5e1e78;

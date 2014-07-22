@@ -19,7 +19,7 @@
 @white: #fff;
 @purple: #D8ABEA;
 @black: #3A265C;
-@green: #2ecc71;
+@green: #00923E;
 
 .fa-github-alt,
 .fa-github-square { color: #eee; }
@@ -46,10 +46,12 @@
   background-color: @green;
   text-decoration: none;
   color: #fff;
-  border-radius: 0.618em;
+  // border-radius: 0.618em;
+  border-bottom: 4px solid darken(@green, 7%);
 
   &:hover {
-    background-color: darken(@green, 2%);   
+    background-color: darken(@green, 2%);
+    border-bottom-color: darken(@green, 9%);
   }
 }
 
@@ -59,7 +61,7 @@
 }
 
 .link {
-  color: darken(@purple, 50%); 
+  color: darken(@purple, 50%);
   text-decoration: none;
   border-bottom: 1px dashed darken(@purple, 40%);
   transition: 0.5s all;
@@ -75,8 +77,8 @@
   text-decoration: none;
   transition: 0.5s all;
 
-  &:hover { 
-    opacity: 0.3; 
+  &:hover {
+    opacity: 0.3;
   }
 }
 
@@ -84,7 +86,7 @@
   text-align: center;
 }
 
-// ## Base 
+// ## Base
 
 body {
   margin: 0;
@@ -130,9 +132,9 @@ code {
   padding-top: @padding;
   padding-bottom: @padding;
 
-  h2 { 
+  h2 {
     margin-top: 0;
-    text-align: center; 
+    text-align: center;
   }
 }
 
@@ -141,7 +143,7 @@ code {
 #header {
   padding-top: (@padding/2);
   padding-bottom: (@padding/2);
-  .dark();  
+  .dark();
 }
 
 #header-icons {
@@ -166,7 +168,7 @@ code {
 .main-nav-el {
   display: inline-block;
   margin-right: 0.618em;
-  
+
   a {
     .link-dbg();
   }
@@ -180,11 +182,11 @@ code {
 
   h2 {
     margin-top: 0;
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 
   .lede {
-    font-size: 2em; 
+    font-size: 2em;
   }
 
   a.documentation-link {
@@ -197,7 +199,7 @@ code {
 
   }
 
-  p { 
+  p {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 300;
@@ -214,7 +216,7 @@ code {
   margin-top: 4em;
 
   &:first-child {
-    margin-top: 0;   
+    margin-top: 0;
   }
 }
 
@@ -229,7 +231,7 @@ code {
   text-align: center;
 
   p {
-    font-size: 1.618em;   
+    font-size: 1.618em;
   }
 }
 
@@ -241,7 +243,7 @@ code {
 
   a {
     .link();
-    color: #fff; 
+    color: #fff;
     border-color: #fff;
 
     &:hover { border-color: #fff; }
