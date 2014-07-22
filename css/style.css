@@ -374,12 +374,26 @@ code {
 #main .lede {
   font-size: 2em;
 }
+#main a.documentation-link {
+  color: #5e1e78;
+  text-decoration: none;
+  border-bottom: 1px dashed #7e28a1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  display: table;
+  margin: 0.618em auto 0 auto;
+  color: #fff;
+  border-color: #fff !important;
+}
+#main a.documentation-link:hover {
+  border-bottom: 1px solid #3e144f;
+}
 #main p {
   margin-top: 0;
   margin-bottom: 0;
   font-weight: 300;
 }
-#screenshots {
+#features {
   background-color: #eee;
 }
 .screenshot {
@@ -423,7 +437,7 @@ code {
 .social-icon {
   display: inline-block;
   margin-right: 0.218em;
-  font-size: 1.618em;
+  font-size: 2em;
 }
 #footer .thinkxl a {
   color: #705b93 !important;
