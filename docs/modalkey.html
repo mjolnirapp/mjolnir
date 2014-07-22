@@ -1,0 +1,262 @@
+<html>
+
+  <head>
+    <title>Hydra docs: modalkey module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#new">new</a></li>
+        
+        <li><a href="#bind">bind</a></li>
+        
+        <li><a href="#enter">enter</a></li>
+        
+        <li><a href="#entered">entered</a></li>
+        
+        <li><a href="#exit">exit</a></li>
+        
+        <li><a href="#exited">exited</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>modalkey</h1>
+        <p>For conveniently binding modal hotkeys.</p>
+
+<p>This would be a simple example usage:</p>
+
+<pre><code>k = modalkey.new({&quot;cmd&quot;, &quot;shift&quot;}, &quot;d&quot;)
+
+function k:entered() hydra.alert(&#39;Entered mode&#39;) end
+function k:exited()  hydra.alert(&#39;Exited mode&#39;)  end
+
+k:bind({}, &#39;escape&#39;, function() k:exit() end)
+k:bind({}, &#39;J&#39;, function() hydra.alert(&quot;Pressed J&quot;) end)
+</code></pre>
+
+      </header>
+
+      
+      <section id="new">
+        <h3><a href="#new">new</a></h3>
+        <code>modalkey.new(mods, key) -> modalkey</code>
+        <p>Creates a new modal hotkey and enables it.<br>
+When mods and key are pressed, all keys bound via <code>modal:bind</code> will be enabled.<br>
+They are disabled when the &quot;mode&quot; is exited via <code>modalkey:exit()</code></p>
+
+      </section>
+      
+      <section id="bind">
+        <h3><a href="#bind">bind</a></h3>
+        <code>modalkey:bind(mods, key, pressedfn, releasedfn)</code>
+        <p>Registers a new hotkey that will be bound when the modalkey is enabled.</p>
+
+      </section>
+      
+      <section id="enter">
+        <h3><a href="#enter">enter</a></h3>
+        <code>modalkey:enter()</code>
+        <p>Enables all hotkeys created via <code>modalkey:bind</code> and disables the modalkey itself.<br>
+Called automatically when the modalkey&#39;s hotkey is pressed.</p>
+
+      </section>
+      
+      <section id="entered">
+        <h3><a href="#entered">entered</a></h3>
+        <code>modalkey:entered()</code>
+        <p>Optional callback for when a modalkey is entered; default implementation does nothing.</p>
+
+      </section>
+      
+      <section id="exit">
+        <h3><a href="#exit">exit</a></h3>
+        <code>modalkey:exit()</code>
+        <p>Disables all hotkeys created via <code>modalkey:bind</code> and re-enables the modalkey itself.</p>
+
+      </section>
+      
+      <section id="exited">
+        <h3><a href="#exited">exited</a></h3>
+        <code>modalkey:exited()</code>
+        <p>Optional callback for when a modalkey is exited; default implementation does nothing.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

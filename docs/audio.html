@@ -1,0 +1,266 @@
+<html>
+
+  <head>
+    <title>Hydra docs: audio module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="applistener.html">applistener</a></li>
+
+        
+
+        
+        <li><a href="audio.html">audio</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#alloutputdevices">alloutputdevices</a></li>
+        
+        <li><a href="#defaultoutputdevice">defaultoutputdevice</a></li>
+        
+        <li><a href="#muted">muted</a></li>
+        
+        <li><a href="#name">name</a></li>
+        
+        <li><a href="#setdefaultoutputdevice">setdefaultoutputdevice</a></li>
+        
+        <li><a href="#setmuted">setmuted</a></li>
+        
+        <li><a href="#setvolume">setvolume</a></li>
+        
+        <li><a href="#volume">volume</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="autolaunch.html">autolaunch</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="dockicon.html">dockicon</a></li>
+
+        
+
+        
+        <li><a href="eventtap.html">eventtap</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="ipc.html">ipc</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="menu.html">menu</a></li>
+
+        
+
+        
+        <li><a href="modalkey.html">modalkey</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="pprint.html">pprint</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="settings.html">settings</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="updates.html">updates</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>audio</h1>
+        <p>Manipulate the system&#39;s audio devices.</p>
+
+      </header>
+
+      
+      <section id="alloutputdevices">
+        <h3><a href="#alloutputdevices">alloutputdevices</a></h3>
+        <code>audio.alloutputdevices() -> audio[]</code>
+        <p>Returns a list of all connected output devices.</p>
+
+      </section>
+      
+      <section id="defaultoutputdevice">
+        <h3><a href="#defaultoutputdevice">defaultoutputdevice</a></h3>
+        <code>audio.defaultoutputdevice() -> audio or nil</code>
+        <p>Gets the system&#39;s default audio device, or nil, it it does not exist.</p>
+
+      </section>
+      
+      <section id="muted">
+        <h3><a href="#muted">muted</a></h3>
+        <code>audio:muted() -> bool or nil</code>
+        <p>Returns true/false if the audio device is muted, or nil if it does not support being muted.</p>
+
+      </section>
+      
+      <section id="name">
+        <h3><a href="#name">name</a></h3>
+        <code>audio:name() -> string or nil</code>
+        <p>Returns the name of the audio device, or nil if it does not have a name.</p>
+
+      </section>
+      
+      <section id="setdefaultoutputdevice">
+        <h3><a href="#setdefaultoutputdevice">setdefaultoutputdevice</a></h3>
+        <code>audio:setdefaultoutputdevice() -> bool</code>
+        <p>Sets the system&#39;s default audio device to this device. Returns true if the audio device was successfully set.</p>
+
+      </section>
+      
+      <section id="setmuted">
+        <h3><a href="#setmuted">setmuted</a></h3>
+        <code>audio:setmuted(bool) -> bool</code>
+        <p>Returns true if the the device&#39;s muted status was set, or false if it does not support being muted.</p>
+
+      </section>
+      
+      <section id="setvolume">
+        <h3><a href="#setvolume">setvolume</a></h3>
+        <code>audio:setvolume(level) -> bool</code>
+        <p>Returns true if the volume was set, or false if the audio device does not support setting a volume level. Level is a percentage between 0 and 100.</p>
+
+      </section>
+      
+      <section id="volume">
+        <h3><a href="#volume">volume</a></h3>
+        <code>audio:volume() -> number or bool</code>
+        <p>Returns a number between 0 and 100 inclusive, representing the volume percentage. Or nil, if the audio device does not have a volume level.</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>
