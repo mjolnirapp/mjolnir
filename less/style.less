@@ -21,8 +21,10 @@
 @black: #100D15;
 @green: #2ecc71;
 
-.fa-github-square { color: #666; }
+.fa-github-alt,
+.fa-github-square { color: #eee; }
 .fa-facebook-square { color: #3b5998; }
+.fa-twitter,
 .fa-twitter-square { color: #55acee; }
 .fa-google-plus-square { color: #dd4b39; }
 .fa-linkedin-square { color: #0976b4; }
@@ -40,7 +42,7 @@
   margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
-  padding: 1em 2em;
+  padding: 0.618em 2em;
   background-color: @green;
   text-decoration: none;
   color: #fff;
@@ -53,17 +55,28 @@
 
 .dark() {
   background-color: @black;
-  color: @purple;
+  color: #fff;
 }
 
 .link {
-  color: #333; 
+  color: darken(@purple, 50%); 
   text-decoration: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dashed darken(@purple, 40%);
   transition: 0.5s all;
 
   &:hover {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid darken(@purple, 60%);
+  }
+}
+
+.link-dbg {
+  border-bottom: none;
+  color: #fff !important;
+  text-decoration: none;
+  transition: 0.5s all;
+
+  &:hover { 
+    opacity: 0.3; 
   }
 }
 
@@ -75,9 +88,16 @@
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  color: #555;
+  color: darken(@purple, 70%);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+}
 
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: darken(@purple, 60%);
 }
 
 pre code {
@@ -86,7 +106,7 @@ pre code {
 
 pre,
 code {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 code {
@@ -100,7 +120,7 @@ code {
 
 .container {
     margin: 0 auto;
-    width: 60.456em;
+    width: 55.456em;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -130,11 +150,26 @@ code {
 }
 
 #site-title {
-  font-weight: 500;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: #fff;
 }
 
 #slogan {
   font-weight: 400;
+}
+
+#main-nav {
+  list-style: none;
+}
+
+.main-nav-el {
+  display: inline-block;
+  margin-right: 0.618em;
+  
+  a {
+    .link-dbg();
+  }
 }
 
 // ## Main
@@ -148,10 +183,13 @@ code {
     margin-bottom: 0; 
   }
 
+  .lede {
+    font-size: 2em; 
+  }
+
   p { 
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2em; 
     font-weight: 300;
   }
 }
@@ -171,6 +209,7 @@ code {
 }
 
 .more-screenshots {
+  margin-bottom: 0;
   font-size: 1.5em;
 }
 
@@ -178,8 +217,6 @@ code {
 
 #statement {
   text-align: center;
-  background-color: @black;
-  color: @purple;
 
   p {
     font-size: 1.618em;   
@@ -187,6 +224,12 @@ code {
 }
 
 // ## Footer
+
+#footer {
+  .dark();
+
+  a { .link-dbg(); }
+}
 
 #social {
   text-align: center;
@@ -201,5 +244,13 @@ code {
 .social-icon {
   display: inline-block;
   margin-right: 0.218em;
-  font-size: 2em;
+  font-size: 1.618em;
+}
+
+#footer .thinkxl a {
+  color: lighten(@black, 40%) !important; 
+}
+
+.thinkxl {
+  color: lighten(@black, 20%);
 }

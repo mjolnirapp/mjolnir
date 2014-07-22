@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Happy Hacking!</title>
+<title>Hydrawm</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
 
 <!-- hightlight.js -->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow-night.min.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
@@ -26,11 +26,19 @@
   <div class="container">
     <div class="row">
       <div class="col-1-2">
-        <h1 id="site-title">Hydra</h1>
+        <p>Project by <strong>sdegutis</strong></p>
       </div> <!-- .col-1-2 -->
 
       <div class="col-1-2" id="header-icons">
-        <i class="fa fa-github fa-4x github-logo"></i>
+        <!-- <i class="fa fa&#45;github fa&#45;3x github&#45;logo"></i> -->
+        <nav id="main-nav">
+          <ul>
+            <li class="main-nav-el"><a href="#screenshots">Screenshots</a></li>
+            <li class="main-nav-el"><a href="#usage">Usage</a></li>
+            <li class="social-icon"><a href="#" title="Follow me"><i class="fa fa-twitter"></i></a></li>
+            <li class="social-icon"><a href="#" title="Fork it"><i class="fa fa-github-alt"></i></a></li>
+          </ul>
+        </nav>
       </div> <!-- .col-1-2 -->
     </div> <!-- .row -->
   </div> <!-- .container -->
@@ -39,9 +47,9 @@
 <main id="main" class="section">
   <div class="container">
     <div class="row">
-      <h2 id="slogan">Lorem ipsum dolor sit amet</h2>
-      <p>Lorem Ipsum Dolor</p>
-
+      <h1 id="site-title">Hydra</h1>
+      <p class="lede">Hack your OS X desktop environment</p>
+      <p><em>A window manager that is very cool</em></p>
       <a class="button-cta" href="#"><i class="fa fa-bolt"></i> Download v1.0</a>
     </div> <!-- .row -->
   </div> <!-- .container -->
@@ -49,7 +57,9 @@
 
 <section id="features" class="section">
   <div class="container">
-    <div class="row">
+    <div class="row text-centered">
+      <h2>Features</h2>
+
       <div class="col-1-3">
         <h3>Lorem Ipsum</h3>
 
@@ -95,7 +105,7 @@
   </div> <!-- .container -->
 </section> <!-- #screenshots -->
 
-<section id="installation" class="section">
+<section id="usage" class="section">
   <div class="container">
     <div class="row">
       <h2>Usage</h2>
@@ -150,27 +160,18 @@ $ man hydra</code></pre>
   </div> <!-- .container -->
 </section> <!-- #installation -->
 
-<section id="statement" class="section">
-  <div class="container">
-    <div class="row">
-      <p>Lorem Ipsum Dolor</p>
-    </div> <!-- .row -->
-  </div> <!-- .container -->
-</section> <!-- #statement -->
+<!-- <section id="statement" class="section"> -->
+<!--   <div class="container"> -->
+<!--     <div class="row"> -->
+<!--       <p>Lorem Ipsum Dolor</p> -->
+<!--     </div> <!&#45;&#45; .row &#45;&#45;> -->
+<!--   </div> <!&#45;&#45; .container &#45;&#45;> -->
+<!-- </section> <!&#45;&#45; #statement &#45;&#45;> -->
 
 <footer id="footer" class="section">
   <div class="container">
     <div class="row">
-      <div class="col-1-2" id="author">
-        <p>Made with <3 by <strong>sdegutis</strong></p>
-      </div> <!-- .col-1-2 -->
-
-      <div class="col-1-2" id="social">
-        <ul class="social-icons">
-          <li class="social-icon"><a href="#"><i class="fa fa-github-square"></i></a></li>
-          <li class="social-icon"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-        </ul>
-      </div> <!-- .col-1-2 -->
+      <p class="thinkxl text-centered">Project by <a href="#">sdegutis</a> &bullet; Web design by <a href="http://jolv.me">thinkxl</a></p>
     </div> <!-- .row -->
   </div> <!-- container -->
 </footer> <!-- #footer -->
@@ -179,6 +180,8 @@ $ man hydra</code></pre>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.11.0.min.js"><\/script>')</script>
 
 <!-- build:js js/app.min.js -->
+<script src="js/libs/jquery.velocity.min.js"></script>
+<script src="js/libs/velocity.ui.js"></script>
 <script src="js/app.js"></script>
 <!-- endbuild -->
 </body>
