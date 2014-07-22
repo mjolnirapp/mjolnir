@@ -43,14 +43,14 @@
 </header> <!-- #header -->
 
 <main id="main" class="section">
-  <div class="container">
-    <div class="row">
-      <h1 id="site-title">Hydra</h1>
-      <p class="lede">Hack your OS X desktop environment</p>
-      <a class="button-cta" href="#"><i class="fa fa-bolt"></i> Download v1.0</a>
-      <p><a class="documentation-link" href="https://github.com/sdegutis/hydra">Documentation</a></p>
-    </div> <!-- .row -->
-  </div> <!-- .container -->
+<div class="container">
+  <div class="row">
+    <h1 id="site-title">Hydra</h1>
+    <p class="lede">Hack your OS X desktop environment</p>
+    <a class="button-cta" href="#"><i class="fa fa-bolt"></i> Download v1.0</a>
+    <p><a class="documentation-link" href="https://github.com/sdegutis/hydra">Documentation</a></p>
+  </div> <!-- .row -->
+</div> <!-- .container -->
 </main> <!-- #main -->
 
 <section id="features" class="section">
@@ -79,68 +79,27 @@
   </div> <!-- .container -->
 </section> <!-- #features -->
 
-<section id="usage" class="section">
+<section id="screenshots" class="section">
   <div class="container">
+    <h2>Screenshots</h2>
     <div class="row">
-      <h2>Usage</h2>
+      <div class="col-1-2">
+        <img src="https://raw.githubusercontent.com/sdegutis/hydra/master/screenshots/grid.gif" alt="Hydra Screenshot" width="100%"/>
+        <p>Using hotkeys to move and resize a window along a grid (<a class="link" href="https://github.com/sdegutis/dotfiles/blob/osx/home/.hydra/init.lua#L43-L50">source</a>)</p>
+      </div> <!-- .col-1-2 -->
 
-      <p>Hydra will look for <code>~/.hydra/init.lua</code> and run it if it exists. But if you haven't written one yet, it will run a fallback config that gives you a menu bar icon that contains an option to open <a class="link" href="https://github.com/sdegutis/hydra/blob/master/Hydra/Bootstrapping/sample_init.lua">this sample init.</a> You can paste its contents into your <code>~/.hydra/init.lua</code> to get started with a really basic starter config.</p>
+      <div class="col-1-2">
+        <img src="https://raw.githubusercontent.com/sdegutis/hydra/master/screenshots/dict.gif" alt="Hydra Screenshot" width="100%"/>
 
-      <p>Bookmark the <a class="link" href="http://sdegutis.github.io/hydra/">official online docs!</a> The index page has very handy and valuable information that's not found in this readme or the in-app documentation system.</p>
-
-      <h3>Example</h3>
-
-      <p>Here's a convenient way to set it up with <code>wget</code>:</p>
-
-      <pre><code class="bash">$ mkdir -p ~/.hydra && cd $_ && wget https://raw.githubusercontent.com/sdegutis/hydra/master/Hydra/Bootstrapping/sample_init.lua -O init.lua</code></pre>
-
-      <p>Here's a snippet:</p>
-      <pre><code class="lua">-- show a helpful menu
-menu.show(function()
-    local updatetitles = {[true] = "Install Update", [false] = "Check for Update..."}
-    local updatefns = {[true] = updates.install, [false] = checkforupdates}
-    local hasupdate = (updates.newversion ~= nil)
-
-    return {
-      {title = "Reload Config", fn = hydra.reload},
-      {title = "Open REPL", fn = repl.open},
-      {title = "-"},
-      {title = "About", fn = hydra.showabout},
-      {title = updatetitles[hasupdate], fn = updatefns[hasupdate]},
-      {title = "Quit Hydra", fn = os.exit},
-    }
-end)
-
--- move the window to the right half of the screen
-function movewindow_righthalf()
-  local win = window.focusedwindow()
-  local newframe = win:screen():frame_without_dock_or_menu()
-  newframe.w = newframe.w / 2
-  -- newframe.x = newframe.w -- uncomment this line to push it to left side of screen
-  win:setframe(newframe)
-end
-
-hotkey.new({"cmd", "ctrl", "alt"}, "L", movewindow_righthalf):enable()</code></pre>
-
-      <h3>Executing commands externally</h3>
-
-      <p>Hydra comes with a command line utility to allow execution of Lua code within Hydra from the command line or another process. To install it, type <code>ipc.link()</code> at the REPL. The documentation for this function can be found at <code>doc.ipc.link</code> from within the REPL, as usual. You'd use it like so:</p>
-
-      <pre><code class="bash">$ hydra "hydra.alert('hello world')"          ## give it args
-$ echo "hydra.alert('hello world')" | hydra   ## or stdin
-$ man hydra</code></pre>
-
+        <p>Using a hotkey to open Dictionary.app and show an alert (<a class="link" href="https://github.com/sdegutis/dotfiles/blob/osx/home/.hydra/init.lua#L20-L25">source</a>)</p>
+      </div> <!-- .col-1-2 -->
     </div> <!-- .row -->
-  </div> <!-- .container -->
-</section> <!-- #installation -->
 
-<!-- <section id="statement" class="section"> -->
-<!--   <div class="container"> -->
-<!--     <div class="row"> -->
-<!--       <p>Lorem Ipsum Dolor</p> -->
-<!--     </div> <!&#45;&#45; .row &#45;&#45;> -->
-<!--   </div> <!&#45;&#45; .container &#45;&#45;> -->
-<!-- </section> <!&#45;&#45; #statement &#45;&#45;> -->
+    <div class="row text-centered">
+      <p class="more-screenshots">For more screenshots <a class="link" href="https://github.com/sdegutis/hydra">check the repo here</a>.</p>
+    </div>
+  </div> <!-- .container -->
+</section> <!-- #screenshots -->
 
 <footer id="footer" class="section">
   <div class="container">
