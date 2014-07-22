@@ -330,7 +330,7 @@ code {
 #header {
   padding-top: 2em;
   padding-bottom: 2em;
-  background-color: #100d15;
+  background-color: #3a265c;
   color: #fff;
 }
 #header-icons {
@@ -364,7 +364,7 @@ code {
 }
 #main {
   text-align: center;
-  background-color: #100d15;
+  background-color: #3a265c;
   color: #fff;
 }
 #main h2 {
@@ -413,18 +413,23 @@ code {
   font-size: 1.618em;
 }
 #footer {
-  background-color: #100d15;
   color: #fff;
+  background-color: #3a265c;
 }
 #footer a {
-  border-bottom: none;
-  color: #fff !important;
+  color: #5e1e78;
   text-decoration: none;
+  border-bottom: 1px dashed #7e28a1;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+  color: #fff;
+  border-color: #fff;
 }
 #footer a:hover {
-  opacity: 0.3;
+  border-bottom: 1px solid #3e144f;
+}
+#footer a:hover {
+  border-color: #fff;
 }
 #social {
   text-align: center;
@@ -438,12 +443,6 @@ code {
   display: inline-block;
   margin-right: 0.218em;
   font-size: 2em;
-}
-#footer .thinkxl a {
-  color: #705b93 !important;
-}
-.thinkxl {
-  color: #403454;
 }
 @media handheld, only screen and (max-width: 768px) {
   .row {

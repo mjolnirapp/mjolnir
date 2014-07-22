@@ -18,7 +18,7 @@
 
 @white: #fff;
 @purple: #D8ABEA;
-@black: #100D15;
+@black: #3A265C;
 @green: #2ecc71;
 
 .fa-github-alt,
@@ -236,9 +236,16 @@ code {
 // ## Footer
 
 #footer {
-  .dark();
+  color: #fff;
+  background-color: @black;
 
-  a { .link-dbg(); }
+  a {
+    .link();
+    color: #fff; 
+    border-color: #fff;
+
+    &:hover { border-color: #fff; }
+  }
 }
 
 #social {
@@ -255,14 +262,6 @@ code {
   display: inline-block;
   margin-right: 0.218em;
   font-size: 2em;
-}
-
-#footer .thinkxl a {
-  color: lighten(@black, 40%) !important; 
-}
-
-.thinkxl {
-  color: lighten(@black, 20%);
 }
 
 @media handheld, only screen and (max-width: 768px) {
