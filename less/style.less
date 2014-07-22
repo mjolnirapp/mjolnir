@@ -120,7 +120,7 @@ code {
 
 .container {
     margin: 0 auto;
-    width: 55.456em;
+    max-width: 55.456em;
     padding-left: 1em;
     padding-right: 1em;
 }
@@ -263,4 +263,27 @@ code {
 
 .thinkxl {
   color: lighten(@black, 20%);
+}
+
+@media handheld, only screen and (max-width: 768px) {
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  [class*='col-'] {
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    width: auto;
+  }
+
+  #header,
+  #main-nav,
+  #screenshots {
+    text-align: center;
+  }
 }
