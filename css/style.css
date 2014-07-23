@@ -334,6 +334,18 @@ code {
   background-color: #3a265c;
   color: #fff;
 }
+#header a#homelink {
+  color: #5e1e78;
+  text-decoration: none;
+  border-bottom: 1px dashed #7e28a1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  color: #fff;
+  border-color: #fff !important;
+}
+#header a#homelink:hover {
+  border-bottom: 1px solid #3e144f;
+}
 #header-icons {
   text-align: right;
   color: #fff;
