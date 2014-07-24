@@ -37,11 +37,23 @@
 
 .cool-edit { .edit(); }
 
-.button-cta {
+.button-cta-wrapper {
   display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-cta {
+  display: inline-block;
   margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
+
+  margin-left: 20px;
+  &:first-child {
+    margin-left: auto;
+  }
+
   padding: 0.618em 2em;
   background-color: @green;
   text-decoration: none;
