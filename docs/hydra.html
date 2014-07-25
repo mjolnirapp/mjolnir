@@ -19,7 +19,17 @@
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="audiodevice.html">audiodevice</a></li>
+
+        
+
+        
+        <li><a href="battery.html">battery</a></li>
+
+        
+
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
 
         
 
@@ -49,6 +59,16 @@
         
 
         
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
         <li><a href="hydra.html">hydra</a></li>
 
         
@@ -72,15 +92,17 @@
         
         <li><a href="#focushydra">focushydra</a></li>
         
-        <li><a href="#indock">indock</a></li>
-        
-        <li><a href="#putindock">putindock</a></li>
+        <li><a href="#licenses">licenses</a></li>
         
         <li><a href="#reload">reload</a></li>
+        
+        <li><a href="#setosxshadows">setosxshadows</a></li>
         
         <li><a href="#showabout">showabout</a></li>
         
         <li><a href="#uuid">uuid</a></li>
+        
+        <li><a href="#version">version</a></li>
         
 
         </ul>
@@ -88,7 +110,42 @@
         
 
         
-        <li><a href="ipc.html">ipc</a></li>
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
 
         
 
@@ -103,11 +160,6 @@
         
 
         
-        <li><a href="menu.html">menu</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
@@ -118,12 +170,17 @@
         
 
         
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
         <li><a href="pathwatcher.html">pathwatcher</a></li>
-
-        
-
-        
-        <li><a href="pprint.html">pprint</a></li>
 
         
 
@@ -138,7 +195,7 @@
         
 
         
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="spaces.html">spaces</a></li>
 
         
 
@@ -149,11 +206,6 @@
 
         
         <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
 
         
 
@@ -217,7 +269,7 @@
       <section id="exec">
         <h3><a href="#exec">exec</a></h3>
         <code>hydra.exec(command) -> string</code>
-        <p>Runs a shell function and returns stdout as a string (without trailing newline).</p>
+        <p>Runs a shell function and returns stdout as a string (may include trailing newline).</p>
 
       </section>
       
@@ -235,17 +287,10 @@
 
       </section>
       
-      <section id="indock">
-        <h3><a href="#indock">indock</a></h3>
-        <code>hydra.indock() -> bool</code>
-        <p>Returns whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
-
-      </section>
-      
-      <section id="putindock">
-        <h3><a href="#putindock">putindock</a></h3>
-        <code>hydra.putindock(bool)</code>
-        <p>Sets whether Hydra has a Dock icon, and thus can be switched to via Cmd-Tab.</p>
+      <section id="licenses">
+        <h3><a href="#licenses">licenses</a></h3>
+        <code>hydra.licenses -> string</code>
+        <p>Returns a string containing the licenses of all the third party software Hydra uses (i.e. Lua)</p>
 
       </section>
       
@@ -253,6 +298,13 @@
         <h3><a href="#reload">reload</a></h3>
         <code>hydra.reload()</code>
         <p>Reloads your init-file. Makes sure to clear any state that makes sense to clear (hotkeys, pathwatchers, etc).</p>
+
+      </section>
+      
+      <section id="setosxshadows">
+        <h3><a href="#setosxshadows">setosxshadows</a></h3>
+        <code>hydra.setosxshadows(bool)</code>
+        <p>Sets whether OSX apps have shadows.</p>
 
       </section>
       
@@ -267,6 +319,13 @@
         <h3><a href="#uuid">uuid</a></h3>
         <code>hydra.uuid() -> string</code>
         <p>Returns a UUID as a string</p>
+
+      </section>
+      
+      <section id="version">
+        <h3><a href="#version">version</a></h3>
+        <code>hydra.version -> string</code>
+        <p>The current version of Hydra, as a human-readable string.</p>
 
       </section>
       

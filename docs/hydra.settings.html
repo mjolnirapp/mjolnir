@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: pasteboard module</title>
+    <title>Hydra docs: hydra.settings module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -103,6 +103,18 @@
 
         
 
+        <ul>
+
+        
+        <li><a href="#get">get</a></li>
+        
+        <li><a href="#set">set</a></li>
+        
+
+        </ul>
+
+        
+
         
         <li><a href="hydra.updates.html">hydra.updates</a></li>
 
@@ -140,16 +152,6 @@
 
         
         <li><a href="pasteboard.html">pasteboard</a></li>
-
-        
-
-        <ul>
-
-        
-        <li><a href="#stringcontents">stringcontents</a></li>
-        
-
-        </ul>
 
         
 
@@ -199,16 +201,23 @@
 
     <div id="module">
       <header>
-        <h1>pasteboard</h1>
-        <p>Interfacing with the pasteboard (aka clipboard)</p>
+        <h1>hydra.settings</h1>
+        <p>Functions for user-defined settings that persist across Hydra launches.</p>
 
       </header>
 
       
-      <section id="stringcontents">
-        <h3><a href="#stringcontents">stringcontents</a></h3>
-        <code>pasteboard.stringcontents() -> string</code>
-        <p>Returns the contents of the pasteboard as a string, or nil if it can&#39;t be done</p>
+      <section id="get">
+        <h3><a href="#get">get</a></h3>
+        <code>hydra.settings.get(key) -> val</code>
+        <p>Gets the Lua value for the given string key.</p>
+
+      </section>
+      
+      <section id="set">
+        <h3><a href="#set">set</a></h3>
+        <code>hydra.settings.set(key, val)</code>
+        <p>Saves the given value for the string key; value must be a string, number, boolean, nil, or a table of any of these, recursively.</p>
 
       </section>
       

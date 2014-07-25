@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: pasteboard module</title>
+    <title>Hydra docs: hydra.updates module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -108,6 +108,26 @@
 
         
 
+        <ul>
+
+        
+        <li><a href="#changelogurl">changelogurl</a></li>
+        
+        <li><a href="#check">check</a></li>
+        
+        <li><a href="#currentversion">currentversion</a></li>
+        
+        <li><a href="#getversions">getversions</a></li>
+        
+        <li><a href="#install">install</a></li>
+        
+        <li><a href="#verifyfile">verifyfile</a></li>
+        
+
+        </ul>
+
+        
+
         
         <li><a href="inspect.html">inspect</a></li>
 
@@ -140,16 +160,6 @@
 
         
         <li><a href="pasteboard.html">pasteboard</a></li>
-
-        
-
-        <ul>
-
-        
-        <li><a href="#stringcontents">stringcontents</a></li>
-        
-
-        </ul>
 
         
 
@@ -199,16 +209,52 @@
 
     <div id="module">
       <header>
-        <h1>pasteboard</h1>
-        <p>Interfacing with the pasteboard (aka clipboard)</p>
+        <h1>hydra.updates</h1>
+        <p>Check for and install Hydra updates.</p>
 
       </header>
 
       
-      <section id="stringcontents">
-        <h3><a href="#stringcontents">stringcontents</a></h3>
-        <code>pasteboard.stringcontents() -> string</code>
-        <p>Returns the contents of the pasteboard as a string, or nil if it can&#39;t be done</p>
+      <section id="changelogurl">
+        <h3><a href="#changelogurl">changelogurl</a></h3>
+        <code>hydra.updates.changelogurl</code>
+        <p>String of the URL that contains the changelog, rendered via Markdown</p>
+
+      </section>
+      
+      <section id="check">
+        <h3><a href="#check">check</a></h3>
+        <code>hydra.updates.check(fn(isavailable) = nil, failverbosely = false)</code>
+        <p>Checks for an update. Calls the given function with a boolean representing whether a new update is available.<br>
+Default implementation of fn shows a user-notification when an update is available, with the tag &quot;showupdate&quot; (for use with notify.register).</p>
+
+      </section>
+      
+      <section id="currentversion">
+        <h3><a href="#currentversion">currentversion</a></h3>
+        <code>hydra.updates.currentversion() -> number</code>
+        <p>Return the current Hydra version as a string.</p>
+
+      </section>
+      
+      <section id="getversions">
+        <h3><a href="#getversions">getversions</a></h3>
+        <code>hydra.updates.getversions(fn(versions))</code>
+        <p>Low-level function to get list of available Hydra versions; used by hydra.updates.check; you probably want to use hydra.updates.check instead of using this directly.</p>
+
+      </section>
+      
+      <section id="install">
+        <h3><a href="#install">install</a></h3>
+        <code>hydra.updates.install()</code>
+        <p>Currently just opens the page containing the update; in the future, this will actually install the update and restart Hydra.</p>
+
+      </section>
+      
+      <section id="verifyfile">
+        <h3><a href="#verifyfile">verifyfile</a></h3>
+        <code>hydra.updates.verifyfile(sig, path) -> bool</code>
+        <p>Verifies the DSA signatue against the file at the given absolute path using Hydra&#39;s public key.</p>
 
       </section>
       

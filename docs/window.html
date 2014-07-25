@@ -19,7 +19,17 @@
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="audiodevice.html">audiodevice</a></li>
+
+        
+
+        
+        <li><a href="battery.html">battery</a></li>
+
+        
+
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
 
         
 
@@ -49,12 +59,57 @@
         
 
         
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
         <li><a href="hydra.html">hydra</a></li>
 
         
 
         
-        <li><a href="ipc.html">ipc</a></li>
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
 
         
 
@@ -69,11 +124,6 @@
         
 
         
-        <li><a href="menu.html">menu</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
@@ -84,12 +134,17 @@
         
 
         
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
         <li><a href="pathwatcher.html">pathwatcher</a></li>
-
-        
-
-        
-        <li><a href="pprint.html">pprint</a></li>
 
         
 
@@ -104,7 +159,7 @@
         
 
         
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="spaces.html">spaces</a></li>
 
         
 
@@ -115,11 +170,6 @@
 
         
         <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
 
         
 
@@ -166,6 +216,8 @@
         
         <li><a href="#id">id</a></li>
         
+        <li><a href="#isfullscreen">isfullscreen</a></li>
+        
         <li><a href="#isminimized">isminimized</a></li>
         
         <li><a href="#isstandard">isstandard</a></li>
@@ -185,6 +237,8 @@
         <li><a href="#screen">screen</a></li>
         
         <li><a href="#setframe">setframe</a></li>
+        
+        <li><a href="#setfullscreen">setfullscreen</a></li>
         
         <li><a href="#setsize">setsize</a></li>
         
@@ -340,6 +394,13 @@
 
       </section>
       
+      <section id="isfullscreen">
+        <h3><a href="#isfullscreen">isfullscreen</a></h3>
+        <code>window:isfullscreen() -> bool or nil</code>
+        <p>Returns whether the window is full screen, or nil if asking that question fails.</p>
+
+      </section>
+      
       <section id="isminimized">
         <h3><a href="#isminimized">isminimized</a></h3>
         <code>window:isminimized() -> bool</code>
@@ -357,7 +418,8 @@
       <section id="isvisible">
         <h3><a href="#isvisible">isvisible</a></h3>
         <code>window:isvisible() -> bool</code>
-        <p>True if the app is not hidden or minimized.</p>
+        <p>True if the app is not hidden and the window is not minimized.<br>
+NOTE: some apps (e.g. in Adobe Creative Cloud) have literally-invisible windows and also like to put them very far offscreen; this method may return true for such windows.</p>
 
       </section>
       
@@ -407,6 +469,13 @@
         <h3><a href="#setframe">setframe</a></h3>
         <code>window:setframe(rect)</code>
         <p>Set the frame of the window in absolute coordinates.</p>
+
+      </section>
+      
+      <section id="setfullscreen">
+        <h3><a href="#setfullscreen">setfullscreen</a></h3>
+        <code>window:setfullscreen(bool) -> bool</code>
+        <p>Sets whether the window is full screen; returns whether it succeeded.</p>
 
       </section>
       

@@ -43,6 +43,10 @@
         
         <li><a href="#kill9">kill9</a></li>
         
+        <li><a href="#kind">kind</a></li>
+        
+        <li><a href="#mainwindow">mainwindow</a></li>
+        
         <li><a href="#pid">pid</a></li>
         
         <li><a href="#title">title</a></li>
@@ -57,7 +61,17 @@
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="audiodevice.html">audiodevice</a></li>
+
+        
+
+        
+        <li><a href="battery.html">battery</a></li>
+
+        
+
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
 
         
 
@@ -87,12 +101,57 @@
         
 
         
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
         <li><a href="hydra.html">hydra</a></li>
 
         
 
         
-        <li><a href="ipc.html">ipc</a></li>
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
 
         
 
@@ -107,11 +166,6 @@
         
 
         
-        <li><a href="menu.html">menu</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
@@ -122,12 +176,17 @@
         
 
         
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
         <li><a href="pathwatcher.html">pathwatcher</a></li>
-
-        
-
-        
-        <li><a href="pprint.html">pprint</a></li>
 
         
 
@@ -142,7 +201,7 @@
         
 
         
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="spaces.html">spaces</a></li>
 
         
 
@@ -153,11 +212,6 @@
 
         
         <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
 
         
 
@@ -213,8 +267,8 @@
       
       <section id="activate">
         <h3><a href="#activate">activate</a></h3>
-        <code>application:activate() -> bool</code>
-        <p>Tries to activate the app (make it focused) and returns whether it succeeded.</p>
+        <code>application:activate(allwindows = false) -> bool</code>
+        <p>Tries to activate the app (make its key window focused) and returns whether it succeeded; if allwindows is true, all windows of the application are brought forward as well.</p>
 
       </section>
       
@@ -234,7 +288,7 @@
       
       <section id="hide">
         <h3><a href="#hide">hide</a></h3>
-        <code>application:hide()</code>
+        <code>application:hide() -> success</code>
         <p>Hides the app (and all its windows).</p>
 
       </section>
@@ -260,6 +314,20 @@
 
       </section>
       
+      <section id="kind">
+        <h3><a href="#kind">kind</a></h3>
+        <code>application:kind() -> number</code>
+        <p>Returns 1 if the app is in the dock, 0 if not, and -1 if it can&#39;t even have GUI elements if it wanted to.</p>
+
+      </section>
+      
+      <section id="mainwindow">
+        <h3><a href="#mainwindow">mainwindow</a></h3>
+        <code>application:mainwindow() -> window</code>
+        <p>Returns the main window of the given app, or nil.</p>
+
+      </section>
+      
       <section id="pid">
         <h3><a href="#pid">pid</a></h3>
         <code>application:pid() -> number</code>
@@ -276,7 +344,7 @@
       
       <section id="unhide">
         <h3><a href="#unhide">unhide</a></h3>
-        <code>application:unhide()</code>
+        <code>application:unhide() -> success</code>
         <p>Unhides the app (and all its windows) if it&#39;s hidden.</p>
 
       </section>

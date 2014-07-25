@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: audio module</title>
+    <title>Hydra docs: audiodevice module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -19,12 +19,7 @@
         
 
         
-        <li><a href="applistener.html">applistener</a></li>
-
-        
-
-        
-        <li><a href="audio.html">audio</a></li>
+        <li><a href="audiodevice.html">audiodevice</a></li>
 
         
 
@@ -53,22 +48,17 @@
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="battery.html">battery</a></li>
+
+        
+
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
 
         
 
         
         <li><a href="brightness.html">brightness</a></li>
-
-        
-
-        
-        <li><a href="dockicon.html">dockicon</a></li>
-
-        
-
-        
-        <li><a href="eventtap.html">eventtap</a></li>
 
         
 
@@ -93,6 +83,11 @@
         
 
         
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
         <li><a href="http.html">http</a></li>
 
         
@@ -103,7 +98,42 @@
         
 
         
-        <li><a href="ipc.html">ipc</a></li>
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
 
         
 
@@ -118,22 +148,17 @@
         
 
         
-        <li><a href="menu.html">menu</a></li>
-
-        
-
-        
-        <li><a href="modalkey.html">modalkey</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
 
         
         <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
 
         
 
@@ -148,11 +173,6 @@
         
 
         
-        <li><a href="pprint.html">pprint</a></li>
-
-        
-
-        
         <li><a href="repl.html">repl</a></li>
 
         
@@ -163,7 +183,7 @@
         
 
         
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="spaces.html">spaces</a></li>
 
         
 
@@ -174,11 +194,6 @@
 
         
         <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
 
         
 
@@ -198,7 +213,7 @@
 
     <div id="module">
       <header>
-        <h1>audio</h1>
+        <h1>audiodevice</h1>
         <p>Manipulate the system&#39;s audio devices.</p>
 
       </header>
@@ -206,56 +221,56 @@
       
       <section id="alloutputdevices">
         <h3><a href="#alloutputdevices">alloutputdevices</a></h3>
-        <code>audio.alloutputdevices() -> audio[]</code>
+        <code>audiodevice.alloutputdevices() -> audio[]</code>
         <p>Returns a list of all connected output devices.</p>
 
       </section>
       
       <section id="defaultoutputdevice">
         <h3><a href="#defaultoutputdevice">defaultoutputdevice</a></h3>
-        <code>audio.defaultoutputdevice() -> audio or nil</code>
+        <code>audiodevice.defaultoutputdevice() -> audio or nil</code>
         <p>Gets the system&#39;s default audio device, or nil, it it does not exist.</p>
 
       </section>
       
       <section id="muted">
         <h3><a href="#muted">muted</a></h3>
-        <code>audio:muted() -> bool or nil</code>
+        <code>audiodevice:muted() -> bool or nil</code>
         <p>Returns true/false if the audio device is muted, or nil if it does not support being muted.</p>
 
       </section>
       
       <section id="name">
         <h3><a href="#name">name</a></h3>
-        <code>audio:name() -> string or nil</code>
+        <code>audiodevice:name() -> string or nil</code>
         <p>Returns the name of the audio device, or nil if it does not have a name.</p>
 
       </section>
       
       <section id="setdefaultoutputdevice">
         <h3><a href="#setdefaultoutputdevice">setdefaultoutputdevice</a></h3>
-        <code>audio:setdefaultoutputdevice() -> bool</code>
+        <code>audiodevice:setdefaultoutputdevice() -> bool</code>
         <p>Sets the system&#39;s default audio device to this device. Returns true if the audio device was successfully set.</p>
 
       </section>
       
       <section id="setmuted">
         <h3><a href="#setmuted">setmuted</a></h3>
-        <code>audio:setmuted(bool) -> bool</code>
+        <code>audiodevice:setmuted(bool) -> bool</code>
         <p>Returns true if the the device&#39;s muted status was set, or false if it does not support being muted.</p>
 
       </section>
       
       <section id="setvolume">
         <h3><a href="#setvolume">setvolume</a></h3>
-        <code>audio:setvolume(level) -> bool</code>
+        <code>audiodevice:setvolume(level) -> bool</code>
         <p>Returns true if the volume was set, or false if the audio device does not support setting a volume level. Level is a percentage between 0 and 100.</p>
 
       </section>
       
       <section id="volume">
         <h3><a href="#volume">volume</a></h3>
-        <code>audio:volume() -> number or bool</code>
+        <code>audiodevice:volume() -> number or bool</code>
         <p>Returns a number between 0 and 100 inclusive, representing the volume percentage. Or nil, if the audio device does not have a volume level.</p>
 
       </section>

@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: pasteboard module</title>
+    <title>Hydra docs: spaces module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -143,16 +143,6 @@
 
         
 
-        <ul>
-
-        
-        <li><a href="#stringcontents">stringcontents</a></li>
-        
-
-        </ul>
-
-        
-
         
         <li><a href="pathwatcher.html">pathwatcher</a></li>
 
@@ -170,6 +160,20 @@
 
         
         <li><a href="spaces.html">spaces</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#count">count</a></li>
+        
+        <li><a href="#currentspace">currentspace</a></li>
+        
+        <li><a href="#movetospace">movetospace</a></li>
+        
+
+        </ul>
 
         
 
@@ -199,16 +203,31 @@
 
     <div id="module">
       <header>
-        <h1>pasteboard</h1>
-        <p>Interfacing with the pasteboard (aka clipboard)</p>
+        <h1>spaces</h1>
+        <p>Experimental API for Spaces support.</p>
 
       </header>
 
       
-      <section id="stringcontents">
-        <h3><a href="#stringcontents">stringcontents</a></h3>
-        <code>pasteboard.stringcontents() -> string</code>
-        <p>Returns the contents of the pasteboard as a string, or nil if it can&#39;t be done</p>
+      <section id="count">
+        <h3><a href="#count">count</a></h3>
+        <code>spaces.count() -> number</code>
+        <p>The number of spaces you currently have.</p>
+
+      </section>
+      
+      <section id="currentspace">
+        <h3><a href="#currentspace">currentspace</a></h3>
+        <code>spaces.currentspace() -> number</code>
+        <p>The index of the space you&#39;re currently on, 1-indexed (as usual).</p>
+
+      </section>
+      
+      <section id="movetospace">
+        <h3><a href="#movetospace">movetospace</a></h3>
+        <code>spaces.movetospace(number)</code>
+        <p>Switches to the space at the given index, 1-indexed (as usual).<br>
+CAUTION: this behaves very strangely on 10.9, for me at least. It probably works better on 10.8, and may not work at all on 10.10. Use at your own risk!</p>
 
       </section>
       

@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: pasteboard module</title>
+    <title>Hydra docs: inspect module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -113,6 +113,16 @@
 
         
 
+        <ul>
+
+        
+        <li><a href="#inspect">inspect</a></li>
+        
+
+        </ul>
+
+        
+
         
         <li><a href="json.html">json</a></li>
 
@@ -140,16 +150,6 @@
 
         
         <li><a href="pasteboard.html">pasteboard</a></li>
-
-        
-
-        <ul>
-
-        
-        <li><a href="#stringcontents">stringcontents</a></li>
-        
-
-        </ul>
 
         
 
@@ -199,16 +199,23 @@
 
     <div id="module">
       <header>
-        <h1>pasteboard</h1>
-        <p>Interfacing with the pasteboard (aka clipboard)</p>
+        <h1>inspect</h1>
+        <p>For inspecting tables and stuff.<br>
+See also:</p>
+
+<ul>
+<li><a href="http://github.com/kikito/inspect.lua">http://github.com/kikito/inspect.lua</a></li>
+<li><code>hydra.licenses</code></li>
+</ul>
 
       </header>
 
       
-      <section id="stringcontents">
-        <h3><a href="#stringcontents">stringcontents</a></h3>
-        <code>pasteboard.stringcontents() -> string</code>
-        <p>Returns the contents of the pasteboard as a string, or nil if it can&#39;t be done</p>
+      <section id="inspect">
+        <h3><a href="#inspect">inspect</a></h3>
+        <code>inspect.inspect(t) -> string</code>
+        <p>Returns a pretty-printed string of the table.<br>
+You can also use <code>inspect(t)</code> instead.</p>
 
       </section>
       

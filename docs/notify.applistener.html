@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: pasteboard module</title>
+    <title>Hydra docs: notify.applistener module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -138,18 +138,24 @@
 
         
 
-        
-        <li><a href="pasteboard.html">pasteboard</a></li>
-
-        
-
         <ul>
 
         
-        <li><a href="#stringcontents">stringcontents</a></li>
+        <li><a href="#new">new</a></li>
+        
+        <li><a href="#stopall">stopall</a></li>
+        
+        <li><a href="#start">start</a></li>
+        
+        <li><a href="#stop">stop</a></li>
         
 
         </ul>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
 
         
 
@@ -199,16 +205,37 @@
 
     <div id="module">
       <header>
-        <h1>pasteboard</h1>
-        <p>Interfacing with the pasteboard (aka clipboard)</p>
+        <h1>notify.applistener</h1>
+        <p>Listen to notifications sent by other apps, and maybe send some yourself.</p>
 
       </header>
 
       
-      <section id="stringcontents">
-        <h3><a href="#stringcontents">stringcontents</a></h3>
-        <code>pasteboard.stringcontents() -> string</code>
-        <p>Returns the contents of the pasteboard as a string, or nil if it can&#39;t be done</p>
+      <section id="new">
+        <h3><a href="#new">new</a></h3>
+        <code>notify.applistener.new(fn(notification)) -> applistener</code>
+        <p>Registers a listener function for inter-app notifications.</p>
+
+      </section>
+      
+      <section id="stopall">
+        <h3><a href="#stopall">stopall</a></h3>
+        <code>notify.applistener.stopall()</code>
+        <p>Stops app applisteners; automatically called when user config reloads.</p>
+
+      </section>
+      
+      <section id="start">
+        <h3><a href="#start">start</a></h3>
+        <code>notify.applistener:start()</code>
+        <p>Starts listening for notifications.</p>
+
+      </section>
+      
+      <section id="stop">
+        <h3><a href="#stop">stop</a></h3>
+        <code>notify.applistener:stop()</code>
+        <p>Stops listening for notifications.</p>
 
       </section>
       

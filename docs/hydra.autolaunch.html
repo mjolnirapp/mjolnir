@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: autolaunch module</title>
+    <title>Hydra docs: hydra.autolaunch module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -19,19 +19,17 @@
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="audiodevice.html">audiodevice</a></li>
 
         
 
-        <ul>
+        
+        <li><a href="battery.html">battery</a></li>
 
         
-        <li><a href="#get">get</a></li>
-        
-        <li><a href="#set">set</a></li>
-        
 
-        </ul>
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
 
         
 
@@ -61,12 +59,69 @@
         
 
         
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
         <li><a href="hydra.html">hydra</a></li>
 
         
 
         
-        <li><a href="ipc.html">ipc</a></li>
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#get">get</a></li>
+        
+        <li><a href="#set">set</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
 
         
 
@@ -81,11 +136,6 @@
         
 
         
-        <li><a href="menu.html">menu</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
@@ -96,12 +146,17 @@
         
 
         
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
         <li><a href="pathwatcher.html">pathwatcher</a></li>
-
-        
-
-        
-        <li><a href="pprint.html">pprint</a></li>
 
         
 
@@ -116,7 +171,7 @@
         
 
         
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="spaces.html">spaces</a></li>
 
         
 
@@ -127,11 +182,6 @@
 
         
         <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
 
         
 
@@ -151,12 +201,12 @@
 
     <div id="module">
       <header>
-        <h1>autolaunch</h1>
+        <h1>hydra.autolaunch</h1>
         <p>Functions for controlling whether Hydra launches at login.</p>
 
 <p>To make sure Hydra launches at login, put this in your config:</p>
 
-<pre><code>autolaunch.set(true)
+<pre><code>hydra.autolaunch.set(true)
 </code></pre>
 
       </header>
@@ -164,14 +214,14 @@
       
       <section id="get">
         <h3><a href="#get">get</a></h3>
-        <code>autolaunch.get() -> bool</code>
+        <code>hydra.autolaunch.get() -> bool</code>
         <p>Returns whether Hydra launches when you login.</p>
 
       </section>
       
       <section id="set">
         <h3><a href="#set">set</a></h3>
-        <code>autolaunch.set(bool)</code>
+        <code>hydra.autolaunch.set(bool)</code>
         <p>Sets whether Hydra launches when you login.</p>
 
       </section>

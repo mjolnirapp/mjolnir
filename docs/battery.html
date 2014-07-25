@@ -1,0 +1,353 @@
+<html>
+
+  <head>
+    <title>Hydra docs: battery module</title>
+    <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
+  </head>
+
+  <body>
+
+    <div id="modules">
+      <ul>
+        <li><a href="index.html">[ overview ]</a></li>
+      </ul>
+      <ul>
+        
+        <li><a href="application.html">application</a></li>
+
+        
+
+        
+        <li><a href="audiodevice.html">audiodevice</a></li>
+
+        
+
+        
+        <li><a href="battery.html">battery</a></li>
+
+        
+
+        <ul>
+
+        
+        <li><a href="#amperage">amperage</a></li>
+        
+        <li><a href="#capacity">capacity</a></li>
+        
+        <li><a href="#cycles">cycles</a></li>
+        
+        <li><a href="#designcapacity">designcapacity</a></li>
+        
+        <li><a href="#health">health</a></li>
+        
+        <li><a href="#healthcondition">healthcondition</a></li>
+        
+        <li><a href="#ischarged">ischarged</a></li>
+        
+        <li><a href="#ischarging">ischarging</a></li>
+        
+        <li><a href="#isfinishingcharge">isfinishingcharge</a></li>
+        
+        <li><a href="#maxcapacity">maxcapacity</a></li>
+        
+        <li><a href="#name">name</a></li>
+        
+        <li><a href="#percentage">percentage</a></li>
+        
+        <li><a href="#timeremaining">timeremaining</a></li>
+        
+        <li><a href="#timetofullcharge">timetofullcharge</a></li>
+        
+        <li><a href="#voltage">voltage</a></li>
+        
+        <li><a href="#watts">watts</a></li>
+        
+
+        </ul>
+
+        
+
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
+
+        
+
+        
+        <li><a href="brightness.html">brightness</a></li>
+
+        
+
+        
+        <li><a href="ext.html">ext</a></li>
+
+        
+
+        
+        <li><a href="fnutils.html">fnutils</a></li>
+
+        
+
+        
+        <li><a href="geometry.html">geometry</a></li>
+
+        
+
+        
+        <li><a href="hotkey.html">hotkey</a></li>
+
+        
+
+        
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
+        <li><a href="hydra.html">hydra</a></li>
+
+        
+
+        
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
+
+        
+
+        
+        <li><a href="json.html">json</a></li>
+
+        
+
+        
+        <li><a href="logger.html">logger</a></li>
+
+        
+
+        
+        <li><a href="mouse.html">mouse</a></li>
+
+        
+
+        
+        <li><a href="notify.html">notify</a></li>
+
+        
+
+        
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
+        <li><a href="pathwatcher.html">pathwatcher</a></li>
+
+        
+
+        
+        <li><a href="repl.html">repl</a></li>
+
+        
+
+        
+        <li><a href="screen.html">screen</a></li>
+
+        
+
+        
+        <li><a href="spaces.html">spaces</a></li>
+
+        
+
+        
+        <li><a href="textgrid.html">textgrid</a></li>
+
+        
+
+        
+        <li><a href="timer.html">timer</a></li>
+
+        
+
+        
+        <li><a href="utf8.html">utf8</a></li>
+
+        
+
+        
+        <li><a href="window.html">window</a></li>
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div id="module">
+      <header>
+        <h1>battery</h1>
+        <p>Functions for getting battery info. All functions here may return nil, if the information requested is not available.</p>
+
+      </header>
+
+      
+      <section id="amperage">
+        <h3><a href="#amperage">amperage</a></h3>
+        <code>battery.amperage() -> number</code>
+        <p>Returns the amperage of the battery in mA. (will be negative if battery is discharging)</p>
+
+      </section>
+      
+      <section id="capacity">
+        <h3><a href="#capacity">capacity</a></h3>
+        <code>battery.capacity() -> number</code>
+        <p>Returns the current capacity of the battery in mAh.</p>
+
+      </section>
+      
+      <section id="cycles">
+        <h3><a href="#cycles">cycles</a></h3>
+        <code>battery.cycles() -> number</code>
+        <p>Returns the number of cycles the connected battery has went through.</p>
+
+      </section>
+      
+      <section id="designcapacity">
+        <h3><a href="#designcapacity">designcapacity</a></h3>
+        <code>battery.designcapacity() -> number</code>
+        <p>Returns the design capacity of the battery in mAh.</p>
+
+      </section>
+      
+      <section id="health">
+        <h3><a href="#health">health</a></h3>
+        <code>battery.health() -> string</code>
+        <p>Returns the health status of the battery. One of {Good, Fair, Poor}</p>
+
+      </section>
+      
+      <section id="healthcondition">
+        <h3><a href="#healthcondition">healthcondition</a></h3>
+        <code>battery.healthcondition() -> string</code>
+        <p>Returns the health condition status of the battery. One of {Check Battery, Permanent Battery Failure}. Nil if there is no health condition set.</p>
+
+      </section>
+      
+      <section id="ischarged">
+        <h3><a href="#ischarged">ischarged</a></h3>
+        <code>battery.ischarged() -> boolean</code>
+        <p>Returns true if battery is charged.</p>
+
+      </section>
+      
+      <section id="ischarging">
+        <h3><a href="#ischarging">ischarging</a></h3>
+        <code>battery.ischarging() -> boolean</code>
+        <p>Returns true if the battery is charging.</p>
+
+      </section>
+      
+      <section id="isfinishingcharge">
+        <h3><a href="#isfinishingcharge">isfinishingcharge</a></h3>
+        <code>battery.isfinishingcharge() -> boolean</code>
+        <p>Returns true if battery is finishing charge.</p>
+
+      </section>
+      
+      <section id="maxcapacity">
+        <h3><a href="#maxcapacity">maxcapacity</a></h3>
+        <code>battery.maxcapacity() -> number</code>
+        <p>Returns the current maximum capacity of the battery in mAh.</p>
+
+      </section>
+      
+      <section id="name">
+        <h3><a href="#name">name</a></h3>
+        <code>battery.name() -> number</code>
+        <p>Returns the name of the battery.</p>
+
+      </section>
+      
+      <section id="percentage">
+        <h3><a href="#percentage">percentage</a></h3>
+        <code>battery.percentage() -> number</code>
+        <p>Returns the current percentage of the battery between 0 and 100.</p>
+
+      </section>
+      
+      <section id="timeremaining">
+        <h3><a href="#timeremaining">timeremaining</a></h3>
+        <code>battery.timeremaining() -> number</code>
+        <p>Returns the time remaining in minutes. Or a negative value: -1 = calculating time remaining, -2 = unlimited (i.e. you&#39;re charging, or apple has somehow discovered an infinite power source.)</p>
+
+      </section>
+      
+      <section id="timetofullcharge">
+        <h3><a href="#timetofullcharge">timetofullcharge</a></h3>
+        <code>battery.timetofullcharge() -> number</code>
+        <p>Returns the time remaining to a full charge in minutes. Or a negative value, -1 = calculating time remaining.</p>
+
+      </section>
+      
+      <section id="voltage">
+        <h3><a href="#voltage">voltage</a></h3>
+        <code>battery.voltage() -> number</code>
+        <p>Returns the voltage flow of the battery in mV.</p>
+
+      </section>
+      
+      <section id="watts">
+        <h3><a href="#watts">watts</a></h3>
+        <code>battery.watts() -> number</code>
+        <p>Returns the watts into or out of the battery in Watt (will be negative if battery is discharging)</p>
+
+      </section>
+      
+    </div>
+
+  </body>
+</html>

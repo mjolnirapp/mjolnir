@@ -19,7 +19,17 @@
         
 
         
-        <li><a href="autolaunch.html">autolaunch</a></li>
+        <li><a href="audiodevice.html">audiodevice</a></li>
+
+        
+
+        
+        <li><a href="battery.html">battery</a></li>
+
+        
+
+        
+        <li><a href="battery.watcher.html">battery.watcher</a></li>
 
         
 
@@ -55,6 +65,10 @@
         
         <li><a href="#disableall">disableall</a></li>
         
+        <li><a href="#inputsourcechanged">inputsourcechanged</a></li>
+        
+        <li><a href="#keycodes">keycodes</a></li>
+        
         <li><a href="#new">new</a></li>
         
         <li><a href="#disable">disable</a></li>
@@ -67,12 +81,57 @@
         
 
         
+        <li><a href="hotkey.modal.html">hotkey.modal</a></li>
+
+        
+
+        
+        <li><a href="http.html">http</a></li>
+
+        
+
+        
         <li><a href="hydra.html">hydra</a></li>
 
         
 
         
-        <li><a href="ipc.html">ipc</a></li>
+        <li><a href="hydra.autolaunch.html">hydra.autolaunch</a></li>
+
+        
+
+        
+        <li><a href="hydra.dockicon.html">hydra.dockicon</a></li>
+
+        
+
+        
+        <li><a href="hydra.ipc.html">hydra.ipc</a></li>
+
+        
+
+        
+        <li><a href="hydra.menu.html">hydra.menu</a></li>
+
+        
+
+        
+        <li><a href="hydra.packages.html">hydra.packages</a></li>
+
+        
+
+        
+        <li><a href="hydra.settings.html">hydra.settings</a></li>
+
+        
+
+        
+        <li><a href="hydra.updates.html">hydra.updates</a></li>
+
+        
+
+        
+        <li><a href="inspect.html">inspect</a></li>
 
         
 
@@ -87,11 +146,6 @@
         
 
         
-        <li><a href="menu.html">menu</a></li>
-
-        
-
-        
         <li><a href="mouse.html">mouse</a></li>
 
         
@@ -102,12 +156,17 @@
         
 
         
+        <li><a href="notify.applistener.html">notify.applistener</a></li>
+
+        
+
+        
+        <li><a href="pasteboard.html">pasteboard</a></li>
+
+        
+
+        
         <li><a href="pathwatcher.html">pathwatcher</a></li>
-
-        
-
-        
-        <li><a href="pprint.html">pprint</a></li>
 
         
 
@@ -122,7 +181,7 @@
         
 
         
-        <li><a href="settings.html">settings</a></li>
+        <li><a href="spaces.html">spaces</a></li>
 
         
 
@@ -133,11 +192,6 @@
 
         
         <li><a href="timer.html">timer</a></li>
-
-        
-
-        
-        <li><a href="updates.html">updates</a></li>
 
         
 
@@ -160,24 +214,13 @@
         <h1>hotkey</h1>
         <p>Create and manage global hotkeys.</p>
 
-<p>The <code>mods</code> field is case-insensitive and may contain any of the following strings: &quot;cmd&quot;, &quot;ctrl&quot;, &quot;alt&quot;, or &quot;shift&quot;.</p>
-
-<p>The <code>key</code> field is case-insensitive and may be any single-character string; it may also be any of the following strings:</p>
-
-<pre><code>F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15,
-F16, F17, F18, F19, F20, PAD, PAD*, PAD+, PAD/, PAD-, PAD=,
-PAD0, PAD1, PAD2, PAD3, PAD4, PAD5, PAD6, PAD7, PAD8, PAD9,
-PAD_CLEAR, PAD_ENTER, RETURN, TAB, SPACE, DELETE, ESCAPE, HELP,
-HOME, PAGE_UP, FORWARD_DELETE, END, PAGE_DOWN, LEFT, RIGHT, DOWN, UP
-</code></pre>
-
       </header>
 
       
       <section id="bind">
         <h3><a href="#bind">bind</a></h3>
-        <code>hotkey.bind(mods, key, fn) -> hotkey</code>
-        <p>Shortcut for: return hotkey.new(mods, key, fn):enable()</p>
+        <code>hotkey.bind(mods, key, pressedfn, releasedfn) -> hotkey</code>
+        <p>Shortcut for: return hotkey.new(mods, key, pressedfn, releasedfn):enable()</p>
 
       </section>
       
@@ -188,10 +231,41 @@ HOME, PAGE_UP, FORWARD_DELETE, END, PAGE_DOWN, LEFT, RIGHT, DOWN, UP
 
       </section>
       
+      <section id="inputsourcechanged">
+        <h3><a href="#inputsourcechanged">inputsourcechanged</a></h3>
+        <code>hotkey.inputsourcechanged()</code>
+        <p>Called when your input source (i.e. qwerty, dvorak, colemac) changes.<br>
+Default implementation does nothing; you may override this to rebind your hotkeys or whatever.</p>
+
+      </section>
+      
+      <section id="keycodes">
+        <h3><a href="#keycodes">keycodes</a></h3>
+        <code>hotkey.keycodes</code>
+        <p>A mapping from string representation of a key to its keycode, and vice versa; not generally useful yet.<br>
+For example: keycodes[1] == &quot;s&quot;, and keycodes[&quot;s&quot;] == 1, and so on</p>
+
+      </section>
+      
       <section id="new">
         <h3><a href="#new">new</a></h3>
-        <code>hotkey.new(mods, key, fn) -> hotkey</code>
-        <p>Creates a new hotkey that can be enabled. The hotkey has the public fields: key, mods, fn.</p>
+        <code>hotkey.new(mods, key, pressedfn, releasedfn = nil) -> hotkey</code>
+        <p>Creates a new hotkey that can be enabled.</p>
+
+<p>The <code>mods</code> parameter is case-insensitive and may contain any of the following strings: &quot;cmd&quot;, &quot;ctrl&quot;, &quot;alt&quot;, or &quot;shift&quot;.</p>
+
+<p>The <code>key</code> parameter is case-insensitive and may be any single-character string; it may also be any of the following strings:</p>
+
+<pre><code>F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12, F13, F14, F15,
+F16, F17, F18, F19, F20, PAD, PAD*, PAD+, PAD/, PAD-, PAD=,
+PAD0, PAD1, PAD2, PAD3, PAD4, PAD5, PAD6, PAD7, PAD8, PAD9,
+PAD_CLEAR, PAD_ENTER, RETURN, TAB, SPACE, DELETE, ESCAPE, HELP,
+HOME, PAGE_UP, FORWARD_DELETE, END, PAGE_DOWN, LEFT, RIGHT, DOWN, UP
+</code></pre>
+
+<p>The <code>pressedfn</code> parameter is the function that will be called when this hotkey is pressed.</p>
+
+<p>The <code>releasedfn</code> parameter is the function that will be called when this hotkey is released; this field is optional (may be nil or omitted).</p>
 
       </section>
       

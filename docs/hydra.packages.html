@@ -1,7 +1,7 @@
 <html>
 
   <head>
-    <title>Hydra docs: pasteboard module</title>
+    <title>Hydra docs: hydra.packages module</title>
     <link href="normalize.css" media="all" rel="stylesheet" type="text/css"/>
     <link href="styles.css" media="all" rel="stylesheet" type="text/css"/>
   </head>
@@ -98,6 +98,26 @@
 
         
 
+        <ul>
+
+        
+        <li><a href="#cachedirectory">cachedirectory</a></li>
+        
+        <li><a href="#install">install</a></li>
+        
+        <li><a href="#list">list</a></li>
+        
+        <li><a href="#list">list</a></li>
+        
+        <li><a href="#listinstalled">listinstalled</a></li>
+        
+        <li><a href="#setup">setup</a></li>
+        
+
+        </ul>
+
+        
+
         
         <li><a href="hydra.settings.html">hydra.settings</a></li>
 
@@ -140,16 +160,6 @@
 
         
         <li><a href="pasteboard.html">pasteboard</a></li>
-
-        
-
-        <ul>
-
-        
-        <li><a href="#stringcontents">stringcontents</a></li>
-        
-
-        </ul>
 
         
 
@@ -199,16 +209,58 @@
 
     <div id="module">
       <header>
-        <h1>pasteboard</h1>
-        <p>Interfacing with the pasteboard (aka clipboard)</p>
+        <h1>hydra.packages</h1>
+        <p>Package management for third party Hydra libraries.</p>
+
+<p>Put <code>hydra.packages.setup()</code> at the top of your initfile; it does nothing if it&#39;s already been setup.</p>
+
+<p>See <code>hydra.packages.list</code> and <code>hydra.packages.install</code> to get started.</p>
 
       </header>
 
       
-      <section id="stringcontents">
-        <h3><a href="#stringcontents">stringcontents</a></h3>
-        <code>pasteboard.stringcontents() -> string</code>
-        <p>Returns the contents of the pasteboard as a string, or nil if it can&#39;t be done</p>
+      <section id="cachedirectory">
+        <h3><a href="#cachedirectory">cachedirectory</a></h3>
+        <code>hydra.packages.cachedirectory -> string</code>
+        <p>Absolute path of packages cache, unquoted; defaults to ~/.hydra-ext</p>
+
+      </section>
+      
+      <section id="install">
+        <h3><a href="#install">install</a></h3>
+        <code>hydra.packages.install(name[, version])</code>
+        <p>Installs the given package.<br>
+If version is omitted, defaults to the latest version.<br>
+Changes take effect immediately, so that you may use <code>require &quot;packagename&quot;</code> without restarting Hydra.<br>
+Multiple versions cannot be installed simultaneously; if another version of the same package is installed, this implies uninstalling it.</p>
+
+      </section>
+      
+      <section id="list">
+        <h3><a href="#list">list</a></h3>
+        <code>hydra.packages.list()</code>
+        <p>Lists available and installed packages.</p>
+
+      </section>
+      
+      <section id="list">
+        <h3><a href="#list">list</a></h3>
+        <code>hydra.packages.list(name[, version])</code>
+        <p>Shows information about a given package.</p>
+
+      </section>
+      
+      <section id="listinstalled">
+        <h3><a href="#listinstalled">listinstalled</a></h3>
+        <code>hydra.packages.listinstalled()</code>
+        <p>Lists only installed packages.</p>
+
+      </section>
+      
+      <section id="setup">
+        <h3><a href="#setup">setup</a></h3>
+        <code>hydra.packages.setup()</code>
+        <p>Clones <a href="https://github.com/sdegutis/hydra-ext">https://github.com/sdegutis/hydra-ext</a> into hydra.packages.cachedirectory if it&#39;s not already there.</p>
 
       </section>
       
