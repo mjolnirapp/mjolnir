@@ -1,1 +1,363 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><meta content="width=device-width, initial-scale=1" name="viewport" /><title>Mjolnir</title><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" /><link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/home.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" /></head><body><div id="tagline"><p class="container"></p></div><header><h1 class="container">Mjolnir</h1></header><section class="container"><article><h2>Productivity app for OS X</h2><p>Coming soon.</p></article></section></body></html>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mjolnir by sdegutis</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mjolnir</h1>
+        <p>Lightweight automation and productivity app for OS X</p>
+
+        <p class="view"><a href="https://github.com/sdegutis/mjolnir">View the Project on GitHub <small>sdegutis/mjolnir</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/sdegutis/mjolnir/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sdegutis/mjolnir/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sdegutis/mjolnir">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="mjolnir" class="anchor" href="#mjolnir"><span class="octicon octicon-link"></span></a>Mjolnir</h1>
+
+<p><img src="https://raw.githubusercontent.com/mjolnir-io/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right"></p>
+
+<p><em>Lightweight automation and productivity power-tool for OS X</em></p>
+
+<ul>
+<li>Current version:  Mjolnir 0.4.2</li>
+<li>Requires:         OS X 10.8 or higher</li>
+</ul><h2>
+<a name="what-is-mjolnir" class="anchor" href="#what-is-mjolnir"><span class="octicon octicon-link"></span></a>What is Mjolnir?</h2>
+
+<p>Mjolnir is an OS X app that lets you automate common tasks using the
+language Lua. At its core, it doesn't actually do anything besides
+load up a Lua environment; the real power lies in all the useful
+modules that you can install.</p>
+
+<p>You write a "config", which just means <code>~/.mjolnir/init.lua</code>. This
+file, along with whatever modules it requires, have full access to the
+built-in <code>mjolnir</code> module, and all Lua modules that you have installed
+(e.g. from LuaRocks or any way you want to install them).</p>
+
+<h2>
+<a name="try-it-out" class="anchor" href="#try-it-out"><span class="octicon octicon-link"></span></a>Try it out</h2>
+
+<ol>
+<li><p>Download <a href="https://github.com/mjolnir-io/mjolnir/releases/latest">the latest release</a>, unzip, right-click <code>Mjolnir.app</code>, choose "Open"</p></li>
+<li>
+<p>Install Lua 5.2 into /usr/local e.g. from Homebrew, and then install LuaRocks for Lua 5.2:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>brew install homebrew/versions/lua52
+<span class="nv">$ </span>brew install luarocks --with-lua52
+<span class="nv">$ </span><span class="nb">echo</span> <span class="s1">'rocks_servers = { "http://rocks.moonscript.org" }'</span> &gt; ~/.luarocks/config.lua
+</pre></div>
+</li>
+<li>
+<p>Install some modules from this list: <a href="https://rocks.moonscript.org/search?q=mjolnir">https://rocks.moonscript.org/search?q=mjolnir</a></p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>luarocks install mjolnir.hotkey
+<span class="nv">$ </span>luarocks install mjolnir.application
+</pre></div>
+
+<p>Note: you don't need to install every module, since some of them have lower-level ones as dependencies, e.g. installing mjolnir-hotkey automatically installs mjolnir-keycodes, etc.</p>
+</li>
+<li>
+<p>Create <code>~/.mjolnir/init.lua</code>, and at the top, require the modules you installed, e.g. like this:</p>
+
+<div class="highlight highlight-lua"><pre><span class="kd">local</span> <span class="n">application</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">"</span><span class="s">mjolnir.application"</span>
+<span class="kd">local</span> <span class="n">hotkey</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">"</span><span class="s">mjolnir.hotkey"</span>
+<span class="kd">local</span> <span class="n">window</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">"</span><span class="s">mjolnir.window"</span>
+<span class="kd">local</span> <span class="n">fnutils</span> <span class="o">=</span> <span class="nb">require</span> <span class="s2">"</span><span class="s">mjolnir.fnutils"</span>
+</pre></div>
+
+<p>NOTE: The <code>mjolnir.window</code> module comes with <code>mjolnir.application</code>,
+     so you don't need to (and can't) install it separately. Also,
+     <code>mjolnir.fnutils</code> is already installed as a dependency of the
+     other modules, so you don't need to explicitly install it.</p>
+</li>
+<li>
+<p>Start writing some fun stuff!</p>
+
+<div class="highlight highlight-lua"><pre><span class="n">hotkey</span><span class="p">.</span><span class="n">bind</span><span class="p">({</span><span class="s2">"</span><span class="s">cmd"</span><span class="p">,</span> <span class="s2">"</span><span class="s">alt"</span><span class="p">,</span> <span class="s2">"</span><span class="s">ctrl"</span><span class="p">},</span> <span class="s2">"</span><span class="s">D"</span><span class="p">,</span> <span class="k">function</span><span class="p">()</span>
+  <span class="kd">local</span> <span class="n">win</span> <span class="o">=</span> <span class="n">window</span><span class="p">.</span><span class="n">focusedwindow</span><span class="p">()</span>
+  <span class="kd">local</span> <span class="n">f</span> <span class="o">=</span> <span class="n">win</span><span class="p">:</span><span class="n">frame</span><span class="p">()</span>
+  <span class="n">f</span><span class="p">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">10</span>
+  <span class="n">win</span><span class="p">:</span><span class="n">setframe</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">end</span><span class="p">)</span>
+</pre></div>
+</li>
+</ol><h2>
+<a name="uninstalling" class="anchor" href="#uninstalling"><span class="octicon octicon-link"></span></a>Uninstalling</h2>
+
+<p>If for any reason you want to undo everything in the above steps, do:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>luarocks purge --tree<span class="o">=</span>/usr/local
+<span class="nv">$ </span>brew uninstall lua52 luarocks
+<span class="nv">$ </span>rm ~/.luarocks/config.lua
+</pre></div>
+
+<h2>
+<a name="installing-to-home" class="anchor" href="#installing-to-home"><span class="octicon octicon-link"></span></a>Installing to $HOME</h2>
+
+<p>If you run <code>luarocks --local install ...</code> instead of <code>luarocks
+install ...</code>, it will install to <code>~/.luarocks/</code> instead of
+<code>/usr/local</code>. Update your <code>package.path</code> and <code>package.cpath</code>
+accordingly, as noted in the FAQ.</p>
+
+<h2>
+<a name="finding-modules" class="anchor" href="#finding-modules"><span class="octicon octicon-link"></span></a>Finding modules</h2>
+
+<p>Check out <a href="https://rocks.moonscript.org/search?q=mjolnir">https://rocks.moonscript.org/search?q=mjolnir</a> for a list of
+published Mjolnir modules.</p>
+
+<p>Notable modules:</p>
+
+<ul>
+<li>
+<code>mjolnir.hotkey</code> for creating global hotkeys</li>
+<li>
+<code>mjolnir.application</code> for inspecting and manipulating running OS X applications and windows</li>
+<li>
+<code>mjolnir.alert</code> for showing on-screen messages</li>
+</ul><h2>
+<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>Mjolnir and mjolnir-modules use <a href="http://kapeli.com/dash">Dash</a> for
+documentation. You can install Mjolnir's docset from the User
+Contributed section of the Downloads tab in Dash's Preferences
+window. It should generally update on its own.</p>
+
+<h2>
+<a name="publishing-modules" class="anchor" href="#publishing-modules"><span class="octicon octicon-link"></span></a>Publishing modules</h2>
+
+<p>Wrote an awesome module, and want to share with the world? Check out
+<a href="https://github.com/mjolnir-io/mjolnir-sample-plugin">this sample Mjolnir plugin</a>.</p>
+
+<p>When it's published, please announce it on our mailing list :)</p>
+
+<h2>
+<a name="principles" class="anchor" href="#principles"><span class="octicon octicon-link"></span></a>Principles</h2>
+
+<p>Development of Mjolnir.app and the core Mjolnir modules follow these
+principles:</p>
+
+<ol>
+<li><p>They must be stable. The app should never crash. You should only
+ever have to launch it once, and it should stay running until you
+quit. Period.</p></li>
+<li><p>They must be lightweight. They should never do anything that drains
+your computer's battery. They should never poll for anything. They
+should use as little RAM as possible. Everything they do should
+feel instant and snappy, never sluggish or delayed.</p></li>
+<li><p>They should be completely transparent. There should be no surprises
+in how it's behaving, or what's being executed and when. Everything
+should be fully predictable.</p></li>
+<li><p>They must not be bloated. The app and core modules must always
+adhere to the minimalist philosophy, no excuses. Everything else
+can be a separate Lua module.</p></li>
+</ol><h2>
+<a name="faq" class="anchor" href="#faq"><span class="octicon octicon-link"></span></a>FAQ</h2>
+
+<ol>
+<li>
+<p><strong>Does LuaRocks have a way to upgrade modules automatically?</strong></p>
+
+<p>Sadly no. But it can be done manually by removing a module and
+re-installing it. I'm hoping maybe one day some enthusiastic
+Mjolnir users can jump in and improve the tooling around this. ;)</p>
+</li>
+<li>
+<p><strong>I'm getting an error like this: "attempt to index field 'win' (a nil value)"</strong></p>
+
+<p>Disable and re-enable accessibility. It may look enabled, but do it
+anyway. (This is an OS X bug, not a Mjolnir bug.)</p>
+</li>
+<li>
+<p><strong>I don't have things in /usr/local, so I can't load modules!</strong></p>
+
+<p>Add the path to <code>package.path</code> and <code>package.cpath</code> in your
+init-file. For example, if you're using Boxen, add this:</p>
+
+<div class="highlight highlight-lua"><pre><span class="nb">package.path</span> <span class="o">=</span> <span class="nb">package.path</span> <span class="o">..</span> <span class="s1">'</span><span class="s">;/opt/boxen/homebrew/share/lua/5.2/?.lua'</span>
+<span class="nb">package.cpath</span> <span class="o">=</span> <span class="nb">package.cpath</span> <span class="o">..</span> <span class="s1">'</span><span class="s">;/opt/boxen/homebrew/lib/lua/5.2/?.so'</span>
+</pre></div>
+</li>
+</ol><h2>
+<a name="mjolnir-vs-other-apps" class="anchor" href="#mjolnir-vs-other-apps"><span class="octicon octicon-link"></span></a>Mjolnir vs. other apps</h2>
+
+<ol>
+<li>
+<p><strong>Hydra, Phoenix, or Zephyros?</strong></p>
+
+<p>The short of it is, Mjolnir is the successor to these older apps of mine. Or check out <a href="http://sdegutis.github.io/2014/08/11/the-history-and-current-state-of-appgrid-zephyros-phoenix-hydra-penknife-and-mjolnir/">the full story</a>.</p>
+</li>
+<li>
+<p><strong>Slate</strong></p>
+
+<p>They're both programmer-centric with somewhat similar goals but
+different approaches. Mjolnir is more modularized, Slate is more
+all-in-one. Try them both and see which one suits you better.</p>
+</li>
+<li>
+<p><strong>Spectacle, Moom, SizeUp, Divvy</strong></p>
+
+<p>Mjolnir is intended for programmers who want to write programs that
+customize their environment. It's not intended to be a drag-n-drop
+solution; it's meant to allow you to write your own personalized
+productivity enhancement suite to keep and to use long-term.</p>
+</li>
+</ol><h2>
+<a name="upgrading-from-hydra" class="anchor" href="#upgrading-from-hydra"><span class="octicon octicon-link"></span></a>Upgrading from Hydra</h2>
+
+<p>Only the core modules have been ported over. I'll be porting over the
+non-core modules over the next few days, so keep an eye out for
+them. You may also want to sign up for the mailing list (see below) to
+hear announcements of ported Hydra modules.</p>
+
+<h2>
+<a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a>Community</h2>
+
+<p>Our <a href="https://groups.google.com/forum/#!forum/mjolnir-io">mailing list</a>
+is a fine place to share ideas, and follow releases and announcements.</p>
+
+<p>We also have a growing IRC channel on freenode, #mjolnir.</p>
+
+<h2>
+<a name="credits-and-thanks" class="anchor" href="#credits-and-thanks"><span class="octicon octicon-link"></span></a>Credits and Thanks</h2>
+
+<p>Mjolnir is developed by Steven Degutis with the help of
+<a href="https://github.com/mjolnir-io/mjolnir/graphs/contributors">various contributors</a>.</p>
+
+<p>Special thanks, in no special order:</p>
+
+<ul>
+<li><p><a href="https://github.com/Habbie" class="user-mention">@Habbie</a> for his constant help and support ever since the moment I
+first jumped into #lua and said "anyone wanna try out an OS X window
+manager scriptable in Lua?" and being the first person to join our
+IRC channel and for helping with nearly every Lua question I had</p></li>
+<li><p><a href="https://github.com/cmsj" class="user-mention">@cmsj</a>, <a href="https://github.com/Keithbsmiley" class="user-mention">@Keithbsmiley</a>, <a href="https://github.com/BrianGilbert" class="user-mention">@BrianGilbert</a>, <a href="https://github.com/muescha" class="user-mention">@muescha</a>, <a href="https://github.com/chdiza" class="user-mention">@chdiza</a>, <a href="https://github.com/asmagill" class="user-mention">@asmagill</a>,
+<a href="https://github.com/splintax" class="user-mention">@splintax</a>, <a href="https://github.com/arxanas" class="user-mention">@arxanas</a>, and <a href="https://github.com/DomT4" class="user-mention">@DomT4</a> for all their help and support</p></li>
+<li><p><a href="https://github.com/jasonm23" class="user-mention">@jasonm23</a> for writing, not one, not two, but <em>three</em> app icons for
+this project</p></li>
+<li><p><a href="https://github.com/jhgg" class="user-mention">@jhgg</a> for contributing so many awesome modules to the project</p></li>
+<li><p><a href="https://github.com/kapeli" class="user-mention">@kapeli</a> for his patience with my constant Dash questions and PRs</p></li>
+<li><p>Everyone else who has helped who I've probably forgotten: thanks for
+all your help!</p></li>
+<li><p>Everyone who has donated: thank you so much for your support!</p></li>
+</ul><p>See the in-app About panel for the open source licenses for the
+software Mjolnir uses internally (basically just Lua's license).</p>
+
+<h2>
+<a name="changes" class="anchor" href="#changes"><span class="octicon octicon-link"></span></a>Changes</h2>
+
+<p><strong>NOTE:</strong> When upgrading, System Preferences will <em>pretend</em> like
+  Mjolnir's accessibility is enabled, showing a checked checkbox. But
+  in fact, you'll still need to be disable and re-enable it. This is a
+  bug in OS X.</p>
+
+<h3>
+<a name="0401" class="anchor" href="#0401"><span class="octicon octicon-link"></span></a>0.4.{0,1}</h3>
+
+<ul>
+<li>Default implementation of <code>mjolnir.showerror(err)</code> now opens the console and focuses Mjolnir</li>
+<li>There's a new variable, <code>mjolnir.configdir = "~/.mjolnir/"</code> for users and modules to coordinate</li>
+<li>New <code>mjolnir.focus()</code> function to make Mjolnir the focused app</li>
+<li>The original <code>print</code> function is now stored in <code>mjolnir.rawprint</code> (rather than <code>mjolnir.print</code>, to disambiguate it)</li>
+<li>New <code>mjolnir.openconsole()</code> function to open console (and bring Mjolnir to front)</li>
+</ul><h3>
+<a name="031" class="anchor" href="#031"><span class="octicon octicon-link"></span></a>0.3.1</h3>
+
+<ul>
+<li>Renamed global <code>mj</code> to <code>mjolnir</code>
+</li>
+</ul><h3>
+<a name="03" class="anchor" href="#03"><span class="octicon octicon-link"></span></a>0.3</h3>
+
+<ul>
+<li>The UI has changed drastically. Expect nothing to be in the same
+place or look the same. Pretend it's a brand new app.</li>
+<li>Modules are now handled by LuaRocks instead of by the app itself.</li>
+<li>The "core" namespace has been renamed to "mj".</li>
+<li>The 'mj.window' module now ships with the 'mj.application' LuaRocks
+package since they depend on each other.</li>
+<li>
+<code>mj.screen:frame_without_dock_or_menu()</code> is now called <code>mj.screen:frame()</code>
+</li>
+<li>
+<code>mj.screen:frame_including_dock_and_menu()</code> is now called <code>mj.screen:fullframe()</code>
+</li>
+</ul><h3>
+<a name="02" class="anchor" href="#02"><span class="octicon octicon-link"></span></a>0.2</h3>
+
+<ul>
+<li>Did anyone actually use this?</li>
+</ul><h3>
+<a name="01" class="anchor" href="#01"><span class="octicon octicon-link"></span></a>0.1</h3>
+
+<ul>
+<li>First public release</li>
+</ul><h2>
+<a name="donate" class="anchor" href="#donate"><span class="octicon octicon-link"></span></a>Donate</h2>
+
+<p>I've worked hard to make this app useful and easy to use. I've also
+released it with a liberal open source license, so that you can do
+with it as you please.</p>
+
+<p>So, instead of charging for licenses, I'm asking for donations. If you
+find Mjolnir genuinely beneficial to your productivity, I encourage
+you to donate in proportion to the value you're getting out of it.</p>
+
+<p>Your donations will fund the time I'll be spending making Mjolnir even
+better, and will be used to compensate volunteers for the time and
+skills which they have generously contributed to the project.</p>
+
+<p>Currently, donations can be made <a href="https://www.paypal.com/cgi-bin/webscr?business=sbdegutis@gmail.com&amp;cmd=_donations&amp;item_name=Mjolnir.app%20donation&amp;no_shipping=1">by PayPal</a>. If you don't have a PayPal account, they let you pay with a credit card too without having to sign up with them.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<blockquote>
+<p>Released under MIT license.</p>
+
+<p>Copyright (c) 2014 Steven Degutis</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+</blockquote>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/sdegutis">sdegutis</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
