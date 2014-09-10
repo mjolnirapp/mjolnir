@@ -1,0 +1,53 @@
+/* line 8, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+* {
+  padding: 0px;
+  margin: 0px; }
+
+/* line 12, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 17, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+body {
+  background-color: #f1f0eb;
+  font-family: "Open Sans", sans-serif;
+  color: #444; }
+
+/* line 22, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  width: 90%; }
+
+/* line 27, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+header {
+  background-color: #d4cabf;
+  color: #d2431b; }
+  /* line 30, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+  header h1 {
+    padding: 70px 0;
+    font-size: 400%;
+    font-weight: normal; }
+
+/* line 35, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+#tagline {
+  background-color: #444;
+  height: 0.75em; }
+
+/* line 41, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+section article h2 {
+  margin: 20px 0px;
+  margin-top: 40px;
+  color: #d2431b;
+  font-size: 125%;
+  font-weight: normal; }
+/* line 49, /Users/sdegutis/projects/grs/source/stylesheets/_base.sass */
+section article p {
+  margin: 20px 0px;
+  line-height: 20px; }
+
+/* line 3, /Users/sdegutis/projects/grs/source/stylesheets/home.scss */
+aside img {
+  float: right; }
