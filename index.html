@@ -31,7 +31,7 @@
         <h1>
 <a name="mjolnir" class="anchor" href="#mjolnir"><span class="octicon octicon-link"></span></a>Mjolnir</h1>
 
-<p><img src="https://raw.githubusercontent.com/mjolnir-io/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right"></p>
+<p><img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right"></p>
 
 <p><em>Lightweight automation and productivity power-tool for OS X</em></p>
 
@@ -55,12 +55,12 @@ built-in <code>mjolnir</code> module, and all Lua modules that you have installe
 <a name="try-it-out" class="anchor" href="#try-it-out"><span class="octicon octicon-link"></span></a>Try it out</h2>
 
 <ol>
-<li><p>Download <a href="https://github.com/mjolnir-io/mjolnir/releases/latest">the latest release</a>, unzip, right-click <code>Mjolnir.app</code>, choose "Open"</p></li>
+<li><p>Download <a href="https://github.com/sdegutis/mjolnir/releases/latest">the latest release</a>, unzip, right-click <code>Mjolnir.app</code>, choose "Open"</p></li>
 <li>
-<p>Install Lua 5.2 into /usr/local e.g. from Homebrew, and then install LuaRocks for Lua 5.2:</p>
+<p>Install Lua 5.2 into /usr/local e.g. from <a href="http://brew.sh/">Homebrew</a>, and then install LuaRocks for Lua 5.2:</p>
 
-<div class="highlight highlight-bash"><pre><span class="nv">$ </span>brew install homebrew/versions/lua52
-<span class="nv">$ </span>brew install luarocks --with-lua52
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>brew install lua
+<span class="nv">$ </span>brew install luarocks
 <span class="nv">$ </span><span class="nb">echo</span> <span class="s1">'rocks_servers = { "http://rocks.moonscript.org" }'</span> &gt; ~/.luarocks/config.lua
 </pre></div>
 </li>
@@ -104,7 +104,7 @@ built-in <code>mjolnir</code> module, and all Lua modules that you have installe
 <p>If for any reason you want to undo everything in the above steps, do:</p>
 
 <div class="highlight highlight-bash"><pre><span class="nv">$ </span>luarocks purge --tree<span class="o">=</span>/usr/local
-<span class="nv">$ </span>brew uninstall lua52 luarocks
+<span class="nv">$ </span>brew uninstall lua luarocks
 <span class="nv">$ </span>rm ~/.luarocks/config.lua
 </pre></div>
 
@@ -143,7 +143,7 @@ window. It should generally update on its own.</p>
 <a name="publishing-modules" class="anchor" href="#publishing-modules"><span class="octicon octicon-link"></span></a>Publishing modules</h2>
 
 <p>Wrote an awesome module, and want to share with the world? Check out
-<a href="https://github.com/mjolnir-io/mjolnir-sample-plugin">this sample Mjolnir plugin</a>.</p>
+the <code>sample-plugin</code> subdirectory.</p>
 
 <p>When it's published, please announce it on our mailing list :)</p>
 
@@ -238,7 +238,7 @@ is a fine place to share ideas, and follow releases and announcements.</p>
 <a name="credits-and-thanks" class="anchor" href="#credits-and-thanks"><span class="octicon octicon-link"></span></a>Credits and Thanks</h2>
 
 <p>Mjolnir is developed by Steven Degutis with the help of
-<a href="https://github.com/mjolnir-io/mjolnir/graphs/contributors">various contributors</a>.</p>
+<a href="https://github.com/sdegutis/mjolnir/graphs/contributors">various contributors</a>.</p>
 
 <p>Special thanks, in no special order:</p>
 
