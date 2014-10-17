@@ -132,18 +132,24 @@ principles:
 
 ## FAQ
 
-1. **Does LuaRocks have a way to upgrade modules automatically?**
+1. **Add Spaces support!**
+
+   Not a question. But anyway, there are no public *or* private APIs
+   to manage Spaces in OS X 10.9 or 10.10, there are only private APIs
+   that work in 10.8. So, literally no app can do this, not just us.
+
+2. **Does LuaRocks have a way to upgrade modules automatically?**
 
    Sadly no. But it can be done manually by removing a module and
    re-installing it. I'm hoping maybe one day some enthusiastic
    Mjolnir users can jump in and improve the tooling around this. ;)
 
-2. **I'm getting an error like this: "attempt to index field 'win' (a nil value)"**
+3. **I'm getting an error like this: "attempt to index field 'win' (a nil value)"**
 
    Disable and re-enable accessibility. It may look enabled, but do it
    anyway. (This is an OS X bug, not a Mjolnir bug.)
 
-3. **I don't have things in /usr/local, so I can't load modules!**
+4. **I don't have things in /usr/local, so I can't load modules!**
 
    Add the path to `package.path` and `package.cpath` in your
    init-file. For example, if you're using Boxen, add this:
