@@ -183,7 +183,7 @@ principles:
 Our [mailing list](https://groups.google.com/forum/#!forum/mjolnir-io)
 is a fine place to share ideas, and follow releases and announcements.
 
-We also have a growing IRC channel on freenode, #mjolnir.
+We also have a shrinking IRC channel on freenode, #mjolnir.
 
 ## Credits and Thanks
 
