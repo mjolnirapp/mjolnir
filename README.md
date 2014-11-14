@@ -108,6 +108,9 @@ the `sample-plugin` subdirectory.
 
 When it's published, please announce it on our mailing list :)
 
+Avoid the temptation to reformat the Repos page in the wiki. It uses
+a strict format that's needed by the documentation generator.
+
 ## Principles
 
 Development of Mjolnir.app and the core Mjolnir modules follow these
