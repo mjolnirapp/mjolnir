@@ -1,6 +1,6 @@
 # Mjolnir
 
-<img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right"/>
+<img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right" width="64" height="64"/>
 
 *Lightweight automation and productivity power-tool for OS X*
 
@@ -29,6 +29,7 @@ built-in `mjolnir` module, and all Lua modules that you have installed
    $ brew update
    $ brew install lua
    $ brew install luarocks
+   $ mkdir -p ~/.luarocks
    $ echo 'rocks_servers = { "http://rocks.moonscript.org" }' > ~/.luarocks/config.lua
    ~~~
 
