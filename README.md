@@ -1,6 +1,6 @@
 # Mjolnir
 
-<img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right"/>
+<img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right" width="64" height="64"/>
 
 *Lightweight automation and productivity power-tool for OS X*
 
