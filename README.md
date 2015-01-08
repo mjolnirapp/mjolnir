@@ -29,6 +29,7 @@ built-in `mjolnir` module, and all Lua modules that you have installed
    $ brew update
    $ brew install lua
    $ brew install luarocks
+   $ mkdir -p ~/.luarocks
    $ echo 'rocks_servers = { "http://rocks.moonscript.org" }' > ~/.luarocks/config.lua
    ~~~
 
