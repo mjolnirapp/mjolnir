@@ -66,6 +66,8 @@ built-in `mjolnir` module, and all Lua modules that you have installed
       win:setframe(f)
    end)
    ~~~
+   
+6. Reload config using `mjolnir.reload()` in the console.
 
 ## Uninstalling
 
