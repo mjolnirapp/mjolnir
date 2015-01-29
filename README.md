@@ -142,7 +142,8 @@ principles:
 
    Not a question. But anyway, there are no public *or* private APIs
    to manage Spaces in OS X 10.9 or 10.10, there are only private APIs
-   that work in 10.8. So, literally no app can do this, not just us.
+   that work in 10.8. No open source project has been able to crack
+   this problem yet, not just us.
 
 2. **Does LuaRocks have a way to upgrade modules automatically?**
 
