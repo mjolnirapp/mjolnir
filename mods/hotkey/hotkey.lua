@@ -27,7 +27,13 @@ local function wrap(fn)
 end
 
 function hotkey.new(mods, key, pressedfn, releasedfn)
-  local keycode = keycodes.map[key:lower()]
+  local keycode
+
+  if (key:sub(1, 1) == '#') then
+    keycode = tonumber(key:sub(2))
+  else
+    keycode = keycodes.map[key:lower()]
+  end
 
   local _pressedfn = wrap(pressedfn)
   local _releasedfn = wrap(releasedfn)
