@@ -28,9 +28,7 @@ built-in `mjolnir` module, and all Lua modules that you have installed
    ~~~bash
    $ brew update
    $ brew install lua
-   $ brew install luarocks
-   $ mkdir -p ~/.luarocks
-   $ echo 'rocks_servers = { "http://rocks.moonscript.org" }' > ~/.luarocks/config.lua
+   $ echo 'rocks_servers = { "http://rocks.moonscript.org" }' >> /usr/local/etc/luarocks52/config-5.2.lua
    ~~~
 
 3. Install some modules from this list: https://rocks.moonscript.org/search?q=mjolnir
@@ -41,6 +39,8 @@ built-in `mjolnir` module, and all Lua modules that you have installed
    ~~~
 
    Note: you don't need to install every module, since some of them have lower-level ones as dependencies, e.g. installing mjolnir-hotkey automatically installs mjolnir-keycodes, etc.
+ 
+   If installing modules via Homebrew's Luarocks please note the version number is appended to the Luarocks command, such as `luarocks-5.2`.
 
 4. Create `~/.mjolnir/init.lua`, and at the top, require the modules you installed, e.g. like this:
 
