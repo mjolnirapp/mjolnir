@@ -31,7 +31,7 @@ built-in `mjolnir` module, and all Lua modules that you have installed
    $ echo 'rocks_servers = { "http://rocks.moonscript.org" }' >> /usr/local/etc/luarocks52/config-5.2.lua
    ~~~
 
-3. Install some modules from this list: https://rocks.moonscript.org/search?q=mjolnir
+3. Install some modules from this list: https://luarocks.org/search?q=mjolnir
 
    ~~~bash
    $ luarocks install mjolnir.hotkey
