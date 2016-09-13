@@ -88,7 +88,7 @@ accordingly, as noted in the FAQ.
 
 ## Finding modules
 
-Check out https://rocks.moonscript.org/search?q=mjolnir for a list of
+Check out http://luarocks.org/search?q=mjolnir for a list of
 published Mjolnir modules.
 
 Notable modules:
