@@ -1,11 +1,5 @@
 # Mjolnir
 
-Hi. I've been writing productivity software for the past 10 years, and open sourcing it for everyone to use freely, including popular projects like Zephyros, Mjolnir, Hydra, AppGrid, and Phoenix. If you have used these or any of my other open source projects, please considering supporting my open source efforts through Patreon. Thanks!
-
-[Patreon.com/sdegutis](https://patreon.com/sdegutis)
-
----
-
 <img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right" width="64" height="64"/>
 
 *Lightweight automation and productivity power-tool for OS X*
