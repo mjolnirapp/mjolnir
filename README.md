@@ -1,11 +1,3 @@
-# NOTICE - Looking for Maintainer
-
-If you would like to maintain this repo, please open an issue and I will transfer it to your account.
-
-If there is no maintainer before the month's end, this repo will be archived.
-
----
-
 # Mjolnir
 
 <img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right" width="64" height="64"/>
