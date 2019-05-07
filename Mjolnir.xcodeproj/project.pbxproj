@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		942E71A619B1112F001BA156 /* MJPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942E71A419B1112F001BA156 /* MJPreferencesWindowController.m */; };
 		942E71AA19B11176001BA156 /* MJAccessibilityUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 942E71A919B11176001BA156 /* MJAccessibilityUtils.m */; };
 		943BF0F219A4B43E0017F79D /* MJUserNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 943BF0F119A4B43E0017F79D /* MJUserNotificationManager.m */; };
-		943BF0F319A4BC730017F79D /* Images.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = 944A2D3F1989737E00D8DC90 /* Images.xcassets */; };
 		94414F47196A1B280067D467 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94414F46196A1B280067D467 /* Carbon.framework */; };
 		9445CA0F19083251002568BB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9445CA0E19083251002568BB /* Cocoa.framework */; };
 		944A2D391989735300D8DC90 /* MJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 944A2D341989735300D8DC90 /* MJAppDelegate.m */; };
@@ -74,6 +73,7 @@
 		94BF76F6199344DA001BDA77 /* MjolnirRestarter in Resources */ = {isa = PBXBuildFile; fileRef = 94BF76E41993418C001BDA77 /* MjolnirRestarter */; };
 		94FA257419A310F700A2BA8B /* MJAutoUpdaterWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94FA257219A310F700A2BA8B /* MJAutoUpdaterWindowController.m */; };
 		94FA257519A310F700A2BA8B /* AutoUpdaterWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94FA257319A310F700A2BA8B /* AutoUpdaterWindow.xib */; };
+		AC6ED23622823BEA001C8276 /* lutf8lib.c in Sources */ = {isa = PBXBuildFile; fileRef = AC6ED23322823BE9001C8276 /* lutf8lib.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +200,9 @@
 		94FA257119A310F700A2BA8B /* MJAutoUpdaterWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAutoUpdaterWindowController.h; sourceTree = "<group>"; };
 		94FA257219A310F700A2BA8B /* MJAutoUpdaterWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAutoUpdaterWindowController.m; sourceTree = "<group>"; };
 		94FA257319A310F700A2BA8B /* AutoUpdaterWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoUpdaterWindow.xib; sourceTree = "<group>"; };
+		AC6ED23222823BE9001C8276 /* luac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = luac.c; sourceTree = "<group>"; };
+		AC6ED23322823BE9001C8276 /* lutf8lib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lutf8lib.c; sourceTree = "<group>"; };
+		AC6ED23422823BE9001C8276 /* lprefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lprefix.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +376,9 @@
 		94AE5BC219B2B9D600769820 /* lua */ = {
 			isa = PBXGroup;
 			children = (
+				AC6ED23422823BE9001C8276 /* lprefix.h */,
+				AC6ED23222823BE9001C8276 /* luac.c */,
+				AC6ED23322823BE9001C8276 /* lutf8lib.c */,
 				94AE5BC319B2B9D600769820 /* lapi.c */,
 				94AE5BC419B2B9D600769820 /* lapi.h */,
 				94AE5BC519B2B9D600769820 /* lauxlib.c */,
@@ -487,12 +493,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = MJ;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Steven Degutis";
 			};
 			buildConfigurationList = 9445CA0619083251002568BB /* Build configuration list for PBXProject "Mjolnir" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -556,6 +562,7 @@
 				94AE5C1019B2B9D600769820 /* lopcodes.c in Sources */,
 				94A1E5421993AB00003AEB26 /* MJSecurityUtils.m in Sources */,
 				94AE5C0F19B2B9D600769820 /* lobject.c in Sources */,
+				AC6ED23622823BEA001C8276 /* lutf8lib.c in Sources */,
 				94AE5C1A19B2B9D600769820 /* lvm.c in Sources */,
 				94AE5C1419B2B9D600769820 /* lstring.c in Sources */,
 				94AE5C1619B2B9D600769820 /* ltable.c in Sources */,
@@ -581,7 +588,6 @@
 				949B520619A55BF400ED4F02 /* MJMenuIcon.m in Sources */,
 				943BF0F219A4B43E0017F79D /* MJUserNotificationManager.m in Sources */,
 				9422ACBD19B6163800F06A90 /* MJConfigUtils.m in Sources */,
-				943BF0F319A4BC730017F79D /* Images.xcassets in Sources */,
 				942E71A619B1112F001BA156 /* MJPreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -609,22 +615,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -647,23 +668,37 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -679,13 +714,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TA23EF7GG6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mjolnir/Mjolnir-Prefix.pch";
 				INFOPLIST_FILE = "Mjolnir/Mjolnir-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.degutis.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Mjolnir;
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -694,14 +732,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TA23EF7GG6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mjolnir/Mjolnir-Prefix.pch";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = "Mjolnir/Mjolnir-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.degutis.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Mjolnir;
-				SDKROOT = macosx10.9;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
