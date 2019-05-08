@@ -1,11 +1,11 @@
 # Mjolnir
 
-<img src="https://raw.githubusercontent.com/sdegutis/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right" width="64" height="64"/>
+<img src="https://raw.githubusercontent.com/mjolnirapp/mjolnir/master/Mjolnir/Images.xcassets/AppIcon.appiconset/icon_128x128.png" alt="Mjolnir logo" title="Mjolnir logo" align="right" width="64" height="64"/>
 
 *Lightweight automation and productivity power-tool for OS X*
 
-* Current version:  Mjolnir 0.4.3
-* Requires:         OS X 10.8 or higher
+* Current version:  Mjolnir 1.0.1
+* Requires:         OS X 10.12 or higher
 
 ## What is Mjolnir?
 
@@ -21,7 +21,7 @@ built-in `mjolnir` module, and all Lua modules that you have installed
 
 ## Try it out
 
-1. Download [the latest release](https://github.com/sdegutis/mjolnir/releases/latest), unzip, right-click `Mjolnir.app`, choose "Open"
+1. Download [the latest release](https://github.com/mjolnirapp/mjolnir/releases/latest), unzip, right-click `Mjolnir.app`, choose "Open"
 
 2. Install Lua 5.2 into /usr/local e.g. from [Homebrew](http://brew.sh/), and then install LuaRocks for Lua 5.2:
 
