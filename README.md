@@ -21,14 +21,18 @@ built-in `mjolnir` module, and all Lua modules that you have installed
 
 ## Try it out
 
-1. Download [the latest release](https://github.com/mjolnirapp/mjolnir/releases/latest), unzip, right-click `Mjolnir.app`, choose "Open"
+1. Download [the latest release](https://github.com/mjolnirapp/mjolnir/releases/latest), unzip, right-click `Mjolnir.app`, choose "Open". Or, install it with [Homebrew](https://brew.sh/):
 
-2. Install Lua 5.2 into /usr/local e.g. from [Homebrew](http://brew.sh/), and then install LuaRocks for Lua 5.2:
+   ~~~bash
+   $ brew cask install mjolnir
+   ~~~
+
+2. Install Lua into /usr/local e.g. from [Homebrew](http://brew.sh/), and then install LuaRocks:
 
    ~~~bash
    $ brew update
    $ brew install lua
-   $ echo 'rocks_servers = { "http://rocks.moonscript.org" }' >> /usr/local/etc/luarocks52/config-5.2.lua
+   $ brew install luarocks
    ~~~
 
 3. Install some modules from this list: https://luarocks.org/search?q=mjolnir
@@ -39,8 +43,6 @@ built-in `mjolnir` module, and all Lua modules that you have installed
    ~~~
 
    Note: you don't need to install every module, since some of them have lower-level ones as dependencies, e.g. installing mjolnir-hotkey automatically installs mjolnir-keycodes, etc.
- 
-   If installing modules via Homebrew's Luarocks please note the version number is appended to the Luarocks command, such as `luarocks-5.2`.
 
 4. Create `~/.mjolnir/init.lua`, and at the top, require the modules you installed, e.g. like this:
 
@@ -162,8 +164,8 @@ principles:
    init-file. For example, if you're using Boxen, add this:
 
    ~~~lua
-   package.path = package.path .. ';/opt/boxen/homebrew/share/lua/5.2/?.lua'
-   package.cpath = package.cpath .. ';/opt/boxen/homebrew/lib/lua/5.2/?.so'
+   package.path = package.path .. ';/opt/boxen/homebrew/share/lua/5.3/?.lua'
+   package.cpath = package.cpath .. ';/opt/boxen/homebrew/lib/lua/5.3/?.so'
    ~~~
 
 ## Mjolnir vs. other apps
