@@ -189,7 +189,7 @@ principles:
 
 4. **Hammerspoon**
 
-   [Hammerspoon](https://github.com/hammerspoon) is a fork of Mjolnir (get it? a "fork and/or spoon" of Mjolnir aka. Thor's "hammer"? :) ). It was created to turn Mjolnir back into an all-in-one application, for those who prefer that over a completely decentralized module system with a bare-bones core (kind of like the debate of monolithic kernel vs microkernel). It's actively maintained, like literally there's commit activit every week.
+   [Hammerspoon](https://github.com/hammerspoon) is a fork of Mjolnir (get it? a "fork and/or spoon" of Mjolnir aka. Thor's "hammer"? :) ). It was created to turn Mjolnir back into an all-in-one application, for those who prefer that over a completely decentralized module system with a bare-bones core (kind of like the debate of monolithic kernel vs microkernel). It's actively maintained, like literally there's commit activity every week.
 
 ## Community
 
