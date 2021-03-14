@@ -24,7 +24,7 @@ built-in `mjolnir` module, and all Lua modules that you have installed
 1. Download [the latest release](https://github.com/mjolnirapp/mjolnir/releases/latest), unzip, right-click `Mjolnir.app`, choose "Open". Or, install it with [Homebrew](https://brew.sh/):
 
    ~~~bash
-   $ brew cask install mjolnir
+   $ brew install --cask mjolnir
    ~~~
 
 2. Install Lua into /usr/local e.g. from [Homebrew](http://brew.sh/), and then install LuaRocks:
